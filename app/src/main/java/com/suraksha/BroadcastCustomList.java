@@ -81,6 +81,15 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
         this.msgMobile = msgMobilea;
     }
 
+    class ViewHolder {
+
+        public ViewHolder() {
+
+
+        }
+
+    }
+
     @Override
     public View getView(final int position, View view, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
@@ -96,6 +105,15 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
         TextView txtdate = (TextView) rowView.findViewById(R.id.tvTime);
         ImageView imgprofile = (ImageView) rowView.findViewById(R.id.profileImg);
         final ImageView postimageview = (ImageView) rowView.findViewById(R.id.ivpostimage);
+        TextView mUseFulcountTxt = (TextView) rowView.findViewById(R.id.useful_count);
+        TextView mUserLesscountTxt = (TextView) rowView.findViewById(R.id.uselee_count);
+        View mUserFullView = rowView.findViewById(R.id.userfullsaperator);
+        View mUserLessView = rowView.findViewById(R.id.userlesssaperator);
+        LinearLayout mUseFullMainLayout = (LinearLayout) rowView.findViewById(R.id.useful_layout);
+        LinearLayout mUseLessMainLayout = (LinearLayout) rowView.findViewById(R.id.useless_layout);
+        ImageView mTick = (ImageView) rowView.findViewById(R.id.tick);
+        ImageView mCross = (ImageView) rowView.findViewById(R.id.cross);
+
 
         final TextView documentText = (TextView) rowView.findViewById(R.id.tvdocument);
         ImageView docDownload = (ImageView) rowView.findViewById(R.id.ivPostImage1);

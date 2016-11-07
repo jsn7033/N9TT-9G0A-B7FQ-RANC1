@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/selected_color"
+    android:id="@+id/mainlayout"
+    android:background="@android:color/white"
     android:visibility="visible">
 
     <LinearLayout
@@ -18,6 +19,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_margin="10dp"
+            android:background="@null"
             android:src="@drawable/ic_person1" />
 
         <TextView
@@ -32,6 +34,7 @@
         <View
             android:id="@+id/selectedview"
             android:layout_width="5dp"
+            android:visibility="gone"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:background="@color/colorPrimary" />

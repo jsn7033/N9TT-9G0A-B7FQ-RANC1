@@ -1,5 +1,6 @@
 package com.suraksha;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.Fragment;
@@ -46,6 +47,11 @@ public class Home extends BaseActivity {
     Toolbar mToolbar;
     FrameLayout container;
 
+    /**
+     * select position of drawer item
+     */
+    private int drawerselectedPos = 0;
+
 
     private boolean doubleBackToExitPressedOnce = false;
 
@@ -70,6 +76,8 @@ public class Home extends BaseActivity {
         }
     }
 
+    MenuItemAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,7 +88,8 @@ public class Home extends BaseActivity {
         mToolbar = loadToolbar("HowZat");
         mToolbar.setLogo(R.drawable.howzaticon_);
         lvItems = (ListView) findViewById(R.id.lvMenu);
-        lvItems.setAdapter(new MenuItemAdapter(Home.this, 0));
+        adapter=new MenuItemAdapter(Home.this, 0);
+        lvItems.setAdapter(adapter);
 
 
         mDrawerToggle = new android.support.v7.app.ActionBarDrawerToggle(this, mDrawerLayout,
@@ -124,6 +133,8 @@ public class Home extends BaseActivity {
                                     int position, long id) {
                 // TODO Auto-generated method stub
                 SelectItem(position);
+                drawerselectedPos = position;
+                adapter.notifyDataSetChanged();
                 Log.d("tagd", "Clicked in a view");
                 mDrawerLayout.closeDrawer(lvItems);
             }
@@ -263,18 +274,32 @@ public class Home extends BaseActivity {
 
                 holder = new ViewHolder();
                 holder.tvMenu = (TextView) view.findViewById(R.id.tvItem);
+                holder.mSelectView = view.findViewById(R.id.selectedview);
+                holder.mMainLayout = (RelativeLayout) view.findViewById(R.id.mainlayout);
                 holder.ivMenu = (ImageView) view.findViewById(R.id.ivItem);
                 view.setTag(holder);
             } else
                 holder = (ViewHolder) view.getTag();
             holder.tvMenu.setText(Title[position]);
             holder.ivMenu.setImageResource(Image[position]);
+
+            if (position == drawerselectedPos) {
+                holder.mMainLayout.setBackgroundColor(Color.parseColor("#f4eefa"));
+                holder.mSelectView.setVisibility(View.VISIBLE);
+            } else {
+                holder.mMainLayout.setBackgroundColor(Color.parseColor("#ffffff"));
+                holder.mSelectView.setVisibility(View.GONE);
+            }
+
+
             return view;
         }
 
         private class ViewHolder {
             private ImageView ivMenu;
             private TextView tvMenu;
+            private View mSelectView;
+            private RelativeLayout mMainLayout;
         }
     }
 
@@ -304,7 +329,7 @@ public class Home extends BaseActivity {
         popup.setBackgroundDrawable(new BitmapDrawable());
 
 
-        popup.showAsDropDown(layout, 0, offsetY);
+        popup.showAsDropDown(layout, 0, 0);
         mostusefull.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
