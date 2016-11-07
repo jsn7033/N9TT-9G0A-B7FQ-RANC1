@@ -20,7 +20,7 @@
 
         <ListView
             android:id="@+id/lvMenu"
-            android:layout_width="240dp"
+            android:layout_width="310dp"
             android:layout_height="fill_parent"
             android:layout_gravity="left|start"
             android:choiceMode="singleChoice"
