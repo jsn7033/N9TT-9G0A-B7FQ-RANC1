@@ -1,0 +1,112 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+android:background="@drawable/profile_bg"   
+android:alpha="0.9" 
+    >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/back"
+    android:layout_marginTop="30dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:alpha="0.8">
+<LinearLayout 
+    android:id="@+id/linearhelp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    
+    android:paddingTop="20dp" >
+            
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:onClick="onCheckboxClicked"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/txtemailid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Message 1(Default)"
+                android:inputType="text"
+                android:text="Please help!"
+                android:textColor="#999" >
+
+                <requestFocus />
+            </EditText>
+        
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp" 
+            android:paddingBottom="20dp"
+            android:layout_below="@+id/linearhelp"
+            
+             >
+<CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               
+                android:onClick="onCheckboxClicked"
+                android:visibility="invisible" />
+            <EditText
+                android:id="@+id/txtage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                
+                
+                android:ems="10"
+                android:textColor="#999"
+                android:hint="Message 2"
+                android:inputType="text"
+                android:text="Call Police Now" />
+
+            
+        </LinearLayout>
+</LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+           
+             >
+
+            <Button
+                android:id="@+id/btnupdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_design"
+                android:textColor="#fff"
+                android:text="Submit Details" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_design"
+                android:textColor="#fff"
+                android:text="Update"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        
+        </RelativeLayout>
+ 
+
+</ScrollView>

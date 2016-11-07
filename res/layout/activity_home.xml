@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray1"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <com.devsmart.android.ui.HorizontalListView
+        android:id="@+id/rlTabs"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/light_gray1" />
+
+    <RelativeLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlTabs"
+        android:layout_marginTop="5dp" >
+    </RelativeLayout>
+
+</RelativeLayout>

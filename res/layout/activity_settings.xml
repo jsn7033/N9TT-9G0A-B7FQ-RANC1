@@ -1,0 +1,247 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/settingsbg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".Settings">
+    
+    <ScrollView
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    >
+
+    <LinearLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/back"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingBottom="20dp"
+        android:alpha="0.9"
+        android:padding="10dp"        
+         >
+        
+        <Button
+            android:id="@+id/btnupdate"
+             android:background="@drawable/setting_btn_design"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="fill_vertical"
+            android:text="Contact Setting"
+             android:textAppearance="?android:attr/textAppearanceMedium" 
+            android:textColor="#503080" 
+            android:layout_margin="5dp"/>
+        <LinearLayout  
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#503080"
+            android:alpha="0.5">         
+        </LinearLayout>        
+        
+         <!--  <Button
+            android:id="@+id/btnmsg"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+           android:gravity="fill_vertical"
+           android:textColor="#503080" 
+           android:layout_margin="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" 
+            android:text="Message Setting" />
+          <LinearLayout  
+              android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#503080"
+            android:alpha="0.5">         
+        </LinearLayout>      
+         -->
+          <Button
+            android:id="@+id/btnpersonal"
+             android:background="@drawable/setting_btn_design"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="fill_vertical"
+            android:textColor="#503080" 
+            android:layout_margin="5dp"
+             android:textAppearance="?android:attr/textAppearanceMedium" 
+            android:text="Personal Details" />
+        <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#503080"
+            android:alpha="0.5">         
+        </LinearLayout>
+         
+        
+          <Button
+            android:id="@+id/btnshowattachment"
+             android:background="@drawable/setting_btn_design"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="fill_vertical"
+            android:textColor="#503080" 
+            android:layout_margin="5dp"
+             android:textAppearance="?android:attr/textAppearanceMedium" 
+            android:text="My Attachments" />
+        <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#503080"
+            android:alpha="0.5">         
+        </LinearLayout>
+        
+        <Button
+            android:id="@+id/btnpostad"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/setting_btn_design"
+            android:gravity="fill_vertical"
+            android:text="Post Advertisement"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#503080" />
+
+        <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#503080"
+            android:alpha="0.5">         
+        </LinearLayout>
+        
+        <RelativeLayout 
+            
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            
+            >
+        <TextView
+            android:id="@+id/textdata"
+             android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:textColor="#503080" 
+            android:gravity="fill_vertical"
+            
+            android:text="Mobile data"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ToggleButton
+            android:id="@+id/togglebtn"
+           android:layout_width="wrap_content"
+           android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton" 
+            android:onClick="onCheckboxClicked"/>
+
+        
+
+    </RelativeLayout>
+    <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#503080"
+            android:alpha="0.5">         
+        </LinearLayout>
+        <RelativeLayout 
+            
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"            
+            >
+
+  <TextView
+      android:id="@+id/textsensor"
+      android:layout_width="200dp"
+      android:layout_height="50dp"
+      android:gravity="fill_vertical"
+      android:text="Shake feature"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:textColor="#503080" />
+
+        <ToggleButton
+            android:id="@+id/togglebtnsensor"
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton" 
+          android:layout_alignParentRight="true"
+ 		   android:onClick="onToggleClicked"
+            />
+
+ 
+
+    </RelativeLayout>
+    <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#503080"
+            android:alpha="0.5">         
+        </LinearLayout>
+        <LinearLayout 
+            
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"            
+            >
+
+  <TextView
+      android:id="@+id/textsensorseek"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="fill_vertical"
+      android:text="Sensor Sensitivity(min to max)"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:textColor="#503080" />
+
+    </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0px"
+            android:orientation="horizontal" />
+    
+         <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#503080"
+            android:alpha="0.5">         
+        </LinearLayout>
+        <LinearLayout 
+            
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"            
+            >
+   <TextView
+      android:id="@+id/texttimer"
+      android:layout_width="200dp"
+      android:layout_height="match_parent"
+      android:gravity="fill_vertical"
+      android:text="Timer Duration:5 sec"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:textColor="#503080" />
+
+
+
+    </LinearLayout>
+   
+     <SeekBar
+            android:id="@+id/seekbartimer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0px"
+            android:orientation="horizontal" />
+    <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#503080"
+            android:alpha="0.5">         
+        </LinearLayout>
+     
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

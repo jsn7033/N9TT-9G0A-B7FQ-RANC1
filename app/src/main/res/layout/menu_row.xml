@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <ImageView
+        android:id="@+id/ivItem"
+        android:layout_width="23dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_person1"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp" />
+    
+    <TextView android:id="@+id/tvItem"
+        android:layout_toRightOf="@+id/ivItem"
+        android:text="asd"
+        style="@style/MenuItem" />
+    
+     <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ivItem"
+        android:background="@color/light_gray2"/>
+
+</RelativeLayout>

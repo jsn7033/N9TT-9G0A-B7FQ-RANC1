@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_suraksha" default="compile.module.suraksha">
+  <dirname property="module.suraksha.basedir" file="${ant.file.module_suraksha}"/>
+  
+  <property name="module.jdk.home.suraksha" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.suraksha" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.suraksha" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.suraksha" value="-encoding UTF-8 -source 1.7 ${compiler.args}"/>
+  
+  <property name="suraksha.output.dir" value="${module.suraksha.basedir}/build/classes/main"/>
+  <property name="suraksha.testoutput.dir" value="${module.suraksha.basedir}/build/classes/test"/>
+  
+  <path id="suraksha.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="suraksha.module.production.classpath">
+    <path refid="${module.jdk.classpath.suraksha}"/>
+  </path>
+  
+  <path id="suraksha.runtime.production.module.classpath">
+    <pathelement location="${suraksha.output.dir}"/>
+  </path>
+  
+  <path id="suraksha.module.classpath">
+    <path refid="${module.jdk.classpath.suraksha}"/>
+    <pathelement location="${suraksha.output.dir}"/>
+  </path>
+  
+  <path id="suraksha.runtime.module.classpath">
+    <pathelement location="${suraksha.testoutput.dir}"/>
+    <pathelement location="${suraksha.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.suraksha">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.suraksha">
+    <patternset refid="excluded.from.module.suraksha"/>
+  </patternset>
+  
+  
+  <target name="compile.module.suraksha" depends="compile.module.suraksha.production,compile.module.suraksha.tests" description="Compile module Suraksha"/>
+  
+  <target name="compile.module.suraksha.production" depends="register.custom.compilers" description="Compile module Suraksha; production classes"/>
+  
+  <target name="compile.module.suraksha.tests" depends="register.custom.compilers,compile.module.suraksha.production" description="compile module Suraksha; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.suraksha" description="cleanup module">
+    <delete dir="${suraksha.output.dir}"/>
+    <delete dir="${suraksha.testoutput.dir}"/>
+  </target>
+</project>

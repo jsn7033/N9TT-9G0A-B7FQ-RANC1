@@ -1,0 +1,62 @@
+<!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/mainHeader"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/purple" >
+
+        <Button
+            android:id="@+id/btn_expanded_menu"
+            style="@style/MenuButton"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_navigation" />
+
+        <TextView
+            android:id="@+id/title_menu"
+            style="@style/MenuTitle"
+            android:layout_toRightOf="@+id/btn_expanded_menu"
+            android:text="@string/text_howzat" />
+
+        <Button
+            android:id="@+id/btn_filter"
+            style="@style/MenuButton"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_filter" />
+
+        <Button
+            android:id="@+id/btn_notification"
+            style="@style/MenuButton"
+            android:layout_toLeftOf="@+id/btn_filter"
+            android:background="@drawable/ic_notification" />
+    </RelativeLayout> -->
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+    </FrameLayout>
+   
+    <ListView
+        android:id="@+id/lvMenu"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:listSelector="@drawable/list_selected"
+        android:choiceMode="singleChoice"
+        android:focusable="true"
+        android:layout_gravity="left|start"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb" >
+    </ListView>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:id="@+id/imageOfferLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/layerlist_offer_imgbgr" >
+
+                <ImageView
+                    android:id="@+id/ivOfferImage"
+                    android:layout_width="100dp"
+                    android:layout_height="110dp"
+                    android:contentDescription="Offer Image"
+                    android:src="@drawable/ic_launcher" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/contentOfferLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imageOfferLayout" >
+
+            <TextView
+                android:id="@+id/tvOfferTitle"
+                style="@style/OfferItemTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_howzat" />
+
+            <TextView
+                android:id="@+id/tvOfferDescription"
+                style="@style/OfferItemDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="adjkasndjkasjn \n ajsdjkasnjkdnasjk \n kajsjkdnasjkdn \n jansjdnjkasnjdnkasjnj"
+                android:layout_below="@+id/tvOfferTitle"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:maxLines="2" />
+            
+            <TextView
+                android:id="@+id/tvOfferCouponTitle"
+                style="@style/OfferItemDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/offer_couponcode_text"
+                android:layout_below="@+id/tvOfferDescription"
+                android:layout_alignParentLeft="true"
+                android:textSize="11sp" />
+            
+             <TextView
+                android:id="@+id/tvOfferCouponCode"
+                style="@style/OfferItemDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12345abcd"
+                android:layout_below="@+id/tvOfferDescription"
+                android:textSize="11sp"
+                android:layout_toRightOf="@+id/tvOfferCouponTitle"
+                android:layout_marginLeft="5dp" />
+            
+             
+          
+            </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/contentOfferLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/contentOfferLayout1"
+                            android:layout_alignLeft="@+id/contentOfferLayout1"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp" >
+
+                            <TextView
+                                android:id="@+id/tvOfferDiscountTitle"
+                                style="@style/OfferItemTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="40%"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:layout_alignParentLeft="true" />
+                            <TextView
+                                android:id="@+id/tvOfferDiscountDesc"
+                                style="For any Pizza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="For any Pizza"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:layout_below="@+id/tvOfferDiscountTitle" />
+                            
+                            <Button android:id="@+id/buttonClaim"
+                                android:layout_width="100dp"
+                                android:layout_height="25dp"
+                                android:text="@string/offer_claim_text"
+                                android:background="@drawable/useful_dark"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/white" 
+                                android:padding="5dp"
+                                android:textSize="10sp"
+                                android:layout_centerVertical="true"/>
+                        </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

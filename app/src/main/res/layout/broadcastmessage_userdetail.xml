@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView"  >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:id="@+id/badgeHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/msguser_profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/circle_img_bgr"
+                android:padding="1dp"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/txtmsguserfullname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/msguser_profile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/msguserAddress"
+                style="@style/MenuItem"
+                android:layout_below="@+id/txtmsguserfullname"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text="Address"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/badgeFooter"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:layout_marginTop="1.5dp"
+            android:background="@color/purple"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnpersonal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@string/personal_title"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/black50" />
+
+            <Button
+                android:id="@+id/btnbages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@string/badges_title"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/personallayout">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile No."
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/primarytext" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/msgusermobile"
+
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:text="User Name"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/primarytext" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/msguserName"
+
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:text="Email Id"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/primarytext" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/msguseremail"
+
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/primarytext" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/msgusergender"
+
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:text="DOB"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/primarytext" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/msguserdob"
+
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:text="Marital Status"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/primarytext" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/msgusermaritalstus"
+
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:text="Father Name"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/primarytext" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/msguserfatherName"
+
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:text="Father Mobile"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/primarytext" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/msguserfatherMobile"
+
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:text="Spouse Name"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/primarytext" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/msguserspouseName"
+
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="45dp">
+                <TextView
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:text="Spouse's Mobile"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/primarytext" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/msguserspousemobile"
+
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/badgeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/rlCoinBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:id="@+id/ivCurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:drawableLeft="@drawable/ic_dollar"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="2000"
+                    android:textColor="@color/purple"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ivBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivCurrency"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/balance_coin_text"
+                    android:textColor="@color/purple"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rlCoinBalance"
+                android:background="@color/light_gray2"/>
+
+            <RelativeLayout
+                android:id="@+id/MadelContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_below="@+id/rlCoinBalance"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/tvBadges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/badges_text"
+                    android:textColor="@color/purple"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvBadges"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true">
+
+                    <RelativeLayout
+                        android:id="@+id/goldContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/badges_border" >
+
+                        <TextView
+                            android:id="@+id/tvGold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:drawableBottom="@drawable/ic_gold"
+                            android:drawablePadding="10dp"
+                            android:text="@string/gold_text"
+                            android:textColor="@color/purple" />
+
+                        <TextView
+                            android:id="@+id/tvGoldCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_below="@+id/tvGold"
+                            android:layout_centerHorizontal="true"
+                            android:text="1"
+                            android:layout_marginTop="8dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/silverContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/badges_border" >
+
+                        <TextView
+                            android:id="@+id/tvSilver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:drawableBottom="@drawable/ic_silver"
+                            android:drawablePadding="10dp"
+                            android:text="@string/silver_text"
+                            android:textColor="@color/purple" />
+
+                        <TextView
+                            android:id="@+id/tvSilverCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvSilver"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="1"
+                            android:layout_marginTop="8dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bronzeContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/badges_border" >
+
+                        <TextView
+                            android:id="@+id/tvBronze"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:drawableBottom="@drawable/ic_bronze"
+                            android:drawablePadding="10dp"
+                            android:text="@string/bronze_text"
+                            android:textColor="@color/purple" />
+
+                        <TextView
+                            android:id="@+id/tvBronzeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_below="@+id/tvBronze"
+                            android:layout_centerHorizontal="true"
+                            android:text="1"
+                            android:layout_marginTop="8dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

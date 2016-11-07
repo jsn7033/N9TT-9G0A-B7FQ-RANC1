@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/btnsend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="Broadcast Post" />
+
+    <ImageButton
+        android:id="@+id/btnattach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/attach" />
+
+    <EditText
+        android:id="@+id/etmsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/btnattach"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/btnattach"
+        android:ems="10"
+        android:hint="What&apos;s on your mind?" >
+
+        <requestFocus />
+    </EditText>
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnsend"
+        android:layout_below="@+id/etmsg"
+        android:layout_centerHorizontal="true"
+        android:maxHeight="400dp"
+        android:maxWidth="300dp"
+        android:src="@drawable/no_image" />
+
+</RelativeLayout>

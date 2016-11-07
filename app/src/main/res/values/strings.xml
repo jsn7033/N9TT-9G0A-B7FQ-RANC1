@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HowZat</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="name">Enter your name</string>
+    <string name="mobile">Enter your number</string>
+    <string name="title_activity_verify_otp">VerifyOTP</string>
+    <string name="relativelayout">rl1</string>
+    <string name="title_activity_fill_personal_details">Personal Details</string>
+    <string name="title_activity_fill_user_details">Personal Details</string>
+    <string name="title_activity_fill_emergency_contacts">Emergency Contacts</string>
+    <string name="title_activity_fill_emergency_contact">Emergency Contacts</string>
+    <string name="title_activity_fill_emergency_numbers">Emergency Contacts</string>
+    <string name="title_activity_add_custom_message">Customize your message</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="title_activity_otp_verification">Verification</string>
+    <string name="title_activity_home">Home</string>
+    <string name="set">:</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_showmylocation">My Circles</string>
+    <string name="title_activity_preloader">Preloader</string>
+    <string name="title_activity_registration">Registration</string>
+    <string name="title_activity_newbroadcast">Broadcast message</string>
+    <string name="title_reg">Registration</string>
+    <string name="title_activity_sensorcallingevent">Sensorcallingevent</string>
+    <string name="title_activity_updatepersonaldetails">Updatepersonaldetails</string>
+    <string name="title_activity_updatepersonaldetail">Personal Details</string>
+    <string name="title_" />
+    <string name="title_activity_landingpage">Landingpage</string>
+    <string name="title_activity_add_circles">Circles</string>
+    <string name="title_activity_add_members">Circle members</string>
+    <string name="title_activity_add_family">Add_family</string>
+    <string name="title_activity_add_social">Social Circle</string>
+    <string name="title_activity_registration_homepage">Registration_homepage</string>
+    <string name="title_activity_registration_existing">Registration_existing</string>
+    <string name="title_attachment_dialog">Attach your image</string>
+    <string name="action_save">Save</string>
+    <string name="action_next">Next</string>
+    <string name="connstring">jdbc:jtds:sqlserver://110.232.255.114:1433/howzat;encrypt=false;user=sa;password=pass@123;</string>
+    <string name="usr">sa</string>
+    <string name="pwd">pass@123</string>
+
+    <string name="redeemd">Redeemed History</string>
+    <string name="voffers">View Offers</string>
+    <string-array name="ad_type">
+        <item>Select Ad Type</item>
+        <item>Provider</item>
+        <item>Seeker</item>
+    </string-array>
+
+    <string-array name="ad_scope">
+        <item>Select Ad Scope</item>
+        <item>Local</item>
+        <item>Global</item>
+    </string-array>
+
+    <string-array name="ad_category">
+        <item>Select Category</item>
+        <item>Company</item>
+        <item>Group</item>
+        <item>Individual</item>
+    </string-array>
+    <string-array name="product_type">
+        <item>Select Title</item>
+        <item>Product</item>
+        <item>Service</item>
+        <item>Job</item>
+    </string-array>
+    <string-array name="ad_usedproduct">
+        <item>Select</item>
+        <item>New</item>
+        <item>Used</item>
+    </string-array>
+
+    <string-array name="places">
+        <item>ATM</item>
+        <item>Bank</item>
+        <item>Cafe</item>
+        <item>Fire-Station</item>
+        <item>Hospital</item>
+        <item>Pharmacy</item>
+        <item>Police</item>
+        <item>Restaurant</item>
+        <item>Shopping Mall</item>
+    </string-array>
+    <string-array name="ad_state">
+        <item>Select State</item>
+        <item>Andaman and Nicobar Island</item>
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chandigarh</item>
+        <item>Chhattisgarh</item>
+        <item>Dadra and Nagar Haveli</item>
+        <item>Daman and Diu</item>
+        <item>Delhi</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Lakshadweep</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>title_activity_ad_searchdetailstitle_activity_ad_searchdetails
+        <item>Odisha</item>
+        <item>Puducherry</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Telangana</item>
+        <item>Tripura</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+        <item>West Bengal</item>
+    </string-array>
+
+    <string name="title_activity_show_attachments">Attachments</string>
+    <string name="title_activity_ad_form">Post new Ad</string>
+    <string name="title_activity_ad_searchdetails">Search Results</string>
+    <string name="profile">Profile</string>
+    <string name="share">Share</string>
+    <string name="aboutus">About Us</string>
+
+
+    <!-- new code -->
+    <!-- Filter options array -->
+    <string name="popular_post_text">Popular Post</string>
+    <string name="most_useful_text">Most Useful Post</string>
+    <string name="recent_post_text">Recent Post</string>
+    <string name="my_useful_text">My Useful Post</string>
+    <string name="my_post_text">My Post</string>
+
+    <!-- Menu Drawer options -->
+    <string name="menu_home_text">Home</string>
+    <string name="menu_profile_text">Profile</string>
+    <string name="menu_badge_text">Badges</string>
+    <string name="menu_offer_text">Offer</string>
+    <string name="menu_post_text">Post Ad</string>
+    <string name="menu_circle_text">Circle</string>
+    <string name="menu_setting_text">Settings</string>
+    <string name="menu_share_text">Share</string>
+    <string name="menu_help_text">Help</string>
+    <string name="menu_about_text">About Us</string>
+    <string name="menu_notification_text">Notification</string>
+    <string name="title_activity_badges_fragment">BadgesFragment</string>
+
+    <!-- Profile screen -->
+    <string name="balance_coin_text">COINS AND BALANCE</string>
+    <string name="view_offer_text">View Offers</string>
+    <string name="redeme_text">Redeemed History</string>
+    <string name="badges_text">Badges</string>
+    <string name="gold_text">GOLD</string>
+    <string name="silver_text">SILVER</string>
+    <string name="bronze_text">BRONZE</string>
+    <string name="personal_text">PERSONAL</string>
+    <string name="professional_text">PROFESSIONAL</string>
+    <string name="health_text">HEALTH</string>
+    <string name="badges_title">BADGES</string>
+    <string name="personal_title">PERSONAL</string>
+    <string name="blood_group_text">BLOOD GROUP</string>
+    <string name="age_text">AGE</string>
+    <string name="diet_text">DIET</string>
+    <string name="weight_text">WEIGHT</string>
+    <string name="quote_text">A Quote from Howzat, Why we need Health Detail.</string>
+    <string name="quote_text_profession">A Quote from Howzat, Why we need Profession Detail.</string>
+    <string name="profession_text">PROFESSION</string>
+    <string name="experience_text">EXPERIENCE</string>
+    <string name="company_text">COMPANY</string>
+    <string name="salary_text">SALARY</string>
+
+    <!-- Personal string -->
+    <string name="name_text">Name</string>
+    <string name="dob_text">Date of Birth</string>
+    <string name="address_text">Address</string>
+    <string name="gander_text">Gender</string>
+    <string name="email_text">Email</string>
+    <string name="phone_text">Phone</string>
+    <string name="save_text">SAVE</string>
+    <string name="title_activity_health_fragment">HealthFragment</string>
+    <string name="title_activity_professional_fragment">ProfessionalFragment</string>
+    <string name="title_activity_personal_fragment">PersonalFragment</string>
+    <string name="title_activity_search_fragment">SearchFragment</string>
+
+    <!--  -->
+    <string name="broadcast_text">BROADCAST</string>
+    <string name="search_text">SEARCH</string>
+    <string name="classified_text">CLASSIFIEDS</string>
+    <string name="title_activity_classified_fragment">ClassifiedFragment</string>
+    <string name="title_activity_broadcast_fragment">BroadcastFragment</string>
+
+    <!-- Offer string -->
+    <string name="offer_couponcode_text">Coupon Code:</string>
+    <string name="offer_claim_text">Claim Reward</string>
+    <string name="text_howzat">HOWZAT</string>
+
+    <string name="yesp">YES</string>
+    <string name="cencel">CANCEL</string>
+
+
+</resources>

@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:id="@+id/healthContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray1" >
+
+        <RelativeLayout
+            android:id="@+id/quoteBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp" >
+
+            <ImageView
+                android:id="@+id/ivQuoteOpen"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/tvQuote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@+id/ivQuoteOpen"
+                android:gravity="center_horizontal"
+                android:text="@string/quote_text"
+                android:textColor="@color/purple" />
+
+            <ImageView
+                android:id="@+id/ivQuoteClose"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/tvQuote"
+                android:layout_alignRight="@+id/tvQuote" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/healthForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnSave"
+            android:layout_below="@+id/quoteBody"
+            android:layout_margin="15dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/BadgeTextViewFiled"
+                    android:text="@string/blood_group_text" />
+
+                <EditText
+                    android:id="@+id/etBloodGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_states"
+                    android:gravity="top" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/BadgeTextViewFiled"
+                    android:text="MEDICAL INSURANCE" />
+
+                <EditText
+                    android:id="@+id/etinsurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_states"
+                    android:gravity="top" />
+            </LinearLayout>
+<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/BadgeTextViewFiled"
+                    android:text="POLICY NO" />
+
+                <EditText
+                    android:id="@+id/etpolicyno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_states"
+                    android:gravity="top" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/BadgeTextViewFiled"
+                    android:text="HEALTH REMARK" />
+
+                <EditText
+                    android:id="@+id/ethealth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_states"
+                    android:ems="10"
+                    android:gravity="top"
+                    android:minLines="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/BadgeTextViewFiled"
+                    android:text="VEHICLE NO" />
+
+                <TextView
+                    android:id="@+id/etvehicleno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_bgr"
+                    android:drawableRight="@drawable/ic_down_arrow"
+                    android:gravity="top"
+                    android:paddingRight="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/purple"
+            android:text="SAVE"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

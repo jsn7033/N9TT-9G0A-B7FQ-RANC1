@@ -1,0 +1,186 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+
+#-keep class com.parse.** { *; }
+
+-keep class net.sourceforge.jtds.jdbcx.** 
+-keep class com.google.android.gms.**
+
+-dontoptimize
+-dontusemixedcaseclassnames
+-dontwarn
+-dontskipnonpubliclibraryclassmembers
+#-libraryjars libs/android-support-v4.jar
+#-keep class javax.** { *; }
+#-keep class org.** { *; }
+
+-libraryjars libs/android-support-v4.jar
+-libraryjars libs/jtds-1.2.5.jar
+-libraryjars libs/org.apache.commons.net_2.0.0.v200905272248.jar
+-libraryjars libs/google-play-services.jar
+
+#-keep class android.** { *; }
+#-keep class java.** { *; }
+#-keep class org.** { *; }
+#-keep class net.** { *; }
+
+-dontwarn javax.sql.XADataSource
+-dontwarn javax.**
+-dontwarn android.**
+-dontwarn jcifs.**
+-dontwarn com.sun.**
+
+
+# view AndroidManifest.xml #generated:275
+-keep class com.suraksha.Ad_form { <init>(...); }
+
+# view AndroidManifest.xml #generated:230
+-keep class com.suraksha.Add_circles { <init>(...); }
+
+# view AndroidManifest.xml #generated:124
+-keep class com.suraksha.Add_custom_message { <init>(...); }
+
+# view AndroidManifest.xml #generated:238
+-keep class com.suraksha.Add_friends { <init>(...); }
+
+# view AndroidManifest.xml #generated:242
+-keep class com.suraksha.Add_members { <init>(...); }
+
+# view AndroidManifest.xml #generated:283
+-keep class com.suraksha.Adsearch_details { <init>(...); }
+
+# view AndroidManifest.xml #generated:217
+-keep class com.suraksha.ContactList { <init>(...); }
+
+# view AndroidManifest.xml #generated:197
+-keep class com.suraksha.CountdownActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:116
+-keep class com.suraksha.Fill_emergency_numbers { <init>(...); }
+
+# view AndroidManifest.xml #generated:108
+-keep class com.suraksha.Fill_user_details { <init>(...); }
+
+# view AndroidManifest.xml #generated:155
+-keep class com.suraksha.Help { <init>(...); }
+
+# view AndroidManifest.xml #generated:140
+-keep class com.suraksha.Home { <init>(...); }
+
+# view res/layout/mapplaces.xml #generated:71
+-keep class com.suraksha.HorizontialListView { <init>(...); }
+
+# view AndroidManifest.xml #generated:219
+-keep class com.suraksha.Landingpage { <init>(...); }
+
+# view AndroidManifest.xml #generated:163
+-keep class com.suraksha.Mapplaces { <init>(...); }
+
+# view AndroidManifest.xml #generated:184
+-keep class com.suraksha.MyService { <init>(...); }
+
+# view AndroidManifest.xml #generated:132
+-keep class com.suraksha.OTP_verification { <init>(...); }
+
+# view AndroidManifest.xml #generated:90
+-keep class com.suraksha.Preloader { <init>(...); }
+
+# view AndroidManifest.xml #generated:100
+-keep class com.suraksha.Registration { <init>(...); }
+
+# view AndroidManifest.xml #generated:259
+-keep class com.suraksha.Registration_existing { <init>(...); }
+
+# view AndroidManifest.xml #generated:255
+-keep class com.suraksha.Registration_homepage { <init>(...); }
+
+# view AndroidManifest.xml #generated:193
+-keep class com.suraksha.Sensorcallingevent { <init>(...); }
+
+# view AndroidManifest.xml #generated:146
+-keep class com.suraksha.Settings { <init>(...); }
+
+# view AndroidManifest.xml #generated:188
+-keep class com.suraksha.Shaker_Service { <init>(...); }
+
+# view AndroidManifest.xml #generated:267
+-keep class com.suraksha.Show_attachments { <init>(...); }
+
+# view AndroidManifest.xml #generated:246
+-keep class com.suraksha.Social_circle { <init>(...); }
+
+# view AndroidManifest.xml #generated:209
+-keep class com.suraksha.Updatepersonaldetail { <init>(...); }
+
+# view AndroidManifest.xml #generated:201
+-keep class com.suraksha.Updatepersonaldetails { <init>(...); }
+
+# view AndroidManifest.xml #generated:104
+-keep class com.suraksha.VerifyOTP { <init>(...); }
+
+# view AndroidManifest.xml #generated:225
+-keep class com.suraksha.attachment_dialog { <init>(...); }
+
+# view AndroidManifest.xml #generated:291
+-keep class com.ticktick.imagecropper.CropImageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:292
+-keep class com.google.android.gms.ads.AdActivity { <init>(...); }
+
+# view res/layout/activity_help.xml #generated:36
+# view res/layout/activity_home.xml #generated:45
+-keep class com.google.android.gms.ads.AdView { <init>(...); }
+
+# view res/layout/mapplaces.xml #generated:46
+-keep class com.google.android.gms.maps.SupportMapFragment { <init>(...); }
+
+-keepclassmembers class * { *** onCheckboxClicked(...); }
+
+# onClick res/layout/activity_cropimage.xml #generated:18
+-keepclassmembers class * { *** onClickBack(...); }
+
+# onClick res/layout/activity_cropimage.xml #generated:81
+-keepclassmembers class * { *** onClickCrop(...); }
+
+# onClick res/layout/activity_cropimage.xml #generated:68
+-keepclassmembers class * { *** onClickReset(...); }
+
+# onClick res/layout/activity_cropimage.xml #generated:55
+-keepclassmembers class * { *** onClickRotate(...); }
+
+# onClick res/layout/activity_cropimage.xml #generated:32
+-keepclassmembers class * { *** onClickSave(...); }
+
+# onClick res/layout/activity_fill_user_details.xml #generated:107
+# onClick res/layout/activity_fill_user_details.xml #generated:98
+# onClick res/layout/activity_updatepersonaldetail.xml #generated:211
+# onClick res/layout/activity_updatepersonaldetail.xml #generated:219
+# onClick res/layout/activity_updatepersonaldetail.xml #generated:407
+# onClick res/layout/activity_updatepersonaldetail.xml #generated:415
+-keepclassmembers class * { *** onRadioButtonClicked(...); }
+
+# onClick res/layout/activity_settings.xml #generated:165
+# onClick res/layout/mapplaces.xml #generated:26
+-keepclassmembers class * { *** onToggleClicked(...); }
+
+
+
+

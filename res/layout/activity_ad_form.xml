@@ -1,0 +1,250 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bghome"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.suraksha.Ad_form" >
+
+
+<ScrollView
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    >
+
+    <LinearLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/back"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:alpha="0.8"
+        android:padding="10dp"        
+         >
+        
+
+        <ImageButton
+            android:id="@+id/btnattachad"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="centerCrop"
+             android:layout_marginLeft="90dp"
+             android:layout_marginBottom="10dp"
+             android:background="@color/text_shadow_white"
+            android:src="@drawable/attachadimage" />
+
+        <LinearLayout  
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#037d46"
+            android:alpha="0.5">         
+        </LinearLayout>        
+        
+         <!--  <Button
+            android:id="@+id/btnmsg"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+           android:gravity="fill_vertical"
+           android:textColor="#037d46" 
+           android:layout_margin="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" 
+            android:text="Message Setting" />
+          <LinearLayout  
+              android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#037d46"
+            android:alpha="0.5">         
+        </LinearLayout>      
+         -->
+
+        <Spinner
+            android:id="@+id/spinneradtype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+		
+ <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#037d46"
+            android:alpha="0.5">         
+        </LinearLayout>
+        <Spinner
+            android:id="@+id/spinneradcategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+        <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#037d46"
+            android:alpha="0.5">         
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/txtcategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Category name" />
+
+         <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#037d46"
+            android:alpha="0.5"> 
+            </LinearLayout>
+        <Spinner
+            android:id="@+id/spinnerproduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+                <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#037d46"
+            android:alpha="0.5">         
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerusedproduct"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content" />
+        
+ 		<LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#037d46"
+            android:alpha="0.5">         
+        </LinearLayout>
+
+ 		<EditText
+ 		    android:id="@+id/txttitle"
+ 		    android:layout_width="match_parent"
+ 		    android:layout_height="wrap_content"
+ 		    android:ems="10"
+ 		    android:hint="Title name" />
+		<LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#037d46"
+            android:alpha="0.5">         
+        </LinearLayout>
+          <EditText
+              android:id="@+id/txtdescription"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:ems="10"
+              android:hint="Description" />
+
+        <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#037d46"
+            android:alpha="0.5">         
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/txtaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Address" />
+
+        <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#037d46"
+            android:alpha="0.5">         
+        </LinearLayout>
+        <Spinner
+        android:id="@+id/spinnerstate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+        <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#037d46"
+            android:alpha="0.5">         
+        </LinearLayout>
+        <Spinner
+        android:id="@+id/spinnercity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+        <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#037d46"
+            android:alpha="0.5">         
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/txtcontactno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Contact No" />
+
+        <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#037d46"
+            android:alpha="0.5">         
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/txtemailid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Email ID" />
+       
+    <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#037d46"
+            android:alpha="0.5">         
+        </LinearLayout>
+
+    
+
+    <EditText
+        android:id="@+id/txtwebsite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Website" />
+    
+    <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#037d46"
+            android:alpha="0.5">         
+        </LinearLayout>
+
+    
+
+    <EditText
+        android:id="@+id/txtkeyword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Keywords(seperated by commas)" />
+     <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#037d46"
+            android:alpha="0.5">         
+        </LinearLayout>
+        <Spinner
+        android:id="@+id/spinnerscope"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />       
+	     <Button
+        android:id="@+id/btnsubmitad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_design"
+        android:layout_marginBottom="20dp"
+        android:text="Submit Ad"
+        android:textColor="#fff" />
+    
+     
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

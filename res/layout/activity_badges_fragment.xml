@@ -1,0 +1,341 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:widget="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray1" >
+
+    <RelativeLayout
+        android:id="@+id/badgeHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/badgeProfile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_img_bgr"
+            android:padding="1dp" />
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/badgeProfile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Ahsan"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/stateName"
+            style="@style/MenuItem"
+            android:layout_below="@+id/profileName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:text="Karachi, Pakistan"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/stateName"
+            android:layout_alignTop="@+id/stateName"
+            android:layout_marginTop="-4dp"
+            android:background="@drawable/ic_edit" />
+    </RelativeLayout>
+
+    <com.devsmart.android.ui.HorizontalListView
+        android:id="@+id/rlTabs"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/badgeHead"
+        android:background="@color/light_gray1" />
+    <!--
+    <HorizontalScrollView
+        android:id="@+id/rlTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/badgeHead"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_below="@+id/badgeHead"
+            android:background="@color/white"
+            android:padding="0dp" >
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="@string/badges_title"
+                android:textColor="@color/purple"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/light_gray2" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="@string/personal_title"
+                android:textColor="@color/purple"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/light_gray2" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="@string/professional_text"
+                android:textColor="@color/purple"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/light_gray2" />
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="@string/health_text"
+                android:textColor="@color/purple"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    -->
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlTabs" >
+
+        <RelativeLayout
+            android:id="@+id/badgeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:id="@+id/rlCoinBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/ivCurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:drawableLeft="@drawable/ic_dollar"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="2000"
+                    android:textColor="@color/purple"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ivBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivCurrency"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/balance_coin_text"
+                    android:textColor="@color/purple"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rlCoinBalance"
+                android:background="@color/light_gray2"/>
+
+            <RelativeLayout
+                android:id="@+id/MadelContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/badgeFooter"
+                android:layout_below="@+id/rlCoinBalance"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/tvBadges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/badges_text"
+                    android:textColor="@color/purple"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvBadges"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/goldContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/badges_border" >
+
+                        <TextView
+                            android:id="@+id/tvGold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:drawableBottom="@drawable/ic_gold"
+                            android:drawablePadding="10dp"
+                            android:text="@string/gold_text"
+                            android:textColor="@color/purple" />
+
+                        <TextView
+                            android:id="@+id/tvGoldCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="1" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/silverContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/badges_border" >
+
+                        <TextView
+                            android:id="@+id/tvSilver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:drawableBottom="@drawable/ic_silver"
+                            android:drawablePadding="10dp"
+                            android:text="@string/silver_text"
+                            android:textColor="@color/purple" />
+
+                        <TextView
+                            android:id="@+id/tvSilverCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="1" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bronzeContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/badges_border" >
+
+                        <TextView
+                            android:id="@+id/tvBronze"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:drawableBottom="@drawable/ic_bronze"
+                            android:drawablePadding="10dp"
+                            android:text="@string/bronze_text"
+                            android:textColor="@color/purple" />
+
+                        <TextView
+                            android:id="@+id/tvBronzeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="1" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/badgeFooter"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/purple"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnViewOffer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:text="@string/view_offer_text"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black50" />
+
+                <Button
+                    android:id="@+id/btnRedeme"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:text="@string/redeme_text"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+
+	<!--   Personal Layout -->
+
+        <include layout="@layout/activity_personal_fragment" />
+
+     <!--    Health Layout -->
+
+        <include layout="@layout/activity_health_fragment" />
+
+        <!-- Professional Layout -->
+
+        <include layout="@layout/activity_professional_fragment" />
+    </RelativeLayout>
+
+</RelativeLayout>

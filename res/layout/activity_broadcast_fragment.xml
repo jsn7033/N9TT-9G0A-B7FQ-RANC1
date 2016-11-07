@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:id="@+id/broadcastContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/lvPost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/footer"
+            android:layout_alignParentTop="true"
+            android:choiceMode="singleChoice" />
+
+        <Button android:id="@+id/btnnewbroadcast"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/lvPost"
+            android:layout_alignRight="@+id/lvPost"
+            android:background="@drawable/newbroadcast"
+            android:layout_margin="10dp"/>
+        <RelativeLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/purple" >
+
+            <ImageView
+                android:id="@+id/ivcircle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_businessman" />
+            
+            <TextView android:id="@+id/tvSlidetoCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Slide to call"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <!-- <RelativeLayout
+            android:id="@+id/startlayout"
+            android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_centerInParent="true"
+            >
+
+        </RelativeLayout> -->
+            
+                <ImageView
+                android:id="@+id/ivShare"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_network" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
