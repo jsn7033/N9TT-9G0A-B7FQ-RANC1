@@ -3,13 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/settingsbg"
     tools:context="com.suraksha.ShakeSetting">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbarlayout"></include>
 
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:padding="50dp"
+        android:alpha="0.85"
         android:orientation="vertical">
 
         <ImageView
@@ -24,6 +32,14 @@
             android:layout_height="wrap_content"
             android:text="Shake your device."
             android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+        <ProgressBar
+            style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            />
 
         <Button
             android:id="@+id/btn_start"

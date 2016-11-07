@@ -30,7 +30,7 @@ import com.webservice.Service1;
 public class Settings extends BaseActivity {
 
 	Databaseclass db;
-	 Button btncontact;
+	Button btncontact;
 	ArrayList<String> listsetting;
 	ToggleButton btntoggleshake;
 	ToggleButton btntoggle;
@@ -41,16 +41,16 @@ public class Settings extends BaseActivity {
 	protected void onResume() {
 		super.onResume();
 
-//		String status=session.Getshechfeature();
-//
-//		if(status.equals("true")){
-//			btntoggleshake.setChecked(true);
+		String status=session.Getshechfeature();
+
+		if(status.equals("true")){
+			btntoggleshake.setChecked(true);
 //			stopService();
 //			checkIfServiceRunning();
-//		}
-//		else if(status.equals("false")){
-//			btntoggleshake.setChecked(false);
-//		}
+		}
+		else if(status.equals("false")){
+			btntoggleshake.setChecked(false);
+		}
 	}
 
 	@Override
@@ -288,14 +288,14 @@ public class Settings extends BaseActivity {
 
 	public void stopService(){
 		if (ShakeDetector.isRunning) {
-			Intent intent = new Intent(this, ShakeDetector.class);
+			Intent intent = new Intent(this, Shaker_Service_updated.class);
 			stopService(intent);
 		}
 	}
 
 	public void checkIfServiceRunning() {
 		if (!ShakeDetector.isRunning) {
-			Intent intent = new Intent(this, ShakeDetector.class);
+			Intent intent = new Intent(this, Shaker_Service_updated.class);
 			startService(intent);
 		}
 	}

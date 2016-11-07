@@ -26,7 +26,7 @@ public class ShakeEventManager implements SensorEventListener {
     private static double MOV_THRESHOLD = 5;
     private static final float ALPHA = 0.8F;
     private static final int SHAKE_WINDOW_TIME_INTERVAL = 500; // milliseconds
-    private boolean isGettingValues=false;
+    private boolean isGettingValues = false;
 
     // Gravity force on x,y,z axis
     private float gravity[] = new float[3];
@@ -37,7 +37,7 @@ public class ShakeEventManager implements SensorEventListener {
 
     private Context ctx;
 
-    List<Float> valueList ;
+    List<Float> valueList;
 
     public ShakeEventManager() {
     }
@@ -65,8 +65,8 @@ public class ShakeEventManager implements SensorEventListener {
 //        Log.d("SwA", "Max Acc ["+maxAcc+"]");
         if (maxAcc >= MOV_THRESHOLD) {
 
-            if(isGettingValues){
-                Log.d("SwA", "Rec Value [" + maxAcc + "]");
+            if (isGettingValues) {
+//                Log.d("SwA", "Rec Value [" + maxAcc + "]");
                 valueList.add(maxAcc);
                 if (listener != null) {
                     listener.onShake();
@@ -88,15 +88,14 @@ public class ShakeEventManager implements SensorEventListener {
                 }
 
                 if (counter == MOV_COUNTS) {
-                    Log.d("SwA", "Max Acc [" + maxAcc + "]");
-                    Log.d("SwA", "Mov counter [" + counter + "]");
-                    if (listener != null) {
+//                    Log.d("SwA", "Max Acc [" + maxAcc + "]");
+//                    Log.d("SwA", "Mov counter [" + counter + "]");
+                    if (listener != null && !isGettingValues) {
                         listener.onShake();
                     }
                     resetAllData();
                 }
             }
-
 
 
         }
@@ -124,7 +123,7 @@ public class ShakeEventManager implements SensorEventListener {
 
     }
 
-    public void enableRecordingValues(boolean flag){
+    public void enableRecordingValues(boolean flag) {
         isGettingValues = flag;
     }
 
@@ -148,7 +147,7 @@ public class ShakeEventManager implements SensorEventListener {
 
 
     private void resetAllData() {
-        Log.d("SwA", "Reset all data");
+//        Log.d("SwA", "Reset all data");
         counter = 0;
         firstMovTime = System.currentTimeMillis();
     }
@@ -160,12 +159,12 @@ public class ShakeEventManager implements SensorEventListener {
 
     public void saveToDb() {
 
-        String value="";
+        String value = "";
 
         for (int i = 0; i < valueList.size(); i++) {
             SQLiteDatabase db = DbHandler.getInstance(ctx).getDbObj(1);
             DBDao.getInstance().insertData(valueList.get(i), db);
-            value = value + "\n"+ valueList.get(i);
+            value = value + "\n" + valueList.get(i);
         }
 
 // get external storage file reference
