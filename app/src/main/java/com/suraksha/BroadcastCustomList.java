@@ -115,6 +115,11 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
         ImageView mCross = (ImageView) rowView.findViewById(R.id.cross);
 
 
+
+
+
+
+
         final TextView documentText = (TextView) rowView.findViewById(R.id.tvdocument);
         ImageView docDownload = (ImageView) rowView.findViewById(R.id.ivPostImage1);
         ImageButton imageviecomment = (ImageButton) rowView.findViewById(R.id.imageviecomment);
