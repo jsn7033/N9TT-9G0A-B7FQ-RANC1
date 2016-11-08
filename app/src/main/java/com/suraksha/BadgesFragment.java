@@ -10,6 +10,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -126,6 +128,7 @@ public class BadgesFragment extends BaseActivity {
     Button btnupdateHealth;
     EditText etemployed, etprofession, etcompany, etoaddress, etocity, etostate, etopincode;
     Button btnprofession;
+    ImageView mEditProfileIv;
 
     private String imgUrl = "http://104.238.126.224/djnni%20dll/bills/";
 
@@ -160,6 +163,8 @@ public class BadgesFragment extends BaseActivity {
         ProfessionalLayout = (RelativeLayout) findViewById(R.id.professionalContainer);
         personalLayout = (RelativeLayout) findViewById(R.id.personalContainer);
         badgeFooter = (LinearLayout) findViewById(R.id.badgeFooter);
+        mEditProfileIv = (ImageView) findViewById(R.id.editprofile);
+        mEditProfileIv.setColorFilter(Color.parseColor("#ffffff"));
 
         badgeLayout.setVisibility(View.VISIBLE);
         healthLayout.setVisibility(View.GONE);
@@ -276,7 +281,7 @@ public class BadgesFragment extends BaseActivity {
                 ds.execute();
             }
         });
-        badgeProfile.setOnClickListener(new View.OnClickListener() {
+        mEditProfileIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 updateImage();
@@ -781,6 +786,7 @@ public class BadgesFragment extends BaseActivity {
             this.mobile = mobile1;
             this.UserName = UserName1;
             this.firstName = firstName1;
+            this.lastName = lastName1;
             this.emailID = emailID1;
             this.gender = gender1;
             this.dob = dob1;

@@ -12,84 +12,69 @@ import java.net.SocketException;
 import java.net.UnknownHostException;
 
 
-public class UploadImages
-{
+public class UploadImages {
 
-	Context context;
-
-
-	String Foldername;
-	String Imagename;
-	String Imagepath;
+    Context context;
 
 
-	static final String FTP_HOST = "104.238.126.224";
-	static final String FTP_USER = "rlftp";
-	static final String FTP_PASS = "bruv2zewrU";
+    String Foldername;
+    String Imagename;
+    String Imagepath;
 
 
-	public UploadImages(String name, String path)
-	{
-		this.Imagename = name;
-		this.Imagepath = path;
+    static final String FTP_HOST = "104.238.126.224";
+    static final String FTP_USER = "rlftp";
+    static final String FTP_PASS = "bruv2zewrU";
 
-		SendPhotos();
-		
 
-	}
+    public UploadImages(String name, String path) {
+        this.Imagename = name;
+        this.Imagepath = path;
 
-	void SendPhotos()
-	{
-		try
-		{
-			try
-			{
-				boolean flag = false;
-				FTPClient localFTPClient;
-				localFTPClient = new FTPClient();
-				try
-				{
-					localFTPClient.connect(InetAddress.getByName(FTP_HOST));
-					boolean bool3 = localFTPClient.login(FTP_USER, FTP_PASS);
-					System.out.println("path...." + bool3);
-					localFTPClient.enterLocalPassiveMode();
-					localFTPClient.setFileType(2);
+        SendPhotos();
 
-					localFTPClient.cwd("/djnni dll/bills");
-					flag = localFTPClient.storeFile(Imagename, new FileInputStream(new File(Imagepath)));
 
-				}
-				catch (SocketException e)
-				{
-					// TODO Auto-generated catch block
-					System.out.println("path...." + e);
-					e.printStackTrace();
+    }
 
-				}
-				catch (UnknownHostException e)
-				{
-					// TODO Auto-generated catch block
-					System.out.println("path...." + e);
-					e.printStackTrace();
+    void SendPhotos() {
+        try {
+            try {
+                boolean flag = false;
+                FTPClient localFTPClient;
+                localFTPClient = new FTPClient();
+                try {
+                    localFTPClient.connect(InetAddress.getByName(FTP_HOST));
+                    boolean bool3 = localFTPClient.login(FTP_USER, FTP_PASS);
+                    System.out.println("path...." + bool3);
+                    localFTPClient.enterLocalPassiveMode();
+                    localFTPClient.setFileType(2);
 
-				}
-				catch (IOException e)
-				{
-					// TODO Auto-generated catch block
-					System.out.println("path...." + e);
-					e.printStackTrace();
-				}
-			}
-			catch (Exception e)
-			{
+                    localFTPClient.cwd("/djnni dll/bills");
+                    flag = localFTPClient.storeFile(Imagename, new FileInputStream(new File(Imagepath)));
 
-			}
+                } catch (SocketException e) {
+                    // TODO Auto-generated catch block
+                    System.out.println("path...." + e);
+                    e.printStackTrace();
 
-		}
-		catch (Exception e) {
-        // TODO: handle exception
-        String a = e.toString();
+                } catch (UnknownHostException e) {
+                    // TODO Auto-generated catch block
+                    System.out.println("path...." + e);
+                    e.printStackTrace();
+
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    System.out.println("path...." + e);
+                    e.printStackTrace();
+                }
+            } catch (Exception e) {
+
+            }
+
+        } catch (Exception e) {
+            // TODO: handle exception
+            String a = e.toString();
         }
-        }
+    }
 
-        }
+}

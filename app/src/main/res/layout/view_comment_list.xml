@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_bg"
+    android:padding="16dp">
 
 
-    <!--<TextView-->
-        <!--android:layout_width="match_parent"-->
-
-        <!--&gt;-->
+    <TextView
+        android:id="@+id/titleTV"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Commnets"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"/>
 
     <ListView
-        android:layout_width="wrap_content"
+        android:id="@+id/lvcomment"
+        android:layout_width="match_parent"
+        android:dividerHeight="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:divider="#aeaeae"
         android:layout_height="wrap_content"
-        android:id="@+id/lvcomment"/>
+        android:layout_below="@+id/titleTV" />
 </RelativeLayout>

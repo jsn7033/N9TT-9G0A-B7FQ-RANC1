@@ -1,222 +1,228 @@
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_gray1"
     android:clickable="true"
-    android:focusableInTouchMode="true"
-    android:background="@color/light_gray1">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="${relativePackage}.${activityClass}" >
+    android:focusableInTouchMode="true">
 
     <RelativeLayout
-        android:id="@+id/professionalContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context="${relativePackage}.${activityClass}">
 
         <RelativeLayout
-            android:id="@+id/quoteBody"
+            android:id="@+id/professionalContainer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp" >
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/ivQuoteOpen"
-                android:layout_width="20dp"
-                android:layout_height="20dp" />
-
-            <TextView
-                android:id="@+id/tvQuote"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:id="@+id/quoteBody"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_toRightOf="@+id/ivQuoteOpen"
-                android:gravity="center_horizontal"
-                android:text="@string/quote_text_profession"
-                android:textColor="@color/purple" />
+                android:padding="20dp">
 
-            <ImageView
-                android:id="@+id/ivQuoteClose"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignBottom="@+id/tvQuote"
-                android:layout_alignRight="@+id/tvQuote" />
+                <ImageView
+                    android:id="@+id/ivQuoteOpen"
+                    android:layout_width="20dp"
+                    android:src="@drawable/ic_rightquote"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/tvQuote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_toRightOf="@+id/ivQuoteOpen"
+                    android:gravity="center_horizontal"
+                    android:text="@string/quote_text_profession"
+                    android:textColor="@color/purple" />
+
+                <ImageView
+                    android:id="@+id/ivQuoteClose"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginBottom="-10dp"
+                    android:src="@drawable/ic_leftquote"
+                    android:layout_alignBottom="@+id/tvQuote"
+                    android:layout_alignRight="@+id/tvQuote" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/healthForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btnSave"
+                android:layout_below="@+id/quoteBody"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/BadgeTextViewFiled"
+                        android:text="Are you employed?" />
+
+                    <EditText
+                        android:id="@+id/etemployed"
+                        android:layout_width="match_parent"
+                        android:layout_height="22dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_states"
+                        android:gravity="top"
+                        android:inputType="text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/BadgeTextViewFiled"
+                        android:text="Profession" />
+
+                    <EditText
+                        android:id="@+id/etprofession"
+                        android:layout_width="match_parent"
+                        android:layout_height="22dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_states"
+                        android:gravity="top"
+                        android:inputType="text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/BadgeTextViewFiled"
+                        android:text="Company" />
+
+                    <EditText
+                        android:id="@+id/etcompany"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_states"
+                        android:ems="10"
+                        android:gravity="top"
+                        android:inputType="text"
+                        android:minLines="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/BadgeTextViewFiled"
+                        android:text="Official Address" />
+
+                    <EditText
+                        android:id="@+id/etoaddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_states"
+                        android:ems="10"
+                        android:gravity="top"
+                        android:inputType="text"
+                        android:minLines="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/BadgeTextViewFiled"
+                        android:text="City" />
+
+                    <EditText
+                        android:id="@+id/etocity"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_states"
+                        android:drawablePadding="5dp"
+                        android:ems="10"
+                        android:gravity="top"
+                        android:inputType="text"
+                        android:padding="1dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/BadgeTextViewFiled"
+                        android:text="State" />
+
+                    <EditText
+                        android:id="@+id/etostate"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_states"
+                        android:drawablePadding="5dp"
+                        android:ems="10"
+                        android:gravity="top"
+                        android:inputType="text"
+                        android:padding="1dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="35dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/BadgeTextViewFiled"
+                        android:text="Pincode" />
+
+                    <EditText
+                        android:id="@+id/etopincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_states"
+                        android:drawablePadding="5dp"
+                        android:ems="10"
+                        android:gravity="top"
+                        android:inputType="number|text"
+                        android:padding="1dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnprofessional"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/healthForm"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/purple"
+                android:text="Save"
+                android:textColor="@color/white" />
         </RelativeLayout>
 
-        <LinearLayout
-            android:id="@+id/healthForm"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/btnSave"
-            android:layout_below="@+id/quoteBody"
-            android:layout_margin="15dp"
-            android:orientation="vertical" >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" >
-
-                <TextView
-                    style="@style/BadgeTextViewFiled"
-                    android:text="Are you employed?" />
-
-                <EditText
-                    android:id="@+id/etemployed"
-                    android:layout_width="match_parent"
-                    android:layout_height="22dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/edittext_states"
-                    android:gravity="top"
-                    android:inputType="text" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal" >
-
-                <TextView
-                    style="@style/BadgeTextViewFiled"
-                    android:text="Profession" />
-
-                <EditText
-                    android:id="@+id/etprofession"
-                    android:layout_width="match_parent"
-                    android:layout_height="22dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/edittext_states"
-                    android:gravity="top"
-                    android:inputType="text" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal" >
-
-                <TextView
-                    style="@style/BadgeTextViewFiled"
-                    android:text="Company" />
-
-                <EditText
-                    android:id="@+id/etcompany"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/edittext_states"
-                    android:ems="10"
-                    android:gravity="top"
-                    android:minLines="3"
-                    android:inputType="text" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal" >
-
-                <TextView
-                    style="@style/BadgeTextViewFiled"
-                    android:text="Official Address" />
-
-                <EditText
-                    android:id="@+id/etoaddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/edittext_states"
-                    android:ems="10"
-                    android:gravity="top"
-                    android:minLines="3"
-                    android:inputType="text" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal" >
-
-                <TextView
-                    style="@style/BadgeTextViewFiled"
-                    android:text="City" />
-
-                <EditText
-                    android:id="@+id/etocity"
-                    android:layout_width="match_parent"
-                    android:layout_height="24dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/edittext_states"
-                    android:drawablePadding="5dp"
-                    android:ems="10"
-                    android:gravity="top"
-                    android:padding="1dp"
-                    android:inputType="text" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    style="@style/BadgeTextViewFiled"
-                    android:text="State" />
-
-                <EditText
-                    android:id="@+id/etostate"
-                    android:layout_width="match_parent"
-                    android:layout_height="24dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/edittext_states"
-                    android:drawablePadding="5dp"
-                    android:ems="10"
-                    android:gravity="top"
-                    android:padding="1dp"
-                    android:inputType="text" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal"
-                android:layout_marginBottom="35dp">
-
-                <TextView
-                    style="@style/BadgeTextViewFiled"
-                    android:text="Pincode" />
-
-                <EditText
-                    android:id="@+id/etopincode"
-                    android:layout_width="match_parent"
-                    android:layout_height="24dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/edittext_states"
-                    android:drawablePadding="5dp"
-                    android:ems="10"
-                    android:gravity="top"
-                    android:padding="1dp"
-                    android:inputType="number|text" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btnprofessional"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_alignParentBottom="true"
-            android:background="@color/purple"
-            android:text="Save"
-            android:textColor="@color/white"
-            android:layout_marginLeft="5dp"
-            android:layout_below="@+id/healthForm"
-            android:layout_marginRight="5dp" />
     </RelativeLayout>
-
-</RelativeLayout>
-    </ScrollView>
+</ScrollView>

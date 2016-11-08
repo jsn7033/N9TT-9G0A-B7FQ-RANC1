@@ -2,28 +2,29 @@
     xmlns:widget="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_gray1" >
+    android:background="@color/light_gray1">
+
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbarlayout"></include>
 
     <RelativeLayout
         android:id="@+id/badgeHead"
-        android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
         android:background="@color/purple"
         android:orientation="horizontal"
-        android:padding="10dp" >
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/badgeProfile"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/circle_img_bgr"
+            android:clickable="true"
             android:padding="1dp"
-            android:clickable="true" />
+            android:src="@drawable/circle_img_bgr" />
 
         <TextView
             android:id="@+id/profileName"
@@ -34,7 +35,7 @@
             android:layout_marginTop="6dp"
             android:text="Ahsan"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/stateName"
@@ -46,6 +47,26 @@
             android:textColor="@color/white"
             android:textSize="12sp" />
 
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:padding="8dp"
+            android:background="@drawable/edit_photo_bg"
+            android:layout_alignBottom="@+id/stateName"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/editprofile"
+
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+
+                android:src="@drawable/edit" />
+        </RelativeLayout>
+
+
         <Button
             android:id="@+id/btnEdit"
             android:layout_width="wrap_content"
@@ -54,10 +75,10 @@
             android:layout_alignRight="@+id/stateName"
             android:layout_alignTop="@+id/stateName"
             android:layout_marginTop="-4dp"
+            android:background="@drawable/ic_edit"
             android:text="Update"
-            android:visibility="gone"
             android:textColor="@color/white"
-            android:background="@drawable/ic_edit" />
+            android:visibility="gone" />
     </RelativeLayout>
 
     <com.devsmart.android.ui.HorizontalListView
@@ -70,226 +91,230 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/badgeFooter"
+        android:layout_below="@+id/rlTabs"
         android:clickable="true"
-        android:layout_below="@+id/rlTabs"
-        android:focusableInTouchMode="true"
-        android:layout_above="@+id/badgeFooter">
-    <RelativeLayout
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/rlTabs"
-        android:layout_above="@+id/badgeFooter">
-
+        android:focusableInTouchMode="true">
 
         <RelativeLayout
-            android:id="@+id/badgeContainer"
+            android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="visible" >
+            android:layout_above="@+id/badgeFooter"
+            android:layout_below="@+id/rlTabs">
+
 
             <RelativeLayout
-                android:id="@+id/rlCoinBalance"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/white"
-                android:padding="10dp" >
-
-                <TextView
-                    android:id="@+id/ivCurrency"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:drawableLeft="@drawable/ic_dollar"
-                    android:drawablePadding="10dp"
-                    android:gravity="center"
-                    android:text="2000"
-                    android:textColor="@color/purple"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/ivBalance"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/ivCurrency"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/balance_coin_text"
-                    android:textColor="@color/purple"
-                    android:textSize="12sp" />
-            </RelativeLayout>
-            <View android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@+id/rlCoinBalance"
-                android:background="@color/light_gray2"/>
-
-            <RelativeLayout
-                android:id="@+id/MadelContainer"
+                android:id="@+id/badgeContainer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:visibility="visible">
 
-                android:layout_below="@+id/rlCoinBalance"
-                android:padding="10dp" >
-
-                <TextView
-                    android:id="@+id/tvBadges"
+                <RelativeLayout
+                    android:id="@+id/rlCoinBalance"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="@string/badges_text"
-                    android:textColor="@color/purple"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:padding="10dp">
 
-                <LinearLayout
+                    <TextView
+                        android:id="@+id/ivCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:drawableLeft="@drawable/ic_dollar"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="2000"
+                        android:textColor="@color/purple"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ivBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivCurrency"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/balance_coin_text"
+                        android:textColor="@color/purple"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvBadges"
-                    android:orientation="horizontal"
-                    android:layout_alignParentBottom="true">
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/rlCoinBalance"
+                    android:background="@color/light_gray2" />
 
-                    <RelativeLayout
-                        android:id="@+id/goldContainer"
+                <RelativeLayout
+                    android:id="@+id/MadelContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_below="@+id/rlCoinBalance"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvBadges"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/badges_border" >
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/badges_text"
+                        android:textColor="@color/purple"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/tvGold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:drawableBottom="@drawable/ic_gold"
-                            android:drawablePadding="10dp"
-                            android:text="@string/gold_text"
-                            android:textColor="@color/purple" />
-
-                        <TextView
-                            android:id="@+id/tvGoldCount"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_below="@+id/tvGold"
-                            android:layout_centerHorizontal="true"
-                            android:text="1"
-                            android:layout_marginTop="8dp" />
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/silverContainer"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/badges_border" >
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/tvBadges"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/tvSilver"
-                            android:layout_width="wrap_content"
+                        <RelativeLayout
+                            android:id="@+id/goldContainer"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:drawableBottom="@drawable/ic_silver"
-                            android:drawablePadding="10dp"
-                            android:text="@string/silver_text"
-                            android:textColor="@color/purple" />
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/badges_border">
 
-                        <TextView
-                            android:id="@+id/tvSilverCount"
-                            android:layout_width="wrap_content"
+                            <TextView
+                                android:id="@+id/tvGold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:drawableBottom="@drawable/ic_gold"
+                                android:drawablePadding="10dp"
+                                android:text="@string/gold_text"
+                                android:textColor="@color/purple" />
+
+                            <TextView
+                                android:id="@+id/tvGoldCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_below="@+id/tvGold"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8dp"
+                                android:text="1" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/silverContainer"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/tvSilver"
-                            android:layout_alignParentBottom="true"
-                            android:layout_centerHorizontal="true"
-                            android:text="1"
-                            android:layout_marginTop="8dp" />
-                    </RelativeLayout>
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/badges_border">
 
-                    <RelativeLayout
-                        android:id="@+id/bronzeContainer"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/badges_border" >
+                            <TextView
+                                android:id="@+id/tvSilver"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:drawableBottom="@drawable/ic_silver"
+                                android:drawablePadding="10dp"
+                                android:text="@string/silver_text"
+                                android:textColor="@color/purple" />
 
-                        <TextView
-                            android:id="@+id/tvBronze"
-                            android:layout_width="wrap_content"
+                            <TextView
+                                android:id="@+id/tvSilverCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_below="@+id/tvSilver"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8dp"
+                                android:text="1" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bronzeContainer"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:drawableBottom="@drawable/ic_bronze"
-                            android:drawablePadding="10dp"
-                            android:text="@string/bronze_text"
-                            android:textColor="@color/purple" />
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/badges_border">
 
-                        <TextView
-                            android:id="@+id/tvBronzeCount"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_below="@+id/tvBronze"
-                            android:layout_centerHorizontal="true"
-                            android:text="1"
-                            android:layout_marginTop="8dp" />
-                    </RelativeLayout>
-                </LinearLayout>
+                            <TextView
+                                android:id="@+id/tvBronze"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:drawableBottom="@drawable/ic_bronze"
+                                android:drawablePadding="10dp"
+                                android:text="@string/bronze_text"
+                                android:textColor="@color/purple" />
+
+                            <TextView
+                                android:id="@+id/tvBronzeCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_below="@+id/tvBronze"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="8dp"
+                                android:text="1" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+
             </RelativeLayout>
 
+            <include layout="@layout/activity_personal_fragment_phase2" />
 
+            <!--    Health Layout -->
+
+            <include layout="@layout/activity_health_fragment_phase2" />
+
+            <!-- Professional Layout -->
+
+            <include layout="@layout/activity_professional_fragment_phase2" />
         </RelativeLayout>
+    </ScrollView>
 
-             <include layout="@layout/activity_personal_fragment_phase2" />
+    <LinearLayout
+        android:id="@+id/badgeFooter"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
 
-          <!--    Health Layout -->
+        android:background="@color/purple"
+        android:orientation="horizontal">
 
-            <include layout="@layout/activity_health_fragment" />
+        <Button
+            android:id="@+id/btnViewOffernew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="@string/view_offer_text"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-         <!-- Professional Layout -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/black50" />
 
-          <include layout="@layout/activity_professional_fragment" />
-     </RelativeLayout>
-   </ScrollView>
-     <LinearLayout
-         android:id="@+id/badgeFooter"
-         android:layout_width="match_parent"
-         android:layout_height="40dp"
-         android:layout_alignParentBottom="true"
+        <Button
+            android:id="@+id/btnRedemenew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="@string/redeme_text"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
-         android:background="@color/purple"
-         android:orientation="horizontal" >
-
-         <Button
-             android:id="@+id/btnViewOffernew"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:layout_gravity="center"
-             android:layout_weight="1"
-             android:background="@null"
-             android:text="@string/view_offer_text"
-             android:textColor="@color/white"
-             android:textSize="14sp"
-             android:textStyle="bold" />
-
-         <View
-             android:layout_width="1dp"
-             android:layout_height="match_parent"
-             android:background="@color/black50" />
-
-         <Button
-             android:id="@+id/btnRedemenew"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:layout_gravity="center"
-             android:layout_weight="1"
-             android:background="@null"
-             android:text="@string/redeme_text"
-             android:textColor="@color/white"
-             android:textSize="14sp"
-             android:textStyle="bold" />
-     </LinearLayout>
-
- </RelativeLayout>
+</RelativeLayout>
