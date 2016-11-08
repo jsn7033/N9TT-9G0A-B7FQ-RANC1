@@ -89,6 +89,14 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
         View rowView = inflater.inflate(R.layout.broadcast_list_row, null, true);
 
 
+
+
+
+
+
+
+
+
         final TextView txtname = (TextView) rowView.findViewById(R.id.profileName);
         final TextView txtstate = (TextView) rowView.findViewById(R.id.profileState);
         TextView txtbronze = (TextView) rowView.findViewById(R.id.tvBronze);
