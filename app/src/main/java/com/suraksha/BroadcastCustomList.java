@@ -79,6 +79,13 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
         this.postimage = postimage;
         this.likeStatus = likeStatus;
         this.msgMobile = msgMobilea;
+
+
+
+
+
+
+
     }
 
 
