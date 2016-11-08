@@ -78,6 +78,7 @@ public class ShakeSetting extends BaseActivity implements View.OnClickListener, 
         counter = 0;
         mSessionManager.setFromSetting(false);
 
+
         try {
 //            unregisterReceiver(broadcastReceiver);
         } catch (Exception e) {

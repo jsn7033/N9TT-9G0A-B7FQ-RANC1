@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_gray1"
-    tools:context="${relativePackage}.${activityClass}" >
+ >
 
     <RelativeLayout
         android:id="@+id/searchContainer"
@@ -15,13 +15,13 @@
         <RelativeLayout
             android:id="@+id/askContainer"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
             android:background="@color/white" >
 
             <ImageView
                 android:id="@+id/ivCircleArrow"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
@@ -39,7 +39,7 @@
                 android:layout_toRightOf="@+id/ivCircleArrow"
                 android:background="@color/light_gray1"
                 android:hint="Ask anything..."
-                android:padding="6dp"
+                android:padding="10dp"
                 android:textColor="@color/purple"
                 android:textSize="12sp" />
 
@@ -59,7 +59,7 @@
                 android:layout_height="20dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:background="@drawable/ic_dots"
                 android:padding="0dp" />
         </RelativeLayout>
