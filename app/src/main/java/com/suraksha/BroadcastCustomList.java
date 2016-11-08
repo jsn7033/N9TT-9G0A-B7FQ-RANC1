@@ -122,6 +122,16 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
         final TextView usefulText = (TextView) rowView.findViewById(R.id.usefulText);
         final TextView uselessText = (TextView) rowView.findViewById(R.id.uselessText);
 
+
+
+
+
+
+
+
+
+
+
         txtname.setText(aluname.get(position).toString());
         txtstate.setText(alcity.get(position).toString());
         txtbronze.setText(albmedal.get(position).toString());
