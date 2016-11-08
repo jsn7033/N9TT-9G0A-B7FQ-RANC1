@@ -9,6 +9,7 @@ import org.json.JSONObject;
 
 import com.AppHelper.RoundedImageView;
 import com.SessionManager.SessionManager;
+import com.utilites.Constants;
 import com.webservice.Service1;
 
 import com.squareup.picasso.Picasso;
@@ -83,7 +84,6 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
     }
 
 
-
     @Override
     public View getView(final int position, View view, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
@@ -94,36 +94,80 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
         TextView txtsilver = (TextView) rowView.findViewById(R.id.tvSilver);
         TextView txtgold = (TextView) rowView.findViewById(R.id.tvGold);
         TextView txtcontent = (TextView) rowView.findViewById(R.id.tvImagePost);
-        final TextView txtuseful = (TextView) rowView.findViewById(R.id.usefulCount);
-        final TextView txtuseless = (TextView) rowView.findViewById(R.id.uselessCount);
+//        final TextView txtuseful = (TextView) rowView.findViewById(R.id.usefulCount);
+//        final TextView txtuseless = (TextView) rowView.findViewById(R.id.uselessCount);
         TextView txtdate = (TextView) rowView.findViewById(R.id.tvTime);
         ImageView imgprofile = (ImageView) rowView.findViewById(R.id.profileImg);
         final ImageView postimageview = (ImageView) rowView.findViewById(R.id.ivpostimage);
-        TextView mUseFulcountTxt = (TextView) rowView.findViewById(R.id.useful_count);
-        TextView mUserLesscountTxt = (TextView) rowView.findViewById(R.id.uselee_count);
-        View mUserFullView = rowView.findViewById(R.id.userfullsaperator);
-        View mUserLessView = rowView.findViewById(R.id.userlesssaperator);
-        LinearLayout mUseFullMainLayout = (LinearLayout) rowView.findViewById(R.id.useful_layout);
-        LinearLayout mUseLessMainLayout = (LinearLayout) rowView.findViewById(R.id.useless_layout);
-        ImageView mTick = (ImageView) rowView.findViewById(R.id.tick);
-        ImageView mCross = (ImageView) rowView.findViewById(R.id.cross);
+        final TextView mUseFulcountTxt = (TextView) rowView.findViewById(R.id.useful_count);
+        final TextView mUserLesscountTxt = (TextView) rowView.findViewById(R.id.uselee_count);
+        final View mUserFullView = rowView.findViewById(R.id.userfullsaperator);
+        final View mUserLessView = rowView.findViewById(R.id.userlesssaperator);
+        final LinearLayout mUseFullMainLayout = (LinearLayout) rowView.findViewById(R.id.useful_layout);
+        final LinearLayout mUseLessMainLayout = (LinearLayout) rowView.findViewById(R.id.useless_layout);
+        final ImageView mTick = (ImageView) rowView.findViewById(R.id.tick);
+        final ImageView mCross = (ImageView) rowView.findViewById(R.id.cross);
+        final TextView mUseFul_TXT = (TextView) rowView.findViewById(R.id.useful_txt);
+        final TextView mUseLess_Txt = (TextView) rowView.findViewById(R.id.useless_txt);
 
 
         final TextView documentText = (TextView) rowView.findViewById(R.id.tvdocument);
         ImageView docDownload = (ImageView) rowView.findViewById(R.id.ivPostImage1);
         ImageButton imageviecomment = (ImageButton) rowView.findViewById(R.id.imageviecomment);
 
-        final TextView usefulText = (TextView) rowView.findViewById(R.id.usefulText);
-        final TextView uselessText = (TextView) rowView.findViewById(R.id.uselessText);
+//        final TextView usefulText = (TextView) rowView.findViewById(R.id.usefulText);
+//        final TextView uselessText = (TextView) rowView.findViewById(R.id.uselessText);
 
 
+        likesus = likeStatus.get(position).toString();
+
+        if (likesus.equalsIgnoreCase(Constants.STATUS_USEFULL)) {
+            mUseFulcountTxt.setTextColor(context.getResources().getColor(R.color.white));
+            mUserFullView.setBackgroundColor(context.getResources().getColor(R.color.white));
+            mUseFullMainLayout.setBackgroundResource(R.drawable.usefull_pressed);
+            mTick.setColorFilter(context.getResources().getColor(R.color.white));
+            mUseFul_TXT.setTextColor(context.getResources().getColor(R.color.white));
 
 
+            mUserLesscountTxt.setTextColor(context.getResources().getColor(R.color.purple));
+            mUserLessView.setBackgroundColor(context.getResources().getColor(R.color.purple));
+            mUseLessMainLayout.setBackgroundResource(R.drawable.useless_unpress);
+            mCross.setColorFilter(context.getResources().getColor(R.color.purple));
+            mUseLess_Txt.setTextColor(context.getResources().getColor(R.color.purple));
+
+        } else if (likesus.equalsIgnoreCase(Constants.STATUS_USELESS)) {
+
+            mUseFulcountTxt.setTextColor(context.getResources().getColor(R.color.purple));
+            mUserFullView.setBackgroundColor(context.getResources().getColor(R.color.purple));
+            mUseFullMainLayout.setBackgroundResource(R.drawable.useful_unpressed);
+            mUseFullMainLayout.setAlpha(0.5f);
+            mTick.setColorFilter(context.getResources().getColor(R.color.purple));
+            mUseFul_TXT.setTextColor(context.getResources().getColor(R.color.purple));
 
 
+            mUserLesscountTxt.setTextColor(context.getResources().getColor(R.color.white));
+            mUserLessView.setBackgroundColor(context.getResources().getColor(R.color.white));
+            mUseLessMainLayout.setBackgroundResource(R.drawable.useless_pressed);
+            mCross.setColorFilter(context.getResources().getColor(R.color.white));
+            mUseLess_Txt.setTextColor(context.getResources().getColor(R.color.white));
 
 
+        } else {
+            mUseFulcountTxt.setTextColor(context.getResources().getColor(R.color.purple));
+            mUserFullView.setBackgroundColor(context.getResources().getColor(R.color.purple));
+            mUseFullMainLayout.setBackgroundResource(R.drawable.useful_unpressed);
+            mTick.setColorFilter(context.getResources().getColor(R.color.purple));
+            mUseFul_TXT.setTextColor(context.getResources().getColor(R.color.purple));
 
+
+            mUserLesscountTxt.setTextColor(context.getResources().getColor(R.color.purple));
+            mUserLessView.setBackgroundColor(context.getResources().getColor(R.color.purple));
+            mUseLessMainLayout.setBackgroundResource(R.drawable.useless_unpress);
+            mCross.setColorFilter(context.getResources().getColor(R.color.purple));
+            mUseLess_Txt.setTextColor(context.getResources().getColor(R.color.purple));
+
+
+        }
 
 
         txtname.setText(aluname.get(position).toString());
@@ -132,14 +176,10 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
         txtsilver.setText(alsmedal.get(position).toString());
         txtgold.setText(algmedal.get(position).toString());
         txtcontent.setText(albcontent.get(position).toString());
-        txtuseful.setText(aluseful.get(position).toString());
-        txtuseless.setText(aluseless.get(position).toString());
+        mUseFulcountTxt.setText(aluseful.get(position).toString());
+        mUserLesscountTxt.setText(aluseless.get(position).toString());
         txtdate.setText(aldate.get(position).toString());
         String broadcast_id = albid.get(position).toString();
-        likesus = likeStatus.get(position).toString();
-
-
-
 
 
         String fileName = postimage.get(position).toString();
@@ -184,8 +224,8 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
 
         final String broad_id = broadcast_id;
         LinearLayout ll = (LinearLayout) rowView.findViewById(R.id.useful_capsule);
-        ll.setClickable(true);
-        ll.setOnClickListener(new OnClickListener() {
+        mUseFullMainLayout.setClickable(true);
+        mUseFullMainLayout.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -198,8 +238,22 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
                     sendComment(broad_id, "1");
                     likeStatus.set(idd, "1");
 
-                    txtuseful.setTextColor(context.getResources().getColor(R.color.blue));
-                    ((TextView) (v.findViewById(R.id.usefulCount))).setText(Integer.toString(Integer.parseInt((((TextView) (v.findViewById(R.id.usefulCount))).getText().toString())) + 1));
+//                    txtuseful.setTextColor(context.getResources().getColor(R.color.blue));
+                    ((TextView) (v.findViewById(R.id.useful_count))).setText(Integer.toString(Integer.parseInt((((TextView) (v.findViewById(R.id.useful_count))).getText().toString())) + 1));
+
+                    mUseFulcountTxt.setTextColor(context.getResources().getColor(R.color.white));
+                    mUserFullView.setBackgroundColor(context.getResources().getColor(R.color.white));
+                    mUseFullMainLayout.setBackgroundResource(R.drawable.usefull_pressed);
+                    mTick.setColorFilter(context.getResources().getColor(R.color.white));
+                    mUseFul_TXT.setTextColor(context.getResources().getColor(R.color.white));
+
+
+                    mUserLesscountTxt.setTextColor(context.getResources().getColor(R.color.purple));
+                    mUserLessView.setBackgroundColor(context.getResources().getColor(R.color.purple));
+                    mUseLessMainLayout.setBackgroundResource(R.drawable.useless_unpress);
+                    mCross.setColorFilter(context.getResources().getColor(R.color.purple));
+                    mUseLess_Txt.setTextColor(context.getResources().getColor(R.color.purple));
+
                 } else {
                     Toast.makeText(context, "All ready click", Toast.LENGTH_LONG).show();
                 }
@@ -208,8 +262,8 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
         });
 
         final LinearLayout ul = (LinearLayout) rowView.findViewById(R.id.useless_capsule);
-        ul.setClickable(true);
-        ul.setOnClickListener(new OnClickListener() {
+        mUseLessMainLayout.setClickable(true);
+        mUseLessMainLayout.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 int idd = position;
@@ -220,9 +274,21 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
                     sendComment(broad_id, "2");
                     likeStatus.set(idd, "2");
 
-                    txtuseless.setTextColor(context.getResources().getColor(R.color.blue));
-                    ((TextView) (v.findViewById(R.id.uselessCount))).setText(Integer.toString(Integer.parseInt((((TextView) (v.findViewById(R.id.uselessCount))).getText().toString())) + 1));
+//                    txtuseless.setTextColor(context.getResources().getColor(R.color.blue));
+                    ((TextView) (v.findViewById(R.id.uselee_count))).setText(Integer.toString(Integer.parseInt((((TextView) (v.findViewById(R.id.uselee_count))).getText().toString())) + 1));
+                    mUseFulcountTxt.setTextColor(context.getResources().getColor(R.color.purple));
+                    mUserFullView.setBackgroundColor(context.getResources().getColor(R.color.purple));
+                    mUseFullMainLayout.setAlpha(0.5f);
+                    mUseFullMainLayout.setBackgroundResource(R.drawable.useful_unpressed);
+                    mTick.setColorFilter(context.getResources().getColor(R.color.purple));
+                    mUseFul_TXT.setTextColor(context.getResources().getColor(R.color.purple));
 
+
+                    mUserLesscountTxt.setTextColor(context.getResources().getColor(R.color.white));
+                    mUserLessView.setBackgroundColor(context.getResources().getColor(R.color.white));
+                    mUseLessMainLayout.setBackgroundResource(R.drawable.useless_pressed);
+                    mCross.setColorFilter(context.getResources().getColor(R.color.white));
+                    mUseLess_Txt.setTextColor(context.getResources().getColor(R.color.white));
 
                 } else {
                     Toast.makeText(context, "All ready click", Toast.LENGTH_LONG).show();
@@ -231,16 +297,16 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
         });
 
 
-        if (likesus.equals("1")) {
-
-
-            txtuseful.setTextColor(context.getResources().getColor(R.color.blue));
-
-        } else if (likesus.equals("2")) {
-
-
-            txtuseless.setTextColor(context.getResources().getColor(R.color.blue));
-        }
+//        if (likesus.equals("1")) {
+//
+//
+//            txtuseful.setTextColor(context.getResources().getColor(R.color.blue));
+//
+//        } else if (likesus.equals("2")) {
+//
+//
+//            txtuseless.setTextColor(context.getResources().getColor(R.color.blue));
+//        }
         docDownload.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -424,8 +490,9 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
 
     public void viewdialodcomment() {
         dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.setContentView(R.layout.view_comment_list);
-        dialog.setTitle("All Comment");
         lv = (ListView) dialog.findViewById(R.id.lvcomment);
 
         final ImageView imgView = (ImageView) dialog.findViewById(R.id.imageViewpostmsg);

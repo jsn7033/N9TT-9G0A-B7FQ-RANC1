@@ -16,4 +16,6 @@
     <color name="yellow">#ffff00</color>
     <color name="primarytext">#0c92ad</color>
     <color name="selected_color">#f4eefa</color>
+
+    <color name="useless_color">#D8BFD8</color>
 </resources>

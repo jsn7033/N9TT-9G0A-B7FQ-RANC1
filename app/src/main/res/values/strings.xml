@@ -211,6 +211,8 @@
     <string name="yesp">YES</string>
     <string name="cencel">CANCEL</string>
     <string name="popular_post">POPULAR POST</string>
+    <string name="useful">USEFUL</string>
+    <string name="useless">USELESS</string>
 
 
 </resources>
