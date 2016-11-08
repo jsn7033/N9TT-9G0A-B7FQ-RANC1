@@ -123,8 +123,8 @@ public class Sensorcallingevent extends Activity {
 								public void onFinish() {
 									calling(num);
 									session.Savepreferences("shakefeature", "true");
-//									startService(new Intent(Sensorcallingevent.this, Shaker_Service_updated.class));
-									startService(new Intent(Sensorcallingevent.this, ShakeDetector.class));
+									startService(new Intent(Sensorcallingevent.this, Shaker_Service_updated.class));
+//									startService(new Intent(Sensorcallingevent.this, ShakeDetector.class));
 								}
 
 								@Override
