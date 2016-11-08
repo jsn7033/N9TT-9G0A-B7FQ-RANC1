@@ -81,19 +81,14 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
         this.msgMobile = msgMobilea;
     }
 
-    class ViewHolder {
 
-        public ViewHolder() {
-
-
-        }
-
-    }
 
     @Override
     public View getView(final int position, View view, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
         View rowView = inflater.inflate(R.layout.broadcast_list_row, null, true);
+
+
         final TextView txtname = (TextView) rowView.findViewById(R.id.profileName);
         final TextView txtstate = (TextView) rowView.findViewById(R.id.profileState);
         TextView txtbronze = (TextView) rowView.findViewById(R.id.tvBronze);

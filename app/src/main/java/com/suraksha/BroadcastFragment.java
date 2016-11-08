@@ -58,6 +58,14 @@ public class BroadcastFragment extends Fragment {
     String postcat = "";
     CheckInternet checkInternet;
 
+
+
+
+
+
+
+
+
     private String MSG_ID = "id", UserName = "UserName", residence_city = "residence_city", bronze_badges_count = "bronze_badges_count",
             silver_badges_count = "silver_badges_count", gold_badges_count = "gold_badges_count",
             broadcast_content = "broadcast_content", broadcast_image = "broadcast_image", useful_count = "useful_count",
@@ -77,6 +85,24 @@ public class BroadcastFragment extends Fragment {
         ws = new Service1();
         ree = (RelativeLayout) view.findViewById(R.id.footer);
         checkInternet = new CheckInternet(getActivity());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         ree.setOnTouchListener(new View.OnTouchListener() {
