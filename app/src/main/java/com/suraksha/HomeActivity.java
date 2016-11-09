@@ -16,10 +16,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.core.BaseFragment;
 import com.devsmart.android.ui.HorizontalListView;
 
 //this activity is home activity wich is first call BroadcastFragment by default
-public class HomeActivity extends Fragment {
+public class HomeActivity extends BaseFragment {
 
     //	HorizontalListView hlList;
 //    GridAdapter adapter;
@@ -199,7 +200,7 @@ public class HomeActivity extends Fragment {
 //	}
 
     public void loadFragment(Fragment fragment) {
-        FragmentManager fm = getFragmentManager();
+        FragmentManager fm = getActivity().getFragmentManager();
         fm.popBackStack();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.add(R.id.mainContainer, fragment);

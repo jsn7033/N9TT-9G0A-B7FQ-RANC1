@@ -9,6 +9,7 @@ import org.json.JSONObject;
 
 import com.CheckInternet.CheckInternet;
 import com.SessionManager.SessionManager;
+import com.core.BaseFragment;
 import com.webservice.Service1;
 
 import android.app.AlertDialog;
@@ -39,7 +40,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-public class BroadcastFragment extends Fragment {
+public class BroadcastFragment extends BaseFragment{
 
 
     ListView lvpost;
@@ -57,13 +58,6 @@ public class BroadcastFragment extends Fragment {
     SessionManager session;
     String postcat = "";
     CheckInternet checkInternet;
-
-
-
-
-
-
-
 
 
     private String MSG_ID = "id", UserName = "UserName", residence_city = "residence_city", bronze_badges_count = "bronze_badges_count",
@@ -85,24 +79,6 @@ public class BroadcastFragment extends Fragment {
         ws = new Service1();
         ree = (RelativeLayout) view.findViewById(R.id.footer);
         checkInternet = new CheckInternet(getActivity());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         ree.setOnTouchListener(new View.OnTouchListener() {

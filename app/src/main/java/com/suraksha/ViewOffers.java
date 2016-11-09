@@ -7,9 +7,12 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -19,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.SessionManager.SessionManager;
+import com.core.BaseFragment;
 import com.webservice.Service1;
 
 import org.json.JSONArray;
@@ -31,7 +35,7 @@ import java.util.Iterator;
 /**
  * Created by RTH0102001 on 02-03-2016.
  */
-public class ViewOffers extends BaseActivity {
+public class ViewOffers extends BaseFragment {
 
     ListView lv;
     Service1 ws;
@@ -45,30 +49,30 @@ public class ViewOffers extends BaseActivity {
 
     private String BasesCoinBalance = "coin_balance";
 
-
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.view_offer_list);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.view_offer_list, container, false);
+
         ws = new Service1();
-        session = new SessionManager(ViewOffers.this);
-        lv = (ListView) findViewById(R.id.list_viewOffer);
+        session = new SessionManager(getActivity());
+        lv = (ListView) view.findViewById(R.id.list_viewOffer);
 
 
-        Toolbar mToolbar = loadToolbar("View Offers");
+      /*  Toolbar mToolbar = loadToolbar("View Offers");
         setSupportActionBar(mToolbar);
         mToolbar.setLogo(R.drawable.howzaticon_);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                getActivity().finish();
             }
         });
-
+*/
 
 //  is.putExtra("offer", "profile");
         try {
-            Intent in = getIntent();
+            Intent in = getActivity().getIntent();
             offer = in.getStringExtra("offer");
             if (offer.equals("profile")) {
                 coinbal = in.getStringExtra("coinbalance");
@@ -97,25 +101,28 @@ public class ViewOffers extends BaseActivity {
                     perchasedialoag(offerid.getText().toString(), offername.getText().toString(), String.valueOf(restcoin),txtdiscription.getText().toString());
                 } else {
 
-                    Toast.makeText(getApplicationContext(), "You don't have enough balance to purchase", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "You don't have enough balance to purchase", Toast.LENGTH_LONG).show();
                 }
             }
         });
+        
+        
+        return  view;
+        
     }
+    
+
+    
 
 
-    @Override
-    public void onBackPressed() {
-
-        finish();
-    }
+   
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             // Respond to the action bar's Up/Home button
             case android.R.id.home:
-                finish();
+                getActivity().finish();
 
 
                 return true;
@@ -125,7 +132,7 @@ public class ViewOffers extends BaseActivity {
 
 
     public void perchasedialoag(final String offerId, final String offerName, final String price,String discription) {
-        final Dialog dialog = new Dialog(ViewOffers.this);
+        final Dialog dialog = new Dialog(getActivity());
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.setContentView(R.layout.dialog_are_you_purchase_offer);
@@ -238,7 +245,7 @@ public class ViewOffers extends BaseActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress = new ProgressDialog(ViewOffers.this);
+            progress = new ProgressDialog(getActivity());
             progress.setMessage("Loading...");
             progress.setCancelable(false);
             progress.show();
@@ -272,7 +279,7 @@ public class ViewOffers extends BaseActivity {
                 ds.execute();
             } else {
                 progress.dismiss();
-                Toast.makeText(getApplicationContext(), "Offer Not purchase", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "Offer Not purchase", Toast.LENGTH_LONG).show();
 
             }
             super.onPostExecute(result);
@@ -313,9 +320,9 @@ public class ViewOffers extends BaseActivity {
         protected void onPostExecute(Void result) {
             progress.dismiss();//otp:I3XW13,MobileNo:
             if (value.equals("true")) {
-                Toast.makeText(ViewOffers.this, "Offer Purchase Successfully", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "Offer Purchase Successfully", Toast.LENGTH_LONG).show();
 
-                finish();
+                getActivity().finish();
             }
             super.onPostExecute(result);
         }
@@ -333,7 +340,7 @@ public class ViewOffers extends BaseActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress = new ProgressDialog(ViewOffers.this);
+            progress = new ProgressDialog(getActivity());
             progress.setMessage("Loading...");
             progress.setCancelable(false);
             progress.show();
@@ -398,13 +405,13 @@ public class ViewOffers extends BaseActivity {
                     }
 
 
-                    SimpleAdapter adapter = new SimpleAdapter(ViewOffers.this, List1, R.layout.view_offer_list_item, new String[]
+                    SimpleAdapter adapter = new SimpleAdapter(getActivity(), List1, R.layout.view_offer_list_item, new String[]
                             {OFFER_NAME, OFFER_DISCRIP, OFFER_PRICE, OFFER_ID}, new int[]{R.id.txtoffer_name, R.id.txtdiscription,
                             R.id.txtcastcradit, R.id.txtofferid});
                     lv.setAdapter(adapter);
                 } else {
 
-                    Toast.makeText(ViewOffers.this, "No Offer", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "No Offer", Toast.LENGTH_LONG).show();
                 }
 
 

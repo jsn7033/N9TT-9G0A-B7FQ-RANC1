@@ -3,7 +3,6 @@ package com.suraksha;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
@@ -12,6 +11,8 @@ import android.content.res.Configuration;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -37,6 +38,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.core.BaseFragment;
 import com.suraksha.R.string;
 
 // this is the navigation activity
@@ -88,7 +90,7 @@ public class Home extends BaseActivity {
         mToolbar = loadToolbar("HowZat");
         mToolbar.setLogo(R.drawable.howzaticon_);
         lvItems = (ListView) findViewById(R.id.lvMenu);
-        adapter=new MenuItemAdapter(Home.this, 0);
+        adapter = new MenuItemAdapter(Home.this, 0);
         lvItems.setAdapter(adapter);
 
 
@@ -146,7 +148,7 @@ public class Home extends BaseActivity {
 
     public void SelectItem(int possition) {
 
-        Fragment fr = null;
+        android.support.v4.app.Fragment fr = null;
         switch (possition) {
 
             case 0:
@@ -159,9 +161,11 @@ public class Home extends BaseActivity {
 
                 break;
             case 2:
-                Intent i = new Intent(Home.this, ViewOffers.class);
+                fr = new ViewOffers();
+
+             /*   Intent i = new Intent(Home.this, ViewOffers.class);
                 i.putExtra("offer", "");
-                startActivity(i);
+                startActivity(i);*/
                 break;
             case 3:
                 Intent ia = new Intent(Home.this, Ad_form.class);
@@ -191,8 +195,8 @@ public class Home extends BaseActivity {
                 break;
         }
         if (fr != null) {
-            FragmentManager fm = getFragmentManager();
-            FragmentTransaction fragmentTransaction = fm.beginTransaction();
+            android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = fm.beginTransaction();
             fragmentTransaction.replace(R.id.container, fr);
             fragmentTransaction.commit();
         }
@@ -377,9 +381,9 @@ public class Home extends BaseActivity {
         args.putString("postcat", pcat);
 
         fragment.setArguments(args);
-        FragmentManager fm = getFragmentManager();
+        android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
         fm.popBackStack();
-        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        android.support.v4.app.FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.add(R.id.mainContainer, fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();

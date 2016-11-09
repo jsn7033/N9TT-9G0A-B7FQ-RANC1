@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
 
     tools:context="com.suraksha.ViewOffers">
-    <include
+   <!-- <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbarlayout"></include>
+        layout="@layout/toolbarlayout"></include>-->
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
