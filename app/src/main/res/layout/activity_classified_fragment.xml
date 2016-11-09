@@ -19,7 +19,7 @@
             <EditText
                 android:id="@+id/etSearch"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="33dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:layout_marginBottom="5dp"
@@ -31,19 +31,21 @@
                 android:padding="6dp"
                 android:textColor="@color/purple"
                 android:textSize="12sp"
-                android:ems="10" />
+                android:ems="10"
+                />
 
             <Button
                 android:id="@+id/btnSend"
-                android:layout_width="30dp"
+                android:layout_width="33dp"
                 android:layout_height="30dp"
                 android:layout_alignBottom="@+id/etSearch"
                 android:layout_alignTop="@+id/etSearch"
                 android:layout_centerVertical="true"
-                android:layout_toLeftOf="@+id/btnDots"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
                 android:background="@drawable/ic_searchbtn" />
 
-            <Button
+           <!-- <Button
                 android:id="@+id/btnDots"
                 android:layout_width="10dp"
                 android:layout_height="20dp"
@@ -51,7 +53,7 @@
                 android:layout_centerVertical="true"
                 android:layout_margin="5dp"
                 android:background="@drawable/ic_dots"
-                android:padding="0dp" />
+                android:padding="0dp" />-->
         </RelativeLayout>
 
         <ListView

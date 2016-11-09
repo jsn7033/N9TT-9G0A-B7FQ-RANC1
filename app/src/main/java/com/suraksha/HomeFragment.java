@@ -3,6 +3,8 @@ package com.suraksha;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 
 import android.support.annotation.Nullable;
@@ -53,7 +55,7 @@ public class HomeFragment extends Fragment {
         mAppTitleCallback.title(getString(R.string.title_activity_home));
     }
 
-    int[] tabDrawables = {};
+    int[] tabDrawables = {R.drawable.broadcast, R.drawable.search, R.drawable.map};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -67,9 +69,12 @@ public class HomeFragment extends Fragment {
 //		hlList.setOnItemClickListener(item_Click);
 
 
+
         tabs.addTab(tabs.newTab().setText("BROADCAST"), true);
         tabs.addTab(tabs.newTab().setText("SEARCH"));
         tabs.addTab(tabs.newTab().setText("CLASSIFIED"));
+
+        setupTabIcons();
 
 //		selectFrag(0);
 
@@ -111,6 +116,10 @@ public class HomeFragment extends Fragment {
         tabs.getTabAt(0).setIcon(tabDrawables[0]);
         tabs.getTabAt(1).setIcon(tabDrawables[1]);
         tabs.getTabAt(2).setIcon(tabDrawables[2]);
+
+        tabs.getTabAt(0).getIcon().setColorFilter(Color.parseColor("#8c8c8c"), PorterDuff.Mode.SRC_IN);
+        tabs.getTabAt(0).getIcon().setColorFilter(Color.parseColor("#8c8c8c"), PorterDuff.Mode.SRC_IN);
+        tabs.getTabAt(0).getIcon().setColorFilter(Color.parseColor("#8c8c8c"), PorterDuff.Mode.SRC_IN);
     }
 
 //    @Override

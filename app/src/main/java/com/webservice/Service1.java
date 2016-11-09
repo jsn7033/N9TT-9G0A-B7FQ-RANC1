@@ -1,6 +1,8 @@
 /* JSON API for android appliation */
 package com.webservice;
 
+import android.util.Log;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -54,6 +56,7 @@ public class Service1 {
         w.flush();
         InputStream istream = conn.getInputStream();
         String result = convertStreamToUTF8String(istream);
+        Log.i("Webservice", "load: Respose: "+result);
         return result;
     }
 
