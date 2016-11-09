@@ -5,7 +5,7 @@
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbarlayout"></include>
+        layout="@layout/toolbarlayout"/>
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:ads="http://schemas.android.com/apk/res-auto"

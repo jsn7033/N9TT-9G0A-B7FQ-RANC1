@@ -3,15 +3,19 @@ package com.suraksha;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import android.app.Fragment;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Button;
 
 public class Help extends BaseActivity {
@@ -75,3 +79,34 @@ public class Help extends BaseActivity {
     }
 
 }
+
+
+//public class Help extends Fragment {
+//
+//    View view;
+//
+//    @Nullable
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+//
+//        view = inflater.inflate(R.layout.activity_help, container, false);
+//
+//                Button btn = (Button) view.findViewById(R.id.btnhelp);
+//        btn.setOnClickListener(new OnClickListener() {
+//
+//            @Override
+//            public void onClick(View arg0) {
+//                Intent intent = new Intent();
+//                intent.setAction(Intent.ACTION_VIEW);
+//                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+//                intent.setData(Uri.parse("http://www.howzatsos.com/usermanual"));
+//                startActivity(intent);
+//
+//            }
+//        });
+//
+//
+//        return view;
+//    }
+//
+//}

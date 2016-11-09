@@ -2,6 +2,7 @@ package com.suraksha;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,10 +12,13 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -123,3 +127,86 @@ public class Share extends BaseActivity {
         Toast.makeText(Share.this, str, Toast.LENGTH_LONG).show();
     }
 }
+
+
+//public class Share extends Fragment{
+//
+//    View view;
+//
+//        Button shareButton;
+//    LocationManager locationManager;
+//    boolean isGPSEnabled = false;
+//    String lat = "", lon = "";
+//    CheckInternet checkInternet;
+//    static String msg;
+//    GPSTracker gps;
+//
+//
+//
+//    @Nullable
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+//
+//        view = inflater.inflate(R.layout.share, container, false);
+//
+//                checkInternet = new CheckInternet(getActivity());
+//        shareButton = (Button) view.findViewById(R.id.shareButton);
+//        gps = new GPSTracker(getActivity());
+//        shareButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                sharedialog();
+//            }
+//        });
+//
+//
+//        return view;
+//    }
+//
+//        private void sharedialog() {
+//        final CharSequence[] items = {"Share my location", "Share this app"};
+//
+//        AlertDialog.Builder builder = new AlertDialog.Builder(Share.this);
+//        builder.setTitle("Choose to share");
+//        builder.setItems(items, new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int item) {
+//                if (items[item].equals("Share my location")) {
+//
+//                    locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+//                    // getting GPS status
+//                    isGPSEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+//
+//                    if (!isGPSEnabled) {
+//                        show("Please enable GPS");
+//                    } else if (!checkInternet.isNetworkAvailable()) {
+//                        show("Please enable internet connection");
+//                    } else {
+//                        msg = "My location is: http://maps.google.com/?q=" + gps.getLongitude() + "," + gps.getLongitude() + " \n Sent by Howzat SOS App \n click to download http://www.howzatsos.com/download ";
+//                        shareIt(msg);
+//
+//                    }
+//                } else {
+//
+//                    String playstorelink = "HowZat sos App click link to download http://www.howzatsos.com/download";
+//                    shareIt(playstorelink);
+//                }
+//            }
+//        });
+//        builder.show();
+//    }
+//
+//        public void show(String str) {
+//        Toast.makeText(getActivity(), str, Toast.LENGTH_LONG).show();
+//    }
+//
+//        private void shareIt(String link) {
+//        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+//        sharingIntent.setType("text/plain");
+//        String shareBody = link;
+//        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "HowZat SOS App");
+//        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+//        startActivity(Intent.createChooser(sharingIntent, "Share via"));
+//    }
+//
+//}
