@@ -22,13 +22,16 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.StrictMode;
 import android.provider.MediaStore;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
@@ -40,13 +43,14 @@ import android.widget.Toast;
 
 import com.AppHelper.ResizeImage;
 import com.SessionManager.SessionManager;
+import com.core.BaseFragment;
 import com.webservice.Service1;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Ad_form extends BaseActivity {
+public class Ad_form extends BaseFragment {
 
     Spinner adtype, adcategory, adproducttype, adusedproduct, adstate, adcity, adscope;
     EditText adcategoryname, adtitle, addescription, adkeyword, adaddress, adcontactno, ademailid, adwebsite;
@@ -68,63 +72,48 @@ public class Ad_form extends BaseActivity {
     int REQUEST_CAMERA = 0, SELECT_FILE = 1;
     private Uri fileUri;
 
+    @Nullable
     @Override
-    public void onBackPressed() {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.activity_ad_form_phase2, container, false);
 
-        finish();
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ad_form_phase2);
-
-        Toolbar mToolbar = loadToolbar("Post new Ad");
-        setSupportActionBar(mToolbar);
-        mToolbar.setLogo(R.drawable.howzaticon_);
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
         ws = new Service1();
-        session = new SessionManager(Ad_form.this);
+        session = new SessionManager(getActivity());
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
 
-        adtype = (Spinner) findViewById(R.id.spinneradtype);
-        adcategory = (Spinner) findViewById(R.id.spinneradcategory);
-        adcategoryname = (EditText) findViewById(R.id.txtcategory);
-        adproducttype = (Spinner) findViewById(R.id.spinnerproduct);
-        adusedproduct = (Spinner) findViewById(R.id.spinnerusedproduct);
-        adtitle = (EditText) findViewById(R.id.txttitle);
-        addescription = (EditText) findViewById(R.id.txtdescription);
-        adaddress = (EditText) findViewById(R.id.txtaddress);
-        adstate = (Spinner) findViewById(R.id.spinnerstate);
-        adcity = (Spinner) findViewById(R.id.spinnercity);
-        adcontactno = (EditText) findViewById(R.id.txtcontactno);
-        ademailid = (EditText) findViewById(R.id.txtemailid);
-        adwebsite = (EditText) findViewById(R.id.txtwebsite);
-        adkeyword = (EditText) findViewById(R.id.txtkeyword);
-        adscope = (Spinner) findViewById(R.id.spinnerscope);
-        btnsubmitad = (Button) findViewById(R.id.btnsubmitad);
-        btnattachad = (ImageButton) findViewById(R.id.btnattachad);
+        adtype = (Spinner) view.findViewById(R.id.spinneradtype);
+        adcategory = (Spinner) view.findViewById(R.id.spinneradcategory);
+        adcategoryname = (EditText) view.findViewById(R.id.txtcategory);
+        adproducttype = (Spinner) view.findViewById(R.id.spinnerproduct);
+        adusedproduct = (Spinner) view.findViewById(R.id.spinnerusedproduct);
+        adtitle = (EditText) view.findViewById(R.id.txttitle);
+        addescription = (EditText) view.findViewById(R.id.txtdescription);
+        adaddress = (EditText) view.findViewById(R.id.txtaddress);
+        adstate = (Spinner) view.findViewById(R.id.spinnerstate);
+        adcity = (Spinner)view. findViewById(R.id.spinnercity);
+        adcontactno = (EditText)view. findViewById(R.id.txtcontactno);
+        ademailid = (EditText)view. findViewById(R.id.txtemailid);
+        adwebsite = (EditText)view. findViewById(R.id.txtwebsite);
+        adkeyword = (EditText)view. findViewById(R.id.txtkeyword);
+        adscope = (Spinner) view.findViewById(R.id.spinnerscope);
+        btnsubmitad = (Button)view. findViewById(R.id.btnsubmitad);
+        btnattachad = (ImageButton)view. findViewById(R.id.btnattachad);
         listcity = new ArrayList<String>();
-        ArrayAdapter<CharSequence> adtype_adapter = ArrayAdapter.createFromResource(this, R.array.ad_type, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adtype_adapter = ArrayAdapter.createFromResource(getActivity(), R.array.ad_type, android.R.layout.simple_spinner_item);
         adtype_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         adtype.setAdapter(adtype_adapter);
-        ArrayAdapter<CharSequence> adcategory_adapter = ArrayAdapter.createFromResource(this, R.array.ad_category, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adcategory_adapter = ArrayAdapter.createFromResource(getActivity(), R.array.ad_category, android.R.layout.simple_spinner_item);
         adcategory_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         adcategory.setAdapter(adcategory_adapter);
-        ArrayAdapter<CharSequence> adproduct_adapter = ArrayAdapter.createFromResource(this, R.array.product_type, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adproduct_adapter = ArrayAdapter.createFromResource(getActivity(), R.array.product_type, android.R.layout.simple_spinner_item);
         adproduct_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         adproducttype.setAdapter(adproduct_adapter);
-        ArrayAdapter<CharSequence> adscope_adapter = ArrayAdapter.createFromResource(this, R.array.ad_scope, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adscope_adapter = ArrayAdapter.createFromResource(getActivity(), R.array.ad_scope, android.R.layout.simple_spinner_item);
         adscope_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         adscope.setAdapter(adscope_adapter);
-        ArrayAdapter<CharSequence> adstate_adapter = ArrayAdapter.createFromResource(this, R.array.ad_state, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adstate_adapter = ArrayAdapter.createFromResource(getActivity(), R.array.ad_state, android.R.layout.simple_spinner_item);
         adstate_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         adstate.setAdapter(adstate_adapter);
 
@@ -136,11 +125,11 @@ public class Ad_form extends BaseActivity {
                 if (arg2 == 1) {
                     adusedproduct.setVisibility(View.VISIBLE);
                     String[] select = {"Choose", "New", "Used"};
-                    adusedproduct_adapter = new ArrayAdapter<String>(Ad_form.this, android.R.layout.simple_spinner_item, select);
+                    adusedproduct_adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, select);
                 } else {
                     adusedproduct.setVisibility(View.GONE);
                     String[] select = {"Choose"};
-                    adusedproduct_adapter = new ArrayAdapter<String>(Ad_form.this, android.R.layout.simple_spinner_item, select);
+                    adusedproduct_adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, select);
                 }
 
                 adusedproduct_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -160,7 +149,7 @@ public class Ad_form extends BaseActivity {
                                        int arg2, long arg3) {
                 if (arg2 == 0) {
                     String[] select = {"Select City"};
-                    adcity_adapter = new ArrayAdapter<String>(Ad_form.this, android.R.layout.simple_spinner_item, select);
+                    adcity_adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, select);
                     adcity_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     adcity.setAdapter(adcity_adapter);
                 } else {
@@ -191,7 +180,26 @@ public class Ad_form extends BaseActivity {
 
             }
         });
+        
+        return view;
     }
+
+   /* @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_ad_form_phase2);
+
+        Toolbar mToolbar = loadToolbar("Post new Ad");
+        setSupportActionBar(mToolbar);
+        mToolbar.setLogo(R.drawable.howzaticon_);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+       
+    }*/
 
 
     private class getCityList extends AsyncTask<Void, Void, Void> {
@@ -210,7 +218,7 @@ public class Ad_form extends BaseActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress = new ProgressDialog(Ad_form.this);
+            progress = new ProgressDialog(getActivity());
             progress.setMessage("Loading...");
             progress.setCancelable(false);
             progress.show();
@@ -251,7 +259,7 @@ public class Ad_form extends BaseActivity {
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    adcity_adapter = new ArrayAdapter<String>(Ad_form.this, android.R.layout.simple_spinner_item, listcity);
+                    adcity_adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, listcity);
 
                     adcity_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     adcity.setAdapter(adcity_adapter);
@@ -264,9 +272,10 @@ public class Ad_form extends BaseActivity {
     }
 
 
-    @Override
+
+ /*   @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.ad_form, menu);
+       getActivity(). getMenuInflater().inflate(R.menu.ad_form, menu);
         return true;
     }
 
@@ -281,7 +290,7 @@ public class Ad_form extends BaseActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
+*/
 
     public void insertaddetails() {
         try {
@@ -355,7 +364,7 @@ public class Ad_form extends BaseActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress = new ProgressDialog(Ad_form.this);
+            progress = new ProgressDialog(getActivity());
             progress.setMessage("Loading...");
             progress.setCancelable(false);
             progress.show();
@@ -380,10 +389,10 @@ public class Ad_form extends BaseActivity {
         protected void onPostExecute(Void result) {
 
             progress.dismiss();
-            Toast.makeText(Ad_form.this, "Ad submitted successfully", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "Ad submitted successfully", Toast.LENGTH_LONG).show();
             SendPhotos sendPhotos = new SendPhotos(Imagename, selectedImagePath);
             sendPhotos.execute();
-            Intent i = new Intent(Ad_form.this, Home.class);
+            Intent i = new Intent(getActivity(), Home.class);
             startActivity(i);
 
             super.onPostExecute(result);
@@ -395,7 +404,7 @@ public class Ad_form extends BaseActivity {
         final CharSequence[] items = {"Take Photo", "Choose from Library",
                 "Cancel"};
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(Ad_form.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Add Photo!");
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
@@ -454,7 +463,7 @@ public class Ad_form extends BaseActivity {
             }
 
 
-        } else if (resultCode == RESULT_CANCELED) {
+        } else if (resultCode == getActivity().RESULT_CANCELED) {
 
             String a = "";
         }
@@ -465,7 +474,7 @@ public class Ad_form extends BaseActivity {
     private void onSelectFromGalleryResult(Intent data) {
         Uri selectedImageUri = data.getData();
         String[] projection = {MediaStore.MediaColumns.DATA};
-        Cursor cursor = managedQuery(selectedImageUri, projection, null, null,
+        Cursor cursor = getActivity().managedQuery(selectedImageUri, projection, null, null,
                 null);
         int column_index = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.DATA);
         cursor.moveToFirst();

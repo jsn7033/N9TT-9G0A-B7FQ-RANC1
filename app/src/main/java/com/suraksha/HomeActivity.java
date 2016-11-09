@@ -1,12 +1,13 @@
 package com.suraksha;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+
 import android.content.Context;
 import android.os.Bundle;
 
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,11 +17,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.core.BaseFragment;
 import com.devsmart.android.ui.HorizontalListView;
 
 //this activity is home activity wich is first call BroadcastFragment by default
-public class HomeActivity extends BaseFragment {
+public class HomeActivity extends Fragment {
 
     //	HorizontalListView hlList;
 //    GridAdapter adapter;
@@ -200,7 +200,7 @@ public class HomeActivity extends BaseFragment {
 //	}
 
     public void loadFragment(Fragment fragment) {
-        FragmentManager fm = getActivity().getFragmentManager();
+        FragmentManager fm = getFragmentManager();
         fm.popBackStack();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.add(R.id.mainContainer, fragment);

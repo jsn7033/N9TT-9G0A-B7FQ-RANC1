@@ -8,7 +8,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -28,10 +27,11 @@ import android.widget.TextView;
 
 import com.SessionManager.SessionManager;
 
+import com.core.BaseFragment;
 import com.webservice.Service1;
 
 // searching the ad form data activity
-public class ClassifiedFragment extends Fragment {
+public class ClassifiedFragment extends BaseFragment {
 
     ListView listad;
     Button btnsend;

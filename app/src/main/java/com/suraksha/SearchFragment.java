@@ -2,9 +2,9 @@ package com.suraksha;
 
 import java.util.ArrayList;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.text.format.Time;
 import android.view.LayoutInflater;

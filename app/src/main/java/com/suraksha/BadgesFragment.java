@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -42,6 +43,7 @@ import android.widget.Toast;
 import com.AppHelper.RoundedImageView;
 import com.CheckInternet.CheckInternet;
 import com.SessionManager.SessionManager;
+import com.core.BaseFragment;
 import com.devsmart.android.ui.HorizontalListView;
 import com.webservice.Service1;
 import com.squareup.picasso.Picasso;
@@ -57,7 +59,7 @@ import java.util.Iterator;
 import java.util.Locale;
 
 //this class repersent the  the profile detail
-public class BadgesFragment extends BaseActivity {
+public class BadgesFragment extends BaseFragment {
 
 
     ///-------------personal Details----------------
@@ -138,17 +140,16 @@ public class BadgesFragment extends BaseActivity {
     String[] maritalList = new String[]{"Select", "Single", "Married", "UnMarried", "divorced"};
     ArrayAdapter<String> gendrAdapter, maritAdapter;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_badges_fragment);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.activity_badges_fragment, container, false);
 
-
-        sessionManager = new SessionManager(BadgesFragment.this);
-        checknet = new CheckInternet(BadgesFragment.this);//initilise the checking internet status
+        sessionManager = new SessionManager(getActivity());
+        checknet = new CheckInternet(getActivity());//initilise the checking internet status
         ws = new Service1();
 
-        Toolbar mToolbar = loadToolbar("Profile");
+       /* Toolbar mToolbar = loadToolbar("Profile");
         setSupportActionBar(mToolbar);
         mToolbar.setLogo(R.drawable.howzaticon_);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -156,14 +157,14 @@ public class BadgesFragment extends BaseActivity {
             public void onClick(View view) {
                 finish();
             }
-        });
+        });*/
 
-        badgeLayout = (RelativeLayout) findViewById(R.id.badgeContainer);
-        healthLayout = (RelativeLayout) findViewById(R.id.healthContainer);
-        ProfessionalLayout = (RelativeLayout) findViewById(R.id.professionalContainer);
-        personalLayout = (RelativeLayout) findViewById(R.id.personalContainer);
-        badgeFooter = (LinearLayout) findViewById(R.id.badgeFooter);
-        mEditProfileIv = (ImageView) findViewById(R.id.editprofile);
+        badgeLayout = (RelativeLayout) view.findViewById(R.id.badgeContainer);
+        healthLayout = (RelativeLayout) view.findViewById(R.id.healthContainer);
+        ProfessionalLayout = (RelativeLayout) view.findViewById(R.id.professionalContainer);
+        personalLayout = (RelativeLayout) view.findViewById(R.id.personalContainer);
+        badgeFooter = (LinearLayout) view.findViewById(R.id.badgeFooter);
+        mEditProfileIv = (ImageView) view.findViewById(R.id.editprofile);
         mEditProfileIv.setColorFilter(Color.parseColor("#ffffff"));
 
         badgeLayout.setVisibility(View.VISIBLE);
@@ -171,76 +172,76 @@ public class BadgesFragment extends BaseActivity {
         ProfessionalLayout.setVisibility(View.GONE);
         personalLayout.setVisibility(View.GONE);
 
-        badgeProfile = (ImageView) findViewById(R.id.badgeProfile);
-        profileName = (TextView) findViewById(R.id.profileName);
-        stateName = (TextView) findViewById(R.id.stateName);
+        badgeProfile = (ImageView) view.findViewById(R.id.badgeProfile);
+        profileName = (TextView) view.findViewById(R.id.profileName);
+        stateName = (TextView) view.findViewById(R.id.stateName);
 
-        btnEdit = (Button) findViewById(R.id.btnEdit);
-        btnViewOffer = (Button) findViewById(R.id.btnViewOffernew);
-        btnRedeme = (Button) findViewById(R.id.btnRedemenew);
+        btnEdit = (Button) view.findViewById(R.id.btnEdit);
+        btnViewOffer = (Button) view.findViewById(R.id.btnViewOffernew);
+        btnRedeme = (Button) view.findViewById(R.id.btnRedemenew);
 
         btnViewOffer.setClickable(true);
         btnRedeme.setClickable(true);
 
-        btnpersonal = (Button) findViewById(R.id.btnpersonal);
-        btnprofession = (Button) findViewById(R.id.btnprofessional);
-        btnupdateHealth = (Button) findViewById(R.id.btnupdateHealth);
+        btnpersonal = (Button) view.findViewById(R.id.btnpersonal);
+        btnprofession = (Button) view.findViewById(R.id.btnprofessional);
+        btnupdateHealth = (Button) view.findViewById(R.id.btnupdateHealth);
 
 
         //bages
-        coinbalance = (TextView) findViewById(R.id.ivCurrency);
-        tvGoldCount = (TextView) findViewById(R.id.tvGoldCount);
-        tvSilverCount = (TextView) findViewById(R.id.tvSilverCount);
-        tvBronzeCount = (TextView) findViewById(R.id.tvBronzeCount);
+        coinbalance = (TextView) view.findViewById(R.id.ivCurrency);
+        tvGoldCount = (TextView) view.findViewById(R.id.tvGoldCount);
+        tvSilverCount = (TextView) view.findViewById(R.id.tvSilverCount);
+        tvBronzeCount = (TextView) view.findViewById(R.id.tvBronzeCount);
         //personal
-        etusername = (EditText) findViewById(R.id.etusername);
-        etmobile = (EditText) findViewById(R.id.etmobile);
-        etfname = (EditText) findViewById(R.id.etfname);
-        etlname = (EditText) findViewById(R.id.etlname);
-        etemailid = (EditText) findViewById(R.id.etemailid);
+        etusername = (EditText) view.findViewById(R.id.etusername);
+        etmobile = (EditText) view.findViewById(R.id.etmobile);
+        etfname = (EditText) view.findViewById(R.id.etfname);
+        etlname = (EditText) view.findViewById(R.id.etlname);
+        etemailid = (EditText) view.findViewById(R.id.etemailid);
 
-        etgender = (Spinner) findViewById(R.id.etgender);
-        etdob = (EditText) findViewById(R.id.etdob);
-        etmarital = (Spinner) findViewById(R.id.etmarital);
+        etgender = (Spinner) view.findViewById(R.id.etgender);
+        etdob = (EditText) view.findViewById(R.id.etdob);
+        etmarital = (Spinner) view.findViewById(R.id.etmarital);
 
-        etfathername = (EditText) findViewById(R.id.etfathername);
-        etfathermobile = (EditText) findViewById(R.id.etfathermobile);
-        etspousename = (EditText) findViewById(R.id.etspousename);
-        etspousemobile = (EditText) findViewById(R.id.etspousemobile);
-        etaddress = (EditText) findViewById(R.id.etaddress);
-        etrcity = (EditText) findViewById(R.id.etrcity);
-        etrstate = (EditText) findViewById(R.id.etrstate);
+        etfathername = (EditText) view.findViewById(R.id.etfathername);
+        etfathermobile = (EditText) view.findViewById(R.id.etfathermobile);
+        etspousename = (EditText) view.findViewById(R.id.etspousename);
+        etspousemobile = (EditText) view.findViewById(R.id.etspousemobile);
+        etaddress = (EditText) view.findViewById(R.id.etaddress);
+        etrcity = (EditText) view.findViewById(R.id.etrcity);
+        etrstate = (EditText) view.findViewById(R.id.etrstate);
 
 //health
-        etBloodGroup = (EditText) findViewById(R.id.etBloodGroup);
-        etinsurance = (EditText) findViewById(R.id.etinsurance);
-        etpolicyno = (EditText) findViewById(R.id.etpolicyno);
-        ethealth = (EditText) findViewById(R.id.ethealth);
-        etvehicleno = (EditText) findViewById(R.id.etvehicleno);
+        etBloodGroup = (EditText) view.findViewById(R.id.etBloodGroup);
+        etinsurance = (EditText) view.findViewById(R.id.etinsurance);
+        etpolicyno = (EditText) view.findViewById(R.id.etpolicyno);
+        ethealth = (EditText) view.findViewById(R.id.ethealth);
+        etvehicleno = (EditText) view.findViewById(R.id.etvehicleno);
 //professional
-        etemployed = (EditText) findViewById(R.id.etemployed);
-        etprofession = (EditText) findViewById(R.id.etprofession);
-        etoaddress = (EditText) findViewById(R.id.etoaddress);
-        etcompany = (EditText) findViewById(R.id.etcompany);
-        etocity = (EditText) findViewById(R.id.etocity);
-        etostate = (EditText) findViewById(R.id.etostate);
-        etopincode = (EditText) findViewById(R.id.etopincode);
+        etemployed = (EditText) view.findViewById(R.id.etemployed);
+        etprofession = (EditText) view.findViewById(R.id.etprofession);
+        etoaddress = (EditText) view.findViewById(R.id.etoaddress);
+        etcompany = (EditText) view.findViewById(R.id.etcompany);
+        etocity = (EditText) view.findViewById(R.id.etocity);
+        etostate = (EditText) view.findViewById(R.id.etostate);
+        etopincode = (EditText) view.findViewById(R.id.etopincode);
 
 
-        hlList = (HorizontalListView) findViewById(R.id.rlTabs);
-        adapter = new GridAdapter(BadgesFragment.this, 0);// set Adapter on horizental list view
+        hlList = (HorizontalListView) view.findViewById(R.id.rlTabs);
+        adapter = new GridAdapter(getActivity(), 0);// set Adapter on horizental list view
         hlList.setAdapter(adapter);
         hlList.setOnItemClickListener(item_Click);
         SetCalenderToTextbox(etdob);// method for calender on edit text
 
 // set array Adapter on the spinner for select gender
-        gendrAdapter = new ArrayAdapter<String>(BadgesFragment.this, android.R.layout.simple_spinner_item, genderlist);
+        gendrAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, genderlist);
         gendrAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         etgender.setAdapter(gendrAdapter);
 
 
 // set array Adapter on the spinner for select marital status
-        maritAdapter = new ArrayAdapter<String>(BadgesFragment.this, android.R.layout.simple_spinner_item, maritalList);
+        maritAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, maritalList);
         maritAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         etmarital.setAdapter(maritAdapter);
 
@@ -292,12 +293,12 @@ public class BadgesFragment extends BaseActivity {
             @Override
             public void onClick(View v) {
                 if (checknet.isNetworkAvailable()) {
-                    Intent is = new Intent(BadgesFragment.this, ViewOffers.class);
+                    Intent is = new Intent(getActivity(), ViewOffers.class);
                     is.putExtra("coinbalance", coinbalance.getText().toString());
                     is.putExtra("offer", "profile");
                     startActivity(is);
                 } else {
-                    Toast.makeText(BadgesFragment.this, "Internet Not Available", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "Internet Not Available", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -306,10 +307,10 @@ public class BadgesFragment extends BaseActivity {
             @Override
             public void onClick(View v) {
                 if (checknet.isNetworkAvailable()) {
-                    Intent is = new Intent(BadgesFragment.this, RedemedHistory.class);
-                    BadgesFragment.this.startActivity(is);
+                    Intent is = new Intent(getActivity(), RedemedHistory.class);
+                    getActivity().startActivity(is);
                 } else {
-                    Toast.makeText(BadgesFragment.this, "Internet Not Available", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "Internet Not Available", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -318,8 +319,18 @@ public class BadgesFragment extends BaseActivity {
             getAllUserDetails fd = new getAllUserDetails();
             fd.execute();
         } else {
-            Toast.makeText(BadgesFragment.this, "Internet Not Available", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "Internet Not Available", Toast.LENGTH_LONG).show();
         }
+        return view;
+    }
+
+ /*   @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_badges_fragment);
+
+
+       
     }
 
 
@@ -335,7 +346,7 @@ public class BadgesFragment extends BaseActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
+*/
 
     public void SetCalenderToTextbox(EditText Txt) {
         final Calendar myCalendar = Calendar.getInstance();
@@ -359,7 +370,7 @@ public class BadgesFragment extends BaseActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                new DatePickerDialog(BadgesFragment.this, date, myCalendar
+                new DatePickerDialog(getActivity(), date, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
             }
@@ -377,7 +388,7 @@ public class BadgesFragment extends BaseActivity {
 
     private void updateImage() {
         final CharSequence[] items = {"Take Photo", "Choose from Library", "Cancel"};
-        AlertDialog.Builder builder = new AlertDialog.Builder(BadgesFragment.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Add Photo!");
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
@@ -419,7 +430,7 @@ public class BadgesFragment extends BaseActivity {
                 }
 
             }
-        } else if (resultCode == RESULT_CANCELED) {
+        } else if (resultCode == getActivity().RESULT_CANCELED) {
 
             String a = "";
         }
@@ -438,7 +449,7 @@ public class BadgesFragment extends BaseActivity {
 
         Uri selectedImageUri = data.getData();
         String[] projection = {MediaStore.MediaColumns.DATA};
-        Cursor cursor = managedQuery(selectedImageUri, projection, null, null,
+        Cursor cursor = getActivity().managedQuery(selectedImageUri, projection, null, null,
                 null);
         int column_index = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.DATA);
         cursor.moveToFirst();
@@ -497,7 +508,7 @@ public class BadgesFragment extends BaseActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress = new ProgressDialog(BadgesFragment.this);
+            progress = new ProgressDialog(getActivity());
             progress.setMessage("Loading...");
             progress.setCancelable(false);
             progress.show();
@@ -547,10 +558,10 @@ public class BadgesFragment extends BaseActivity {
         @Override
         protected void onPostExecute(Void result) {
             progress.dismiss();
-            Toast.makeText(BadgesFragment.this, "Image Updated", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "Image Updated", Toast.LENGTH_LONG).show();
             try {
-                Picasso.with(BadgesFragment.this).load(imgUrl + pName)
-                        .placeholder(BadgesFragment.this.getResources().getDrawable(R.drawable.circle_img_bgr))
+                Picasso.with(getActivity()).load(imgUrl + pName)
+                        .placeholder(getActivity().getResources().getDrawable(R.drawable.circle_img_bgr))
                         .transform(new RoundedImageView(50, 4))
                         .resize(100, 100)
                         .centerCrop()
@@ -572,7 +583,7 @@ public class BadgesFragment extends BaseActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress = new ProgressDialog(BadgesFragment.this);
+            progress = new ProgressDialog(getActivity());
             progress.setMessage("Loading...");
             progress.setCancelable(false);
             progress.show();
@@ -688,8 +699,8 @@ public class BadgesFragment extends BaseActivity {
                         e.printStackTrace();
                     }
                     try {
-                        Picasso.with(BadgesFragment.this).load(imgUrl + imgName)
-                                .placeholder(BadgesFragment.this.getResources().getDrawable(R.drawable.circle_img_bgr))
+                        Picasso.with(getActivity()).load(imgUrl + imgName)
+                                .placeholder(getActivity().getResources().getDrawable(R.drawable.circle_img_bgr))
                                 .transform(new RoundedImageView(50, 4))
                                 .resize(100, 100)
                                 .centerCrop()
@@ -728,7 +739,7 @@ public class BadgesFragment extends BaseActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress = new ProgressDialog(BadgesFragment.this);
+            progress = new ProgressDialog(getActivity());
             progress.setMessage("Loading...");
             progress.setCancelable(false);
             progress.show();
@@ -763,7 +774,7 @@ public class BadgesFragment extends BaseActivity {
             progress.dismiss();
 
 
-            Toast.makeText(BadgesFragment.this, "Profession Detail Updated Successfully", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "Profession Detail Updated Successfully", Toast.LENGTH_LONG).show();
 
             super.onPostExecute(result);
         }
@@ -805,7 +816,7 @@ public class BadgesFragment extends BaseActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress = new ProgressDialog(BadgesFragment.this);
+            progress = new ProgressDialog(getActivity());
             progress.setMessage("Loading...");
             progress.setCancelable(false);
             progress.show();
@@ -842,7 +853,7 @@ public class BadgesFragment extends BaseActivity {
             progress.dismiss();
 
             if (value.equals("true"))
-                Toast.makeText(BadgesFragment.this, "Profile Updated Successfully", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "Profile Updated Successfully", Toast.LENGTH_LONG).show();
 
             super.onPostExecute(result);
         }
@@ -874,7 +885,7 @@ public class BadgesFragment extends BaseActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progress = new ProgressDialog(BadgesFragment.this);
+            progress = new ProgressDialog(getActivity());
             progress.setMessage("Loading...");
             progress.setCancelable(false);
             progress.show();
@@ -908,7 +919,7 @@ public class BadgesFragment extends BaseActivity {
         protected void onPostExecute(Void result) {
             progress.dismiss();
 
-            Toast.makeText(BadgesFragment.this, "Health Detail Updated Successfully", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "Health Detail Updated Successfully", Toast.LENGTH_LONG).show();
 
             super.onPostExecute(result);
         }
@@ -1033,10 +1044,6 @@ public class BadgesFragment extends BaseActivity {
         ImageView img;
     }
 
-    @Override
-    public void onBackPressed() {
 
-        finish();
-    }
 
 }

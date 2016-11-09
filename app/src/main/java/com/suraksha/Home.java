@@ -155,8 +155,9 @@ public class Home extends BaseActivity {
                 fr = new HomeActivity();// this is the home Activity and it is fragment class
                 break;
             case 1:
-                Intent iss = new Intent(Home.this, BadgesFragment.class);
-                startActivity(iss);
+                fr = new BadgesFragment();
+               /* Intent iss = new Intent(Home.this, BadgesFragment.class);
+                startActivity(iss);*/
 
 
                 break;
@@ -168,12 +169,14 @@ public class Home extends BaseActivity {
                 startActivity(i);*/
                 break;
             case 3:
-                Intent ia = new Intent(Home.this, Ad_form.class);
-                startActivity(ia);
+                fr = new Ad_form();
+              /*  Intent ia = new Intent(Home.this, Ad_form.class);
+                startActivity(ia);*/
 
 
                 break;
             case 4:
+                fr = new Settings();
                 Intent ix = new Intent(Home.this, Settings.class);
                 startActivity(ix);
                 break;
