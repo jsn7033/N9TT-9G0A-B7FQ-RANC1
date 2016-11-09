@@ -1,66 +1,62 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbarlayout"/>
+    tools:context=".HelpFragment">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <ImageView
+        android:id="@+id/bg_image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/bghome"
-        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_height="match_parent" />
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context=".Help">
+        android:layout_alignParentTop="true"
+        android:text="For any kind of information please read user manual"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="18dp" />
 
+    <Button
+        android:id="@+id/btnhelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/button_design"
+        android:text="Go to user manual"
+        android:textColor="#fff"
+        android:textSize="20dp" />
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:text="For any kind of information please read user manual"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="18dp" />
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnhelp"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-6566144324664945/6229564114"></com.google.android.gms.ads.AdView>
 
-        <Button
-            android:id="@+id/btnhelp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textView1"
-            android:layout_alignRight="@+id/textView1"
-            android:layout_below="@+id/textView1"
-            android:layout_marginTop="17dp"
-            android:background="@drawable/button_design"
-            android:text="Go to user manual"
-            android:textColor="#fff"
-            android:textSize="20dp" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="©HowZat SOS"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
-            android:id="@+id/adView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btnhelp"
-            android:layout_alignParentBottom="true"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-6566144324664945/6229564114"></com.google.android.gms.ads.AdView>
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/adView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="16dp"
-            android:text="©HowZat SOS"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    </RelativeLayout>
-</LinearLayout>
+</RelativeLayout>

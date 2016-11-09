@@ -65,6 +65,6 @@ return rowView;
 		sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "HowZat SOS App");
 		sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
 		sharingIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		context.startActivity(Intent.createChooser(sharingIntent, "Share via"));
+		context.startActivity(Intent.createChooser(sharingIntent, "ShareFragment via"));
 		}
 }

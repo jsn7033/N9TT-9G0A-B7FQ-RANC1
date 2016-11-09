@@ -150,10 +150,10 @@
             android:name=".Fill_emergency_numbers"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_fill_emergency_numbers"
-            android:parentActivityName=".Settings">
+            android:parentActivityName=".SettingsFragment">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.suraksha.Settings" />
+                android:value="com.suraksha.SettingsFragment" />
         </activity>
         <activity
             android:name=".OTP_verification"
@@ -171,7 +171,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"></activity>
         <activity
-            android:name=".Settings"
+            android:name=".SettingsFragment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_settings"
             android:parentActivityName=".Home"
@@ -181,7 +181,7 @@
                 android:value="com.suraksha.Home" />
         </activity>
         <activity
-            android:name=".Help"
+            android:name=".HelpFragment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_help"
             android:parentActivityName=".Home">
@@ -256,13 +256,13 @@
             android:name=".Show_attachments"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_show_attachments"
-            android:parentActivityName=".Settings">
+            android:parentActivityName=".SettingsFragment">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.suraksha.Settings" />
+                android:value="com.suraksha.SettingsFragment" />
         </activity>
         <activity
-            android:name=".Ad_form"
+            android:name=".AdFormFragment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_ad_form"
             android:parentActivityName=".Home">
@@ -298,7 +298,7 @@
                 android:value="com.suraksha.Home" />
         </activity>
         <activity
-            android:name=".ViewOffers"
+            android:name=".ViewOffersFragment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/voffers"
             android:parentActivityName=".BadgesFragment">
@@ -324,7 +324,7 @@
                 android:value="com.suraksha.Home" />
         </activity>
         <activity
-            android:name=".Share"
+            android:name=".ShareFragment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/share"
             android:parentActivityName=".Home">
@@ -333,7 +333,7 @@
                 android:value="com.suraksha.Home" />
         </activity>
         <activity
-            android:name=".AboutUs"
+            android:name=".AboutUsFragment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/aboutus"
             android:parentActivityName=".Home">
@@ -380,7 +380,7 @@
             android:exported="false" />
 
         <activity android:name=".ShakeSetting"
-            android:parentActivityName=".Settings"
+            android:parentActivityName=".SettingsFragment"
             />
     </application>
 

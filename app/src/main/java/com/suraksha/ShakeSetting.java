@@ -45,7 +45,7 @@ public class ShakeSetting extends BaseActivity implements View.OnClickListener, 
         init();
         registerListener();
 
-        Toolbar mToolbar = loadToolbar("Settings");
+        Toolbar mToolbar = loadToolbar("SettingsFragment");
         setSupportActionBar(mToolbar);
         mToolbar.setLogo(R.drawable.howzaticon_);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {

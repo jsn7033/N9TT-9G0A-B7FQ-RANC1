@@ -316,14 +316,14 @@ public class BroadcastFragment extends BaseFragment{
     }
 
     private void sharedialog() {
-        final CharSequence[] items = {"Share my location", "Share this app"};
+        final CharSequence[] items = {"ShareFragment my location", "ShareFragment this app"};
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Choose to share");
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int item) {
-                if (items[item].equals("Share my location")) {
+                if (items[item].equals("ShareFragment my location")) {
 
                     locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
                     // getting GPS status
@@ -389,7 +389,7 @@ public class BroadcastFragment extends BaseFragment{
         String shareBody = link;
         sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "HowZat SOS App");
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
-        startActivity(Intent.createChooser(sharingIntent, "Share via"));
+        startActivity(Intent.createChooser(sharingIntent, "ShareFragment via"));
     }
 
     public void show(String str) {

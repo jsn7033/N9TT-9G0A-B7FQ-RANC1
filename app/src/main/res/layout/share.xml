@@ -5,6 +5,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <include
         android:id="@+id/toolbar"
+        android:visibility="gone"
         layout="@layout/toolbarlayout"></include>
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"

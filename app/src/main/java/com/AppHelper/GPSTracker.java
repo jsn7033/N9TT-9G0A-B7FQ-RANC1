@@ -166,7 +166,7 @@ public class GPSTracker extends Service implements LocationListener {
      
     /**
      * Function to show settings alert dialog
-     * On pressing Settings button will lauch Settings Options
+     * On pressing SettingsFragment button will lauch SettingsFragment Options
      * */
 
 
@@ -180,8 +180,8 @@ public class GPSTracker extends Service implements LocationListener {
         // Setting Dialog Message
         alertDialog.setMessage("GPS is not enabled. Do you want to go to settings menu?");
   
-        // On pressing Settings button
-        alertDialog.setPositiveButton("Settings", new DialogInterface.OnClickListener() {
+        // On pressing SettingsFragment button
+        alertDialog.setPositiveButton("SettingsFragment", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog,int which) {
                 Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                 mContext.startActivity(intent);

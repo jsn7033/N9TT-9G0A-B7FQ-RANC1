@@ -2,21 +2,15 @@ package com.suraksha;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.app.Activity;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.ColorDrawable;
-import android.support.v4.app.ActionBarDrawerToggle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -38,11 +32,21 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.core.BaseFragment;
 import com.suraksha.R.string;
+import com.utilites.Constants;
+import com.utilites.Utilites;
 
 // this is the navigation activity
-public class Home extends BaseActivity {
+public class Home extends BaseActivity implements HomeFragment.AppTitleCallback,
+        BadgesFragment.AppTitleCallback,
+        ViewOffersFragment.AppTitleCallback,
+        AdFormFragment.AppTitleCallback,
+        SettingsFragment.AppTitleCallback,
+        ShareFragment.AppTitleCallback,
+        HelpFragment.AppTitleCallback,
+        AboutUsFragment.AppTitleCallback {
+
+
     private ListView lvItems;
     private DrawerLayout mDrawerLayout;
     private android.support.v7.app.ActionBarDrawerToggle mDrawerToggle;
@@ -63,16 +67,16 @@ public class Home extends BaseActivity {
         if (mDrawerLayout.isDrawerOpen(Gravity.LEFT)) {
             mDrawerLayout.closeDrawer(Gravity.LEFT);
         } else {
+                onBackPressed();
 
-
-            if (doubleBackToExitPressedOnce) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_MAIN);
-                intent.addCategory(Intent.CATEGORY_HOME);
-                startActivity(intent);
-            }
-            this.doubleBackToExitPressedOnce = true;
-            Toast.makeText(this, "Click Again to Exit", Toast.LENGTH_SHORT).show();
+//            if (doubleBackToExitPressedOnce) {
+//                Intent intent = new Intent();
+//                intent.setAction(Intent.ACTION_MAIN);
+//                intent.addCategory(Intent.CATEGORY_HOME);
+//                startActivity(intent);
+//            }
+//            this.doubleBackToExitPressedOnce = true;
+//            Toast.makeText(this, "Click Again to Exit", Toast.LENGTH_SHORT).show();
 
 
         }
@@ -88,7 +92,7 @@ public class Home extends BaseActivity {
         container = (FrameLayout) findViewById(R.id.container);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mToolbar = loadToolbar("HowZat");
-        mToolbar.setLogo(R.drawable.howzaticon_);
+//        mToolbar.setLogo(R.drawable.howzaticon_);
         lvItems = (ListView) findViewById(R.id.lvMenu);
         adapter = new MenuItemAdapter(Home.this, 0);
         lvItems.setAdapter(adapter);
@@ -121,7 +125,11 @@ public class Home extends BaseActivity {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
         if (savedInstanceState == null) {
-            SelectItem(0);
+
+            Fragment fragment = new HomeFragment();
+            Utilites.addFragmentToBackStack(Home.this, fragment, false);
+//            invalidateOptionsMenu();
+//            SelectItem(0);
         }
 //        getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>HowZat </font>"));
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -145,64 +153,113 @@ public class Home extends BaseActivity {
 
     }
 
+    public void clearBackStack() {
+        FragmentManager fm = getSupportFragmentManager();
+        for (int i = 0; i < fm.getBackStackEntryCount(); ++i) {
+            fm.popBackStack();
+        }
+
+    }
+
 
     public void SelectItem(int possition) {
 
-        android.support.v4.app.Fragment fr = null;
+        clearBackStack();
         switch (possition) {
 
             case 0:
-                fr = new HomeActivity();// this is the home Activity and it is fragment class
+                invalidateOptionsMenu();
+
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        Fragment fragment = new HomeFragment();
+//                        Utilites.addFragmentToBackStack(Home.this, fragment, false);
+//                        invalidateOptionsMenu();
+//                    }
+//                }, Constants.FRAGMENT_TRANSACTION_TIME);
+
                 break;
             case 1:
-                fr = new BadgesFragment();
+
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Fragment fragment = new BadgesFragment();
+                        Utilites.addFragmentToBackStack(Home.this, fragment, true);
+                        invalidateOptionsMenu();
+                    }
+                }, Constants.FRAGMENT_TRANSACTION_TIME);
+
                /* Intent iss = new Intent(Home.this, BadgesFragment.class);
                 startActivity(iss);*/
 
 
                 break;
             case 2:
-                fr = new ViewOffers();
 
-             /*   Intent i = new Intent(Home.this, ViewOffers.class);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Fragment fragment = new ViewOffersFragment();
+                        Utilites.addFragmentToBackStack(Home.this, fragment, true);
+                        invalidateOptionsMenu();
+                    }
+                }, Constants.FRAGMENT_TRANSACTION_TIME);
+             /*   Intent i = new Intent(Home.this, ViewOffersFragment.class);
                 i.putExtra("offer", "");
                 startActivity(i);*/
                 break;
             case 3:
-                fr = new Ad_form();
-              /*  Intent ia = new Intent(Home.this, Ad_form.class);
+                Fragment fragment = new AdFormFragment();
+                Utilites.addFragmentToBackStack(Home.this, fragment, true);
+                invalidateOptionsMenu();
+              /*  Intent ia = new Intent(Home.this, AdFormFragment.class);
                 startActivity(ia);*/
 
 
                 break;
             case 4:
-                fr = new Settings();
-                Intent ix = new Intent(Home.this, Settings.class);
-                startActivity(ix);
+                Fragment mSettingfragment = new SettingsFragment();
+                Utilites.addFragmentToBackStack(Home.this, mSettingfragment, true);
+                invalidateOptionsMenu();
+//                Intent ix = new Intent(Home.this, SettingsFragment.class);
+//                startActivity(ix);
                 break;
             case 5:
-                Intent ixxa = new Intent(Home.this, Share.class);
-                startActivity(ixxa);
+                Fragment mShareFragment = new ShareFragment();
+                Utilites.addFragmentToBackStack(Home.this, mShareFragment, true);
+                invalidateOptionsMenu();
+//                Intent ixxa = new Intent(Home.this, ShareFragment.class);
+//                startActivity(ixxa);
                 break;
             case 6:
-                Intent ixx = new Intent(Home.this, Help.class);
-                startActivity(ixx);
+                Fragment mHelpFragment = new HelpFragment();
+                Utilites.addFragmentToBackStack(Home.this, mHelpFragment, true);
+                invalidateOptionsMenu();
+//                Intent ixx = new Intent(Home.this, HelpFragment.class);
+//                startActivity(ixx);
                 break;
             case 7:
-                Intent xx = new Intent(Home.this, AboutUs.class);
-                startActivity(xx);
+                Fragment mAboutusFragment = new AboutUsFragment();
+                Utilites.addFragmentToBackStack(Home.this, mAboutusFragment, true);
+                invalidateOptionsMenu();
+//                Intent xx = new Intent(Home.this, AboutUsFragment.class);
+//                startActivity(xx);
 
                 break;
 
             default:
                 break;
         }
-        if (fr != null) {
-            android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
-            android.support.v4.app.FragmentTransaction fragmentTransaction = fm.beginTransaction();
-            fragmentTransaction.replace(R.id.container, fr);
-            fragmentTransaction.commit();
-        }
+//        if (fr != null) {
+//            android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
+//            android.support.v4.app.FragmentTransaction fragmentTransaction = fm.beginTransaction();
+//            fragmentTransaction.replace(R.id.container, fr);
+//            fragmentTransaction.commit();
+//        }
+
 
     }
 
@@ -222,9 +279,17 @@ public class Home extends BaseActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main, menu);
 
-        return true;
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.container);
+        if (fragment instanceof HomeFragment) {
+            mToolbar.setTitle(getString(string.menu_home_text));
+            getMenuInflater().inflate(R.menu.activity_main, menu);
+            return true;
+        } else {
+            return false;
+        }
+
+
     }
 
     @Override
@@ -238,6 +303,13 @@ public class Home extends BaseActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void title(String title) {
+        if (mToolbar != null) {
+            mToolbar.setTitle(title);
+        }
     }
 
 

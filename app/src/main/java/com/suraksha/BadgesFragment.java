@@ -11,7 +11,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.graphics.ColorFilter;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -19,17 +18,13 @@ import android.os.Environment;
 import android.provider.MediaStore;
 
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -139,6 +134,32 @@ public class BadgesFragment extends BaseFragment {
     String[] genderlist = new String[]{"Select", "Male", "Female"};
     String[] maritalList = new String[]{"Select", "Single", "Married", "UnMarried", "divorced"};
     ArrayAdapter<String> gendrAdapter, maritAdapter;
+
+
+    AppTitleCallback mAppTitleCallback;
+
+
+    public interface AppTitleCallback {
+        void title(String title);
+    }
+
+
+    @Override
+    public void onAttach(Activity context) {
+        super.onAttach(context);
+
+        if (context instanceof Home) {
+            mAppTitleCallback = (AppTitleCallback) context;
+        }
+
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mAppTitleCallback.title(getString(R.string.profile));
+    }
+
 
     @Nullable
     @Override
@@ -293,7 +314,7 @@ public class BadgesFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 if (checknet.isNetworkAvailable()) {
-                    Intent is = new Intent(getActivity(), ViewOffers.class);
+                    Intent is = new Intent(getActivity(), ViewOffersFragment.class);
                     is.putExtra("coinbalance", coinbalance.getText().toString());
                     is.putExtra("offer", "profile");
                     startActivity(is);
@@ -1043,7 +1064,6 @@ public class BadgesFragment extends BaseFragment {
         View tab_purple_box, tab_white_box;
         ImageView img;
     }
-
 
 
 }
