@@ -67,7 +67,7 @@ public class Home extends BaseActivity implements HomeFragment.AppTitleCallback,
         if (mDrawerLayout.isDrawerOpen(Gravity.LEFT)) {
             mDrawerLayout.closeDrawer(Gravity.LEFT);
         } else {
-                onBackPressed();
+            super.onBackPressed();
 
 //            if (doubleBackToExitPressedOnce) {
 //                Intent intent = new Intent();
@@ -126,10 +126,10 @@ public class Home extends BaseActivity implements HomeFragment.AppTitleCallback,
 
         if (savedInstanceState == null) {
 
-            Fragment fragment = new HomeFragment();
-            Utilites.addFragmentToBackStack(Home.this, fragment, false);
-//            invalidateOptionsMenu();
-//            SelectItem(0);
+//            Fragment fragment = new HomeFragment();
+//            Utilites.addFragmentToBackStack(Home.this, fragment, false);
+////            invalidateOptionsMenu();
+            SelectItem(0);
         }
 //        getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>HowZat </font>"));
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -168,6 +168,8 @@ public class Home extends BaseActivity implements HomeFragment.AppTitleCallback,
         switch (possition) {
 
             case 0:
+                Fragment fragmentHome = new HomeFragment();
+                Utilites.addFragmentToBackStack(Home.this, fragmentHome, false);
                 invalidateOptionsMenu();
 
 //                new Handler().postDelayed(new Runnable() {
@@ -182,15 +184,17 @@ public class Home extends BaseActivity implements HomeFragment.AppTitleCallback,
                 break;
             case 1:
 
-
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Fragment fragment = new BadgesFragment();
-                        Utilites.addFragmentToBackStack(Home.this, fragment, true);
-                        invalidateOptionsMenu();
-                    }
-                }, Constants.FRAGMENT_TRANSACTION_TIME);
+                Fragment fragment = new BadgesFragment();
+                Utilites.addFragmentToBackStack(Home.this, fragment, true);
+                invalidateOptionsMenu();
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+////                        Fragment fragment = new BadgesFragment();
+////                        Utilites.addFragmentToBackStack(Home.this, fragment, true);
+////                        invalidateOptionsMenu();
+//                    }
+//                }, Constants.FRAGMENT_TRANSACTION_TIME);
 
                /* Intent iss = new Intent(Home.this, BadgesFragment.class);
                 startActivity(iss);*/
@@ -198,22 +202,24 @@ public class Home extends BaseActivity implements HomeFragment.AppTitleCallback,
 
                 break;
             case 2:
-
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Fragment fragment = new ViewOffersFragment();
-                        Utilites.addFragmentToBackStack(Home.this, fragment, true);
-                        invalidateOptionsMenu();
-                    }
-                }, Constants.FRAGMENT_TRANSACTION_TIME);
+                Fragment fragmentViewOffersFragment = new ViewOffersFragment();
+                Utilites.addFragmentToBackStack(Home.this, fragmentViewOffersFragment, true);
+                invalidateOptionsMenu();
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+////                        Fragment fragment = new ViewOffersFragment();
+////                        Utilites.addFragmentToBackStack(Home.this, fragment, true);
+////                        invalidateOptionsMenu();
+//                    }
+//                }, Constants.FRAGMENT_TRANSACTION_TIME);
              /*   Intent i = new Intent(Home.this, ViewOffersFragment.class);
                 i.putExtra("offer", "");
                 startActivity(i);*/
                 break;
             case 3:
-                Fragment fragment = new AdFormFragment();
-                Utilites.addFragmentToBackStack(Home.this, fragment, true);
+                Fragment fragmentAd = new AdFormFragment();
+                Utilites.addFragmentToBackStack(Home.this, fragmentAd, false);
                 invalidateOptionsMenu();
               /*  Intent ia = new Intent(Home.this, AdFormFragment.class);
                 startActivity(ia);*/
@@ -222,28 +228,28 @@ public class Home extends BaseActivity implements HomeFragment.AppTitleCallback,
                 break;
             case 4:
                 Fragment mSettingfragment = new SettingsFragment();
-                Utilites.addFragmentToBackStack(Home.this, mSettingfragment, true);
+                Utilites.addFragmentToBackStack(Home.this, mSettingfragment, false);
                 invalidateOptionsMenu();
 //                Intent ix = new Intent(Home.this, SettingsFragment.class);
 //                startActivity(ix);
                 break;
             case 5:
                 Fragment mShareFragment = new ShareFragment();
-                Utilites.addFragmentToBackStack(Home.this, mShareFragment, true);
+                Utilites.addFragmentToBackStack(Home.this, mShareFragment, false);
                 invalidateOptionsMenu();
 //                Intent ixxa = new Intent(Home.this, ShareFragment.class);
 //                startActivity(ixxa);
                 break;
             case 6:
                 Fragment mHelpFragment = new HelpFragment();
-                Utilites.addFragmentToBackStack(Home.this, mHelpFragment, true);
+                Utilites.addFragmentToBackStack(Home.this, mHelpFragment, false);
                 invalidateOptionsMenu();
 //                Intent ixx = new Intent(Home.this, HelpFragment.class);
 //                startActivity(ixx);
                 break;
             case 7:
                 Fragment mAboutusFragment = new AboutUsFragment();
-                Utilites.addFragmentToBackStack(Home.this, mAboutusFragment, true);
+                Utilites.addFragmentToBackStack(Home.this, mAboutusFragment, false);
                 invalidateOptionsMenu();
 //                Intent xx = new Intent(Home.this, AboutUsFragment.class);
 //                startActivity(xx);
