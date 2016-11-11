@@ -22,6 +22,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.core.BaseFragment;
@@ -64,16 +65,12 @@ public class HomeFragment extends BaseFragment {
 
         View view = inflater.inflate(R.layout.activity_home, container, false);
         tabs = (TabLayout) view.findViewById(R.id.tabs);
+        tabs.setTabMode(TabLayout.MODE_SCROLLABLE);
 //		hlList = (HorizontalListView) view.findViewById(R.id.rlTabs);
 //		adapter = new GridAdapter(getActivity(), 0);// custom adapter for set horizental list view
 //		hlList.setAdapter(adapter);
 //		hlList.setOnItemClickListener(item_Click);
 
-
-
-        tabs.addTab(tabs.newTab().setText("BROADCAST"), true);
-        tabs.addTab(tabs.newTab().setText("SEARCH"));
-        tabs.addTab(tabs.newTab().setText("CLASSIFIED"));
 
         setupTabIcons();
 
@@ -114,13 +111,45 @@ public class HomeFragment extends BaseFragment {
     }
 
     private void setupTabIcons() {
-        tabs.getTabAt(0).setIcon(tabDrawables[0]);
-        tabs.getTabAt(1).setIcon(tabDrawables[1]);
-        tabs.getTabAt(2).setIcon(tabDrawables[2]);
 
-        tabs.getTabAt(0).getIcon().setColorFilter(Color.parseColor("#8c8c8c"), PorterDuff.Mode.SRC_IN);
-        tabs.getTabAt(0).getIcon().setColorFilter(Color.parseColor("#8c8c8c"), PorterDuff.Mode.SRC_IN);
-        tabs.getTabAt(0).getIcon().setColorFilter(Color.parseColor("#8c8c8c"), PorterDuff.Mode.SRC_IN);
+        RelativeLayout mTabMainlayout = (RelativeLayout) LayoutInflater.from(getActivity()).inflate(R.layout.custom_tab, null);
+        TextView mTabText = (TextView) mTabMainlayout.findViewById(R.id.tab_text);
+        ImageView mImageview = (ImageView) mTabMainlayout.findViewById(R.id.tabimage);
+        mTabText.setText("BROADCAST");
+
+        tabs.addTab(tabs.newTab().setText("BROADCAST"));
+        tabs.addTab(tabs.newTab().setText("SEARCH"));
+        tabs.addTab(tabs.newTab().setText("CLASSIFIED"));
+
+        mImageview.setImageResource(tabDrawables[0]);
+        mImageview.setColorFilter(Color.parseColor("#8c8c8c"), PorterDuff.Mode.SRC_IN);
+        tabs.getTabAt(0).setCustomView(mTabMainlayout);
+
+        RelativeLayout mTabMainlayout1 = (RelativeLayout) LayoutInflater.from(getActivity()).inflate(R.layout.custom_tab, null);
+        TextView mTabText1 = (TextView) mTabMainlayout1.findViewById(R.id.tab_text);
+        ImageView mImageview1 = (ImageView) mTabMainlayout1.findViewById(R.id.tabimage);
+        mTabText1.setText("SEARCH");
+        mImageview1.setImageResource(tabDrawables[1]);
+        mImageview1.setColorFilter(Color.parseColor("#8c8c8c"), PorterDuff.Mode.SRC_IN);
+        tabs.getTabAt(1).setCustomView(mTabMainlayout1);
+
+        RelativeLayout mTabMainlayout2 = (RelativeLayout) LayoutInflater.from(getActivity()).inflate(R.layout.custom_tab, null);
+        TextView mTabText2 = (TextView) mTabMainlayout2.findViewById(R.id.tab_text);
+        ImageView mImageview2 = (ImageView) mTabMainlayout2.findViewById(R.id.tabimage);
+        mTabText2.setText("CLASSIFIED");
+        mImageview2.setImageResource(tabDrawables[2]);
+        mImageview2.setColorFilter(Color.parseColor("#8c8c8c"), PorterDuff.Mode.SRC_IN);
+        tabs.getTabAt(2).setCustomView(mTabMainlayout2);
+        ;
+
+
+//        tabs.getTabAt(0).setIcon(tabDrawables[0]);
+//        tabs.getTabAt(1).setIcon(tabDrawables[1]);
+//        tabs.getTabAt(2).setIcon(tabDrawables[2]);
+
+//        tabs.getTabAt(0).getIcon().setColorFilter(Color.parseColor("#8c8c8c"), PorterDuff.Mode.SRC_IN);
+//        tabs.getTabAt(0).getIcon().setColorFilter(Color.parseColor("#8c8c8c"), PorterDuff.Mode.SRC_IN);
+//        tabs.getTabAt(0).getIcon().setColorFilter(Color.parseColor("#8c8c8c"), PorterDuff.Mode.SRC_IN);
     }
 
 //    @Override
@@ -145,8 +174,6 @@ public class HomeFragment extends BaseFragment {
 //
 //        return super.onOptionsItemSelected(item);
 //    }
-
-
 
 
 //	OnItemClickListener item_Click = new OnItemClickListener() {

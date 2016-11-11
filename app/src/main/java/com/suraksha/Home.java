@@ -176,12 +176,13 @@ public class Home extends BaseActivity implements HomeFragment.AppTitleCallback,
 
     public void SelectItem(int possition) {
 
-        clearBackStack();
+
         switch (possition) {
 
             case 0:
 //                Fragment fragmentHome = new HomeFragment();
 //                Utilites.addFragmentToBackStack(Home.this, fragmentHome, false);
+                clearBackStack();
                 invalidateOptionsMenu();
 
 //                new Handler().postDelayed(new Runnable() {
@@ -202,6 +203,7 @@ public class Home extends BaseActivity implements HomeFragment.AppTitleCallback,
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
+                        clearBackStack();
                         Fragment fragment = new BadgesFragment();
                         Utilites.addFragmentToBackStack(Home.this, fragment, true);
                         invalidateOptionsMenu();
@@ -220,6 +222,7 @@ public class Home extends BaseActivity implements HomeFragment.AppTitleCallback,
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
+                        clearBackStack();
                         Fragment fragment = new ViewOffersFragment();
                         Utilites.addFragmentToBackStack(Home.this, fragment, true);
                         invalidateOptionsMenu();
@@ -230,6 +233,7 @@ public class Home extends BaseActivity implements HomeFragment.AppTitleCallback,
                 startActivity(i);*/
                 break;
             case 3:
+                clearBackStack();
                 Fragment fragmentAd = new AdFormFragment();
                 Utilites.addFragmentToBackStack(Home.this, fragmentAd, true);
                 invalidateOptionsMenu();
@@ -239,6 +243,7 @@ public class Home extends BaseActivity implements HomeFragment.AppTitleCallback,
 
                 break;
             case 4:
+                clearBackStack();
                 Fragment mSettingfragment = new SettingsFragment();
                 Utilites.addFragmentToBackStack(Home.this, mSettingfragment, true);
                 invalidateOptionsMenu();
@@ -246,6 +251,7 @@ public class Home extends BaseActivity implements HomeFragment.AppTitleCallback,
 //                startActivity(ix);
                 break;
             case 5:
+                clearBackStack();
                 Fragment mShareFragment = new ShareFragment();
                 Utilites.addFragmentToBackStack(Home.this, mShareFragment, true);
                 invalidateOptionsMenu();
@@ -253,6 +259,7 @@ public class Home extends BaseActivity implements HomeFragment.AppTitleCallback,
 //                startActivity(ixxa);
                 break;
             case 6:
+                clearBackStack();
                 Fragment mHelpFragment = new HelpFragment();
                 Utilites.addFragmentToBackStack(Home.this, mHelpFragment, true);
                 invalidateOptionsMenu();
@@ -260,6 +267,7 @@ public class Home extends BaseActivity implements HomeFragment.AppTitleCallback,
 //                startActivity(ixx);
                 break;
             case 7:
+                clearBackStack();
                 Fragment mAboutusFragment = new AboutUsFragment();
                 Utilites.addFragmentToBackStack(Home.this, mAboutusFragment, true);
                 invalidateOptionsMenu();

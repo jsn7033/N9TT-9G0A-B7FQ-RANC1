@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -18,6 +19,8 @@ import android.os.Environment;
 import android.provider.MediaStore;
 
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -105,9 +108,14 @@ public class BadgesFragment extends BaseFragment {
     private Uri fileUri;
 
 
+    int image[] = {R.drawable.ic_person1, R.drawable.ic_person1,
+            R.drawable.ic_professional, R.drawable.ic_health};
+    int image1[] = {R.drawable.ic_person, R.drawable.ic_person,
+            R.drawable.ic_professional, R.drawable.ic_health};
+
     RelativeLayout badgeLayout, healthLayout, personalLayout, ProfessionalLayout;
 
-    com.devsmart.android.ui.HorizontalListView hlList;
+    //    com.devsmart.android.ui.HorizontalListView hlList;
     GridAdapter adapter;
     Service1 ws;
     ProgressDialog progress;
@@ -160,6 +168,7 @@ public class BadgesFragment extends BaseFragment {
         mAppTitleCallback.title(getString(R.string.profile));
     }
 
+    TabLayout tabs;
 
     @Nullable
     @Override
@@ -169,7 +178,8 @@ public class BadgesFragment extends BaseFragment {
         sessionManager = new SessionManager(getActivity());
         checknet = new CheckInternet(getActivity());//initilise the checking internet status
         ws = new Service1();
-
+        tabs = (TabLayout) view.findViewById(R.id.tabs);
+        tabs.setTabMode(TabLayout.MODE_SCROLLABLE);
        /* Toolbar mToolbar = loadToolbar("Profile");
         setSupportActionBar(mToolbar);
         mToolbar.setLogo(R.drawable.howzaticon_);
@@ -249,10 +259,10 @@ public class BadgesFragment extends BaseFragment {
         etopincode = (EditText) view.findViewById(R.id.etopincode);
 
 
-        hlList = (HorizontalListView) view.findViewById(R.id.rlTabs);
-        adapter = new GridAdapter(getActivity(), 0);// set Adapter on horizental list view
-        hlList.setAdapter(adapter);
-        hlList.setOnItemClickListener(item_Click);
+//        hlList = (HorizontalListView) view.findViewById(R.id.rlTabs);
+//        adapter = new GridAdapter(getActivity(), 0);// set Adapter on horizental list view
+//        hlList.setAdapter(adapter);
+//        hlList.setOnItemClickListener(item_Click);
         SetCalenderToTextbox(etdob);// method for calender on edit text
 
 // set array Adapter on the spinner for select gender
@@ -345,7 +355,105 @@ public class BadgesFragment extends BaseFragment {
         return view;
     }
 
- /*   @Override
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+
+        super.onActivityCreated(savedInstanceState);
+
+
+        setTabs();
+        tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                int position = tab.getPosition();
+                switch (position) {
+                    case 0:
+                        badgeLayout.setVisibility(View.VISIBLE);
+                        healthLayout.setVisibility(View.GONE);
+                        ProfessionalLayout.setVisibility(View.GONE);
+                        personalLayout.setVisibility(View.GONE);
+                        badgeFooter.setVisibility(View.VISIBLE);
+//                        adapter.setItemSelected(position);
+                        break;
+                    case 1:
+                        badgeLayout.setVisibility(View.GONE);
+                        healthLayout.setVisibility(View.GONE);
+                        ProfessionalLayout.setVisibility(View.GONE);
+                        personalLayout.setVisibility(View.VISIBLE);
+                        badgeFooter.setVisibility(View.GONE);
+//                        adapter.setItemSelected(position);
+                        break;
+                    case 2:
+                        badgeLayout.setVisibility(View.GONE);
+                        healthLayout.setVisibility(View.GONE);
+                        ProfessionalLayout.setVisibility(View.VISIBLE);
+                        personalLayout.setVisibility(View.GONE);
+                        badgeFooter.setVisibility(View.GONE);
+//                        adapter.setItemSelected(position);
+                        break;
+                    case 3:
+                        healthLayout.setVisibility(View.VISIBLE);
+                        badgeLayout.setVisibility(View.GONE);
+                        ProfessionalLayout.setVisibility(View.GONE);
+                        personalLayout.setVisibility(View.GONE);
+                        badgeFooter.setVisibility(View.GONE);
+//                        adapter.setItemSelected(position);
+                        break;
+                }
+
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+            }
+        });
+
+    }
+
+
+    private void setTabs() {
+
+        tabs.addTab(tabs.newTab().setText("BROADCAST"));
+        tabs.addTab(tabs.newTab().setText("PERSONAL"));
+        tabs.addTab(tabs.newTab().setText("PROFESSIONAL"));
+        tabs.addTab(tabs.newTab().setText("HEALTH"));
+
+
+        RelativeLayout mTabMainlayout = (RelativeLayout) LayoutInflater.from(getActivity()).inflate(R.layout.custom_tab, null);
+        TextView mTabText = (TextView) mTabMainlayout.findViewById(R.id.tab_text);
+        ImageView mImageview = (ImageView) mTabMainlayout.findViewById(R.id.tabimage);
+        mTabText.setText("BROADCAST");
+        mImageview.setImageResource(image1[0]);
+        tabs.getTabAt(0).setCustomView(mTabMainlayout);
+
+        RelativeLayout mTabMainlayout1 = (RelativeLayout) LayoutInflater.from(getActivity()).inflate(R.layout.custom_tab, null);
+        TextView mTabText1 = (TextView) mTabMainlayout1.findViewById(R.id.tab_text);
+        ImageView mImageview1 = (ImageView) mTabMainlayout1.findViewById(R.id.tabimage);
+        mTabText1.setText("PERSONAL");
+        mImageview1.setImageResource(image1[1]);
+        tabs.getTabAt(1).setCustomView(mTabMainlayout1);
+
+        RelativeLayout mTabMainlayout2 = (RelativeLayout) LayoutInflater.from(getActivity()).inflate(R.layout.custom_tab, null);
+        TextView mTabText2 = (TextView) mTabMainlayout2.findViewById(R.id.tab_text);
+        ImageView mImageview2 = (ImageView) mTabMainlayout2.findViewById(R.id.tabimage);
+        mTabText2.setText("PROFESSIONAL");
+        mImageview2.setImageResource(image1[2]);
+        tabs.getTabAt(2).setCustomView(mTabMainlayout2);
+
+        RelativeLayout mTabMainlayout3 = (RelativeLayout) LayoutInflater.from(getActivity()).inflate(R.layout.custom_tab, null);
+        TextView mTabText3 = (TextView) mTabMainlayout3.findViewById(R.id.tab_text);
+        ImageView mImageview3 = (ImageView) mTabMainlayout3.findViewById(R.id.tabimage);
+        mTabText3.setText("HEALTH");
+        mImageview3.setImageResource(image1[3]);
+        tabs.getTabAt(3).setCustomView(mTabMainlayout3);
+    }
+
+
+    /*   @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_badges_fragment);
@@ -859,8 +967,6 @@ public class BadgesFragment extends BaseFragment {
                     String key = (String) iter.next();
                     if (key.equals("Value")) {
                         value = responce.getString(key);
-
-
                     }
                 }
             } catch (Exception e) {
@@ -875,7 +981,8 @@ public class BadgesFragment extends BaseFragment {
 
             if (value.equals("true"))
                 Toast.makeText(getActivity(), "Profile Updated Successfully", Toast.LENGTH_LONG).show();
-
+            profileName.setText(firstName + " " + lastName);
+            stateName.setText(residence_state);
             super.onPostExecute(result);
         }
 
