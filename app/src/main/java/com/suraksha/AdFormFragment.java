@@ -38,12 +38,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.AppHelper.ResizeImage;
 import com.SessionManager.SessionManager;
 import com.core.BaseFragment;
+import com.squareup.picasso.Picasso;
 import com.webservice.Service1;
 
 import org.json.JSONArray;
@@ -71,7 +73,7 @@ public class AdFormFragment extends BaseFragment {
     private static final String IMAGE_DIRECTORY_NAME = "Howzat";
     int REQUEST_CAMERA = 0, SELECT_FILE = 1;
     private Uri fileUri;
-
+    ImageView mBackGroundImage;
 
     AppTitleCallback mAppTitleCallback;
 
@@ -108,6 +110,7 @@ public class AdFormFragment extends BaseFragment {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
+        mBackGroundImage = (ImageView) view.findViewById(R.id.bg_image);
 
         adtype = (Spinner) view.findViewById(R.id.spinneradtype);
         adcategory = (Spinner) view.findViewById(R.id.spinneradcategory);
@@ -454,6 +457,15 @@ public class AdFormFragment extends BaseFragment {
             }
         });
         builder.show();
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Picasso.with(getActivity()).load(R.drawable.bghome)
+                .fit()
+                .into(mBackGroundImage);
+
     }
 
     @Override

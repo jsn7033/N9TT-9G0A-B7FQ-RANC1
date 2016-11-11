@@ -1,18 +1,18 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical">
 
-    <include
-        android:id="@+id/toolbar"
-        android:visibility="gone"
-        layout="@layout/toolbarlayout"></include>
+    <ImageView
+        android:id="@+id/bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bghome"
         android:paddingBottom="@dimen/activity_vertical_margin"
         tools:context="com.suraksha.AdFormFragment">
 
@@ -157,8 +157,8 @@
                 android:id="@+id/spinnerusedproduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="5dp"
                 android:layout_marginTop="10dp"
+                android:paddingBottom="5dp"
                 android:paddingTop="5dp"
                 android:visibility="gone" />
 
@@ -409,4 +409,4 @@
         </LinearLayout>
     </ScrollView>
 
-</LinearLayout>
+</RelativeLayout>

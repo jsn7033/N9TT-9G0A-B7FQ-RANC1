@@ -24,10 +24,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.core.BaseFragment;
 import com.devsmart.android.ui.HorizontalListView;
 
 //this activity is home activity wich is first call BroadcastFragment by default
-public class HomeFragment extends Fragment {
+public class HomeFragment extends BaseFragment {
 
     TabLayout tabs;
 
@@ -261,7 +262,7 @@ public class HomeFragment extends Fragment {
 //	}
 
     public void loadFragment(Fragment fragment) {
-        FragmentManager fm = getFragmentManager();
+        FragmentManager fm = getChildFragmentManager();
         fm.popBackStack();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.add(R.id.mainContainer, fragment);
