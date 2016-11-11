@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="23"
+    density="xxxhdpi"
+    format="8"
+    plugin-version="2.2.2"
+    timestamp="10213796160126"
+    token="-769174554662808347"
+    verifier="COLD_SWAP_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="2128" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="464" />
+    <task
+        name="verifier"
+        duration="22" />
+
+    <artifact
+        location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
+        type="DEX" />
+
+    <build
+        timestamp="9499981480830"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="10213796160126"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
+            type="DEX" />
+    </build>
+
+</instant-run>

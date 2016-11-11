@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="9dp"
+        android:textSize="21dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="Sure to purchase"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textoffrName"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:text="sdfsd"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/title"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:textSize="18sp"
+
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="9dp"
+         />
+
+    <TextView
+        android:id="@+id/textoffrName_desc"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/textoffrName"
+        android:layout_height="wrap_content"
+        android:text="sdfsd"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:layout_marginTop="3dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/badgeFooter"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textoffrName_desc"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btncanceloffer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/cancel_bg"
+            android:text="@string/cencel"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="2dp"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:background="@color/black50" />
+
+        <Button
+            android:id="@+id/btnpuchaseoffer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/yes_bg"
+            android:text="@string/yesp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

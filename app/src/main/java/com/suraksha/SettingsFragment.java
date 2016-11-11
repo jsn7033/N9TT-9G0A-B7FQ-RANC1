@@ -22,7 +22,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 import android.widget.SeekBar.OnSeekBarChangeListener;
@@ -32,18 +34,48 @@ import com.core.BaseFragment;
 import com.squareup.picasso.Picasso;
 import com.webservice.Service1;
 
-public class SettingsFragment extends BaseFragment {
+public class SettingsFragment extends BaseFragment implements CompoundButton.OnCheckedChangeListener {
 
     Databaseclass db;
     Button btncontact;
     ArrayList<String> listsetting;
-    ToggleButton btntoggleshake;
-    ToggleButton btntoggle;
+    Switch btntoggleshake;
+    Switch btntoggle;
     SessionManager session;
     Service1 ws;
 
 
     AppTitleCallback mAppTitleCallback;
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+        switch (compoundButton.getId()) {
+            case R.id.notifiationtogglebtn:
+
+                if (b) {
+                    session.Savepreferences("isChecked", "0");
+                    onOffNotifcation ds = new onOffNotifcation("1");
+                    ds.execute();
+                } else {
+                    session.Savepreferences("isChecked", "1");
+                    onOffNotifcation ds = new onOffNotifcation("0");
+                    ds.execute();
+                }
+
+                break;
+            case R.id.togglebtnsensor:
+                if (b) {
+                    startActivity(new Intent(getActivity(), ShakeSetting.class));
+//                    session.Savepreferences("shakefeature", "true");
+                } else {
+//                    session.Savepreferences("shakefeature", "false");
+                    getActivity().stopService(new Intent(getActivity(), Shaker_Service_updated.class));
+                }
+                break;
+        }
+
+    }
 
 
     public interface AppTitleCallback {
@@ -68,7 +100,7 @@ public class SettingsFragment extends BaseFragment {
     }
 
 
-    //    @Override
+//    @Override
 //    public void onResume() {
 //        super.onResume();
 //
@@ -76,13 +108,26 @@ public class SettingsFragment extends BaseFragment {
 //
 //        if (status.equals("true")) {
 //            btntoggleshake.setChecked(true);
-////			stopService();
-////			checkIfServiceRunning();
 //        } else if (status.equals("false")) {
 //            btntoggleshake.setChecked(false);
 //        }
 //    }
 
+
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//
+//        String status = session.Getshechfeature();
+//
+//        if (status.equals("true")) {
+//            btntoggleshake.setChecked(true);
+//        } else if (status.equals("false")) {
+//            btntoggleshake.setChecked(false);
+//        }
+//
+//
+//    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -189,7 +234,7 @@ public class SettingsFragment extends BaseFragment {
         /////////////
         btncontact = (Button) view.findViewById(R.id.btnupdate);
 
-        btntoggle = (ToggleButton) view.findViewById(R.id.togglebtn);
+        btntoggle = (Switch) view.findViewById(R.id.notifiationtogglebtn);
 
         if (!session.GetisChecked().equals("0")) {
             btntoggle.setChecked(true);
@@ -197,7 +242,11 @@ public class SettingsFragment extends BaseFragment {
             btntoggle.setChecked(false);
         }
 
-        btntoggleshake = (ToggleButton) view.findViewById(R.id.togglebtnsensor);
+        btntoggle.setOnCheckedChangeListener(this);
+
+        btntoggleshake = (Switch) view.findViewById(R.id.togglebtnsensor);
+
+        btntoggleshake.setOnCheckedChangeListener(this);
 
 
         btncontact.setOnClickListener(new OnClickListener() {
@@ -209,52 +258,6 @@ public class SettingsFragment extends BaseFragment {
             }
         });
         return view;
-    }
-
-
-//    @Override
-//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-//
-//        Picasso.with(getActivity()).load(R.drawable.preloader_back)
-//                .fit()
-//                .into(mBackGroundImage);
-//    }
-
-  /*  @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
-
-
-        Toolbar mToolbar = loadToolbar("SettingsFragment");
-        setSupportActionBar(mToolbar);
-        mToolbar.setLogo(R.drawable.howzaticon_);
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
-
-    }*/
-
-    public void onCheckboxClicked(View view) {
-        boolean checked = ((ToggleButton) view).isChecked();
-        switch (view.getId()) {
-            case R.id.togglebtn:
-                if (checked) {
-                    session.Savepreferences("isChecked", "0");
-                    onOffNotifcation ds = new onOffNotifcation("1");
-                    ds.execute();
-                } else {
-                    session.Savepreferences("isChecked", "1");
-                    onOffNotifcation ds = new onOffNotifcation("0");
-                    ds.execute();
-                }
-
-                break;
-        }
     }
 
     private class onOffNotifcation extends AsyncTask<Void, Void, Void> {
@@ -291,40 +294,6 @@ public class SettingsFragment extends BaseFragment {
         }
     }
 
-    public void onToggleClicked(View view) {
-
-        boolean on = ((ToggleButton) view).isChecked();
-
-        if (on) {
-            startActivity(new Intent(getActivity(), ShakeSetting.class));
-            session.Savepreferences("shakefeature", "true");
-//	    	startService(new Intent(getActivity(), Shaker_Service_updated.class));
-        } else {
-            session.Savepreferences("shakefeature", "false");
-            getActivity().stopService(new Intent(getActivity(), Shaker_Service_updated.class));
-//			stopService(new Intent(getActivity(), ShakeDetector.class));
-        }
-    }
-/*
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.settings, menu);
-        return true;
-    }
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home button
-            case android.R.id.home:
-                finish();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-*/
 
     public void stopService() {
         if (ShakeDetector.isRunning) {

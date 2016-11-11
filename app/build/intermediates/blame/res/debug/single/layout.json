@@ -1,0 +1,486 @@
+[
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_shake_setting.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_shake_setting.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/view_offer_list.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/view_offer_list.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_registration.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_registration.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_sensorcallingevent.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_sensorcallingevent.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_preloader.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_preloader.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/mapplaces.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/mapplaces.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_fill_user_details.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_fill_user_details.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/mr_media_route_list_item.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/layout/mr_media_route_list_item.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/post_new_broadcast.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/post_new_broadcast.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_layout_tab_text.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/attachmentlist.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/attachmentlist.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_help.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_help.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_personal_fragment_phase2.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_personal_fragment_phase2.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/toolbarlayout.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/toolbarlayout.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/addetails_search.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/addetails_search.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/dialog_usefull_useless.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/dialog_usefull_useless.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/filterscreen_pupp.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/filterscreen_pupp.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/broadcast_list_row.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/broadcast_list_row.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_home_old.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_home_old.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_health_fragment.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_health_fragment.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_professional_fragment_phase2.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_professional_fragment_phase2.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_show_attachments.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_show_attachments.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/mr_media_route_controller_material_dialog_b.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/layout/mr_media_route_controller_material_dialog_b.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_edit_custom_message.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_edit_custom_message.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_add_circles.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_add_circles.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/about_us.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/about_us.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/listitem_discuss.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/listitem_discuss.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/view_comment_list_item.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/view_comment_list_item.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/socialcirclelist.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/socialcirclelist.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/redemed_history_list_item.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/redemed_history_list_item.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/broadcastmessage_userdetail.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/broadcastmessage_userdetail.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_landingpage.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_landingpage.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/adds_row.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/adds_row.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_ad_form.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_ad_form.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/adsearchlist.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/adsearchlist.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/attachment_dialog.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/attachment_dialog.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/notification_template_lines.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/view_save_image.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/view_save_image.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/circlememberlist.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/circlememberlist.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/view_comment_list.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/view_comment_list.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/custom_tab.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/custom_tab.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_personal_fragment.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_personal_fragment.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_home.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_home.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/menu_row.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/menu_row.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_otp_verification.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_otp_verification.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/dialog_are_you_purchase_offer.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/dialog_are_you_purchase_offer.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_broadcast_fragment.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_broadcast_fragment.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_navigation_item.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_add_friends.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_add_friends.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_ad_form_phase2.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_ad_form_phase2.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/emergencycontactmain.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/emergencycontactmain.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_health_fragment_phase2.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_health_fragment_phase2.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/emergencycontactlistview.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/emergencycontactlistview.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/profile_row.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/profile_row.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_classified_fragment.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_classified_fragment.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_add_members.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_add_members.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/offer_row.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/offer_row.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_countdown.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_countdown.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/place_autocomplete_item_prediction.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_item_prediction.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/view_offer_list_item.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/view_offer_list_item.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_settings.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_settings.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/place_autocomplete_fragment.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_fragment.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/place_autocomplete_progress.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_progress.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/social_circle.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/social_circle.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_add_custom_message.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_add_custom_message.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/viewitem.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/viewitem.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_professional_fragment.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_professional_fragment.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_fill_emergency_numbers.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_fill_emergency_numbers.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/share.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/share.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_badges_fragment.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_badges_fragment.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/activity_search_fragment.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/activity_search_fragment.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout/design_navigation_item_header.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/place_autocomplete_item_powered_by_google.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout/place_autocomplete_item_powered_by_google.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/mr_media_route_chooser_dialog.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/layout/mr_media_route_chooser_dialog.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/layout/comment_row.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/layout/comment_row.xml"
+    }
+]

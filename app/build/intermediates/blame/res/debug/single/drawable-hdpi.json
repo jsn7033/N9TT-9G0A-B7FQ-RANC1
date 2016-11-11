@@ -1,0 +1,414 @@
+[
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ad_icon.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/ad_icon.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/otp_lock.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/otp_lock.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/landingbg.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/landingbg.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_pause_dark.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_pause_dark.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/policepin.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/policepin.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_cast_on_light.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_cast_on_light.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/otp1.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/otp1.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/cast_ic_notification_2.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/res/drawable-hdpi/cast_ic_notification_2.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/add_people_circles.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/add_people_circles.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_plus_signin_btn_icon_dark_normal.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_plus_signin_btn_icon_dark_normal.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_search.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/ic_action_search.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_search_onclick.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/ic_action_search_onclick.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/registration.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/registration.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_media_pause.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_media_pause.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_send_onclick.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/ic_action_send_onclick.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_cast_on_1_light.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_cast_on_1_light.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_google_signin_btn_text_light_disabled.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_text_light_disabled.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_cast_disabled_light.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_cast_disabled_light.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_back.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/ic_action_back.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_google_signin_btn_icon_dark_normal.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_icon_dark_normal.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_setting_dark.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_setting_dark.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_plus_signin_btn_text_light_disabled.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_plus_signin_btn_text_light_disabled.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_plus_signin_btn_text_dark_pressed.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_plus_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_plusone_standard_off_client.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-hdpi/ic_plusone_standard_off_client.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_send.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/ic_action_send.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_google_signin_btn_text_dark_normal.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_text_dark_normal.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_plus_signin_btn_icon_light_focused.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_plus_signin_btn_icon_light_focused.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/attachment_bg.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/attachment_bg.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_cast_on_0_light.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_cast_on_0_light.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/cast_ic_notification_on.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/res/drawable-hdpi/cast_ic_notification_on.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_edit.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/ic_action_edit.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_overflow_onclick.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/ic_action_overflow_onclick.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_google_signin_btn_icon_light_focused.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_icon_light_focused.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_photo.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/ic_action_photo.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_ic_googleplayservices.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_ic_googleplayservices.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_plusone_tall_off_client.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-hdpi/ic_plusone_tall_off_client.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_google_signin_btn_icon_light_disabled.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_icon_light_disabled.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_setting_light.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_setting_light.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_pause_light.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_pause_light.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_media_route_on_2_mono_dark.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_media_route_on_2_mono_dark.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_google_signin_btn_text_dark_focused.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_media_route_disabled_mono_dark.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_media_route_disabled_mono_dark.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_overflow.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/ic_action_overflow.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_media_route_on_0_mono_dark.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_media_route_on_0_mono_dark.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/attach.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/attach.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_google_signin_btn_icon_light_normal.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_icon_light_normal.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/cast_ic_notification_0.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/res/drawable-hdpi/cast_ic_notification_0.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/places_ic_clear.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/drawable-hdpi/places_ic_clear.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_cast_light.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_cast_light.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_done.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/ic_action_done.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_save.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/ic_action_save.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_play_light.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_play_light.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_cast_off_light.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_cast_off_light.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_google_signin_btn_text_light_focused.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_text_light_focused.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_plus_signin_btn_icon_dark_disabled.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_plus_signin_btn_icon_dark_disabled.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_plus_signin_btn_text_light_focused.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_plus_signin_btn_text_light_focused.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_plusone_small_off_client.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-hdpi/ic_plusone_small_off_client.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/topchat.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/topchat.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_play_dark.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_play_dark.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/leftbox.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/leftbox.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_plus_signin_btn_text_dark_disabled.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_plus_signin_btn_text_dark_disabled.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_cast_dark.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_cast_dark.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_plus_signin_btn_text_light_normal.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_plus_signin_btn_text_light_normal.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_plus_signin_btn_icon_dark_focused.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_plus_signin_btn_icon_dark_focused.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/profile_bg.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/profile_bg.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_google_signin_btn_icon_dark_disabled.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_icon_dark_disabled.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_plus_signin_btn_icon_light_normal.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_plus_signin_btn_icon_light_normal.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_plus_signin_btn_text_dark_normal.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_plus_signin_btn_text_dark_normal.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_send_now.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/ic_action_send_now.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_google_signin_btn_text_dark_pressed.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_text_dark_pressed.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_plus_signin_btn_text_dark_focused.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_plus_signin_btn_text_dark_focused.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_cast_on_2_light.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_cast_on_2_light.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_google_signin_btn_icon_light_pressed.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_icon_light_pressed.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_plus_signin_btn_text_light_pressed.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_plus_signin_btn_text_light_pressed.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/attach_onclick.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/attach_onclick.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_media_play.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_media_play.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_google_signin_btn_text_dark_disabled.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_text_dark_disabled.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/cast_ic_notification_1.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/res/drawable-hdpi/cast_ic_notification_1.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_google_signin_btn_icon_dark_pressed.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_icon_dark_pressed.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/add_circles.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/add_circles.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_plusone_medium_off_client.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/res/drawable-hdpi/ic_plusone_medium_off_client.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/emergency_bg.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/emergency_bg.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_full_open_on_phone.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_full_open_on_phone.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/send.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/send.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_media_route_on_1_mono_dark.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_media_route_on_1_mono_dark.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/hospitalpin.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/hospitalpin.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_event_onclick.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/ic_action_event_onclick.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/topchat_onclick.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/topchat_onclick.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_media_route_on_mono_dark.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_media_route_on_mono_dark.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_launcher.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_plus_signin_btn_icon_light_pressed.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_plus_signin_btn_icon_light_pressed.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_google_signin_btn_text_light_pressed.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_text_light_pressed.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_google_signin_btn_icon_dark_focused.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_icon_dark_focused.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_event.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/ic_action_event.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_google_signin_btn_text_light_normal.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_text_light_normal.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_media_route_off_mono_dark.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_media_route_off_mono_dark.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/powered_by_google_light.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/drawable-hdpi/powered_by_google_light.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_plus_signin_btn_icon_dark_pressed.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_plus_signin_btn_icon_dark_pressed.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/settingsbg.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/settingsbg.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/places_ic_search.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/drawable-hdpi/places_ic_search.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/powered_by_google_dark.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/drawable-hdpi/powered_by_google_dark.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/common_plus_signin_btn_icon_light_disabled.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_plus_signin_btn_icon_light_disabled.9.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-hdpi/rightbox.9.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-hdpi/rightbox.9.png"
+    }
+]

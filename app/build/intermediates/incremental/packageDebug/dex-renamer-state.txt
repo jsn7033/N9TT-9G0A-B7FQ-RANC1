@@ -1,0 +1,7 @@
+#Sat Nov 12 01:45:21 IST 2016
+base.0=/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_aff6faea089f22fa8044f220e77692600a53fc39
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_2f0611fd2d43d0da9bd0d754b4838d65bd3ffdc6/classes.dex
+base.1=/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_2f0611fd2d43d0da9bd0d754b4838d65bd3ffdc6
+file.0=/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_aff6faea089f22fa8044f220e77692600a53fc39/classes.dex

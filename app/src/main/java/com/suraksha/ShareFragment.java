@@ -127,14 +127,14 @@ public class ShareFragment extends BaseFragment {
     }
 
     private void sharedialog() {
-        final CharSequence[] items = {"ShareFragment my location", "ShareFragment this app"};
+        final CharSequence[] items = {"Share my location", "Share this app"};
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Choose to share");
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int item) {
-                if (items[item].equals("ShareFragment my location")) {
+                if (items[item].equals("Share my location")) {
 
                     locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
                     // getting GPS status
