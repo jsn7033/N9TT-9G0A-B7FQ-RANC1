@@ -50,7 +50,7 @@ public class Landingpage extends Activity {
 			finish();
 			// checking user is login or not
 		}else if(sessionManager.GetLogin().equals("yes")){
-			Intent i=new Intent(Landingpage.this,Home.class);
+			Intent i=new Intent(Landingpage.this,HomeActivity.class);
 			startActivity(i);
 			finish();
 		}
@@ -91,7 +91,7 @@ public class Landingpage extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-			// Respond to the action bar's Up/Home button
+			// Respond to the action bar's Up/HomeActivity button
 			case android.R.id.home:
 				finish();
 

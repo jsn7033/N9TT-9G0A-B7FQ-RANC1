@@ -165,7 +165,7 @@
                 android:value="com.suraksha.Registration" />
         </activity>
         <activity
-            android:name=".Home"
+            android:name=".HomeActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_home"
             android:screenOrientation="portrait"
@@ -174,31 +174,31 @@
             android:name=".SettingsFragment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".Home"
+            android:parentActivityName=".HomeActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.suraksha.Home" />
+                android:value="com.suraksha.HomeActivity" />
         </activity>
         <activity
             android:name=".HelpFragment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_help"
-            android:parentActivityName=".Home">
+            android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.suraksha.Home" />
+                android:value="com.suraksha.HomeActivity" />
         </activity>
         <activity
             android:name=".Mapplaces"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_showmylocation"
-            android:parentActivityName=".Home"
+            android:parentActivityName=".HomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppBaseTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.suraksha.Home" />
+                android:value="com.suraksha.HomeActivity" />
         </activity>
 
         <service
@@ -265,37 +265,37 @@
             android:name=".AdFormFragment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_ad_form"
-            android:parentActivityName=".Home">
+            android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.suraksha.Home" />
+                android:value="com.suraksha.HomeActivity" />
         </activity>
         <activity
             android:name=".Adsearch_details"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_ad_searchdetails"
-            android:parentActivityName=".Home">
+            android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.suraksha.Home" />
+                android:value="com.suraksha.HomeActivity" />
         </activity>
         <activity
             android:name=".BadgesFragment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/profile"
-            android:parentActivityName=".Home">
+            android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.suraksha.Home" />
+                android:value="com.suraksha.HomeActivity" />
         </activity>
         <activity
             android:name=".Add_new_broadcast"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_newbroadcast"
-            android:parentActivityName=".Home">
+            android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.suraksha.Home" />
+                android:value="com.suraksha.HomeActivity" />
         </activity>
         <activity
             android:name=".ViewOffersFragment"
@@ -318,28 +318,28 @@
         <activity
             android:name=".BroadCastMessageUserDetail"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:parentActivityName=".Home">
+            android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.suraksha.Home" />
+                android:value="com.suraksha.HomeActivity" />
         </activity>
         <activity
             android:name=".ShareFragment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/share"
-            android:parentActivityName=".Home">
+            android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.suraksha.Home" />
+                android:value="com.suraksha.HomeActivity" />
         </activity>
         <activity
             android:name=".AboutUsFragment"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/aboutus"
-            android:parentActivityName=".Home">
+            android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.suraksha.Home" />
+                android:value="com.suraksha.HomeActivity" />
         </activity>
         <activity android:name="com.ticktick.imagecropper.CropImageActivity" />
         <activity

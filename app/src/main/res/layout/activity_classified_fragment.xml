@@ -1,20 +1,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-     xmlns:tools="http://schemas.android.com/tools"
-     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-   >
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/classifiedContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:id="@+id/askContainer"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:background="@color/white" >
+            android:background="@color/white">
 
             <EditText
                 android:id="@+id/etSearch"
@@ -27,33 +25,32 @@
                 android:layout_marginTop="5dp"
                 android:layout_toLeftOf="@+id/btnSend"
                 android:background="@color/light_gray1"
+                android:ems="10"
                 android:hint="Search Classified"
                 android:padding="6dp"
                 android:textColor="@color/purple"
-                android:textSize="12sp"
-                android:ems="10"
-                />
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/btnSend"
-                android:layout_width="33dp"
+                android:layout_width="40dp"
                 android:layout_height="30dp"
                 android:layout_alignBottom="@+id/etSearch"
+                android:layout_alignParentRight="true"
                 android:layout_alignTop="@+id/etSearch"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="10dp"
-                android:layout_alignParentRight="true"
                 android:background="@drawable/ic_searchbtn" />
 
-           <!-- <Button
-                android:id="@+id/btnDots"
-                android:layout_width="10dp"
-                android:layout_height="20dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_margin="5dp"
-                android:background="@drawable/ic_dots"
-                android:padding="0dp" />-->
+            <!-- <Button
+                 android:id="@+id/btnDots"
+                 android:layout_width="10dp"
+                 android:layout_height="20dp"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                 android:layout_margin="5dp"
+                 android:background="@drawable/ic_dots"
+                 android:padding="0dp" />-->
         </RelativeLayout>
 
         <ListView
@@ -61,36 +58,36 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/addLayout"
-            android:layout_below="@+id/askContainer"
-            android:layout_alignParentBottom="true" />
-
-        
-            <RelativeLayout
-        android:id="@+id/addLayout"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-
-            android:layout_centerHorizontal="true" >
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/askContainer" />
 
 
-       <!--     <com.google.android.gms.ads.AdView
- android:id="@+id/adView"
- android:layout_width="match_parent"
- android:layout_height="wrap_content"
- ads:adSize="BANNER" 
- ads:adUnitId="ca-app-pub-6566144324664945/6229564114"
-/> -->
+        <RelativeLayout
+            android:id="@+id/addLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
 
-    </RelativeLayout>
+            android:layout_centerHorizontal="true">
+
+
+            <!--     <com.google.android.gms.ads.AdView
+      android:id="@+id/adView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      ads:adSize="BANNER"
+      ads:adUnitId="ca-app-pub-6566144324664945/6229564114"
+     /> -->
+
+        </RelativeLayout>
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="No Result found"
-            android:id="@+id/textView"
             android:layout_below="@+id/addLayout"
             android:layout_centerHorizontal="true"
+            android:text="No Result found"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:visibility="gone" />
         <!--  <Button
              android:id="@+id/btnPost"

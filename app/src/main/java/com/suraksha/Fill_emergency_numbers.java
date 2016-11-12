@@ -143,7 +143,7 @@ public class Fill_emergency_numbers extends BaseActivity implements OnClickListe
 		}
 		if(v.getId()==btnsave.getId()) {
 			sessionManager.Savepreferences("login","yes");
-			Intent i = new Intent(Fill_emergency_numbers.this, Home.class);
+			Intent i = new Intent(Fill_emergency_numbers.this, HomeActivity.class);
 			startActivity(i);
 			finish();
 		}
@@ -188,7 +188,7 @@ public class Fill_emergency_numbers extends BaseActivity implements OnClickListe
 			   } else {
 				   sessionManager.Savepreferences("login","yes");
 
-				   Intent i = new Intent(Fill_emergency_numbers.this, Home.class);
+				   Intent i = new Intent(Fill_emergency_numbers.this, HomeActivity.class);
 				   startActivity(i);
 				   finish();
 			   }

@@ -9,7 +9,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -182,7 +181,7 @@ public class Add_new_broadcast extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home button
+            // Respond to the action bar's Up/HomeActivity button
             case android.R.id.home:
                 finish();
 
@@ -241,7 +240,7 @@ public class Add_new_broadcast extends BaseActivity {
 
 
             Toast.makeText(Add_new_broadcast.this, "Message broadcasted", Toast.LENGTH_LONG).show();
-            Intent i = new Intent(Add_new_broadcast.this, Home.class);
+            Intent i = new Intent(Add_new_broadcast.this, HomeActivity.class);
             startActivity(i);
             dismissDialog(progress_bar_type);
         }

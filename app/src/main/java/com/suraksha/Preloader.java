@@ -1,11 +1,8 @@
 package com.suraksha;
 
 
-import java.sql.Connection;
-import java.sql.Statement;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.StrictMode;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
@@ -51,7 +48,7 @@ public class Preloader extends Activity {
 				 getApplicationContext().startService(new Intent(Preloader.this.getApplicationContext(), Shaker_Service_updated.class));
 			}
 			// go to home page
-			Intent i = new Intent(Preloader.this, Home.class);
+			Intent i = new Intent(Preloader.this, HomeActivity.class);
 				startActivity(i);
 				finish();
 

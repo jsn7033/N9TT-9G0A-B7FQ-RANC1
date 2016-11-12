@@ -19,6 +19,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -28,6 +30,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -40,7 +43,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-public class BroadcastFragment extends BaseFragment{
+public class BroadcastFragment extends BaseFragment {
 
 
     ListView lvpost;
@@ -50,7 +53,8 @@ public class BroadcastFragment extends BaseFragment{
     String lat = "", lon = "";
 
     static String msg;
-    Button btn_new_broadcast;
+    //    Button btn_new_broadcast;
+    FloatingActionButton mFloatingActionButton;
     ArrayList<String> albid, aluname, alcity, albmedal, alsmedal, algmedal, albcontent, albimage,
             aluseful, aluseless, aldate, postimage, likeStatus, msgMobile;
     Service1 ws;
@@ -107,9 +111,11 @@ public class BroadcastFragment extends BaseFragment{
         postimage = new ArrayList<String>();
         likeStatus = new ArrayList<String>();
         msgMobile = new ArrayList<String>();
-        btn_new_broadcast = (Button) view.findViewById(R.id.btnnewbroadcast);
+        mFloatingActionButton = (FloatingActionButton) view.findViewById(R.id.float_button);
+        mFloatingActionButton.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorPrimary)));
+
         broadcastContainer = (RelativeLayout) view.findViewById(R.id.broadcastContainer);
-        btn_new_broadcast.setOnClickListener(new OnClickListener() {
+        mFloatingActionButton.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
@@ -151,6 +157,7 @@ public class BroadcastFragment extends BaseFragment{
 
         try {
             postcat = getArguments().getString("postcat");
+            //  HomeFragment.tabs.setScrollPosition(0,0f,true);
         } catch (Exception e) {
 
         }

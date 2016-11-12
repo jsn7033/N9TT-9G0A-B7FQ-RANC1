@@ -9,9 +9,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginTop="59dp"
         android:background="@color/white"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <Button
             android:id="@+id/popular_post_txt"
@@ -69,6 +72,18 @@
             android:layout_height="wrap_content"
             android:background="@drawable/btn_bgr"
             android:text="@string/my_post_text"
+            android:textColor="@color/purple" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black50" />
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bgr"
+            android:text="@string/cancel"
             android:textColor="@color/purple" />
     </LinearLayout>
 

@@ -11,18 +11,19 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -42,7 +43,7 @@ import com.AppHelper.RoundedImageView;
 import com.CheckInternet.CheckInternet;
 import com.SessionManager.SessionManager;
 import com.core.BaseFragment;
-import com.devsmart.android.ui.HorizontalListView;
+import com.utilites.Utilites;
 import com.webservice.Service1;
 import com.squareup.picasso.Picasso;
 
@@ -51,6 +52,7 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
@@ -149,6 +151,7 @@ public class BadgesFragment extends BaseFragment {
 
     public interface AppTitleCallback {
         void title(String title);
+
     }
 
 
@@ -156,15 +159,81 @@ public class BadgesFragment extends BaseFragment {
     public void onAttach(Activity context) {
         super.onAttach(context);
 
-        if (context instanceof Home) {
+        if (context instanceof HomeActivity) {
             mAppTitleCallback = (AppTitleCallback) context;
         }
 
     }
 
+    public static void showOptionDialog(Context context, String title, final String[] genderlist, final EditText editText) {
+
+        android.support.v7.app.AlertDialog.Builder builder;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            builder = new android.support.v7.app.AlertDialog.Builder(context, android.R.style.Theme_Material_Light_Dialog_Alert);
+        } else {
+            builder = new android.support.v7.app.AlertDialog.Builder(context);
+        }
+
+        builder.setTitle(title);
+
+        ArrayList<String> currList = new ArrayList<>();
+        for (int i = 0; i < currList.size(); i++) {
+/*
+            builder.setSingleChoiceItems(genderlist, i, null)
+                    .setPositiveButton("Select", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            int position = ((android.support.v7.app.AlertDialog) dialog).getListView().getCheckedItemPosition();
+                            String selectedTExt = genderlist[position];
+                            editText.setText(selectedTExt);
+
+                        }
+                    })
+                    .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+
+//            }
+*/
+            builder.setSingleChoiceItems(genderlist, 0, null)
+                    .setPositiveButton("Select", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            int pos = ((AlertDialog) dialog).getListView().getCheckedItemPosition();
+                            String selectedTExt = genderlist[pos];
+
+                            editText.setText(selectedTExt);
+
+                        }
+                    })
+                    .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+
+        }
+
+        android.support.v7.app.AlertDialog dialog = builder.create();//AlertDialog dialog; create like this outside onClick
+        dialog.show();
+
+    }
+
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        menu.clear();
+    }
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
         mAppTitleCallback.title(getString(R.string.profile));
     }
 
@@ -174,7 +243,6 @@ public class BadgesFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_badges_fragment, container, false);
-
         sessionManager = new SessionManager(getActivity());
         checknet = new CheckInternet(getActivity());//initilise the checking internet status
         ws = new Service1();
@@ -233,6 +301,8 @@ public class BadgesFragment extends BaseFragment {
 
         etgender = (Spinner) view.findViewById(R.id.etgender);
         etdob = (EditText) view.findViewById(R.id.etdob);
+        showOptionDialog(getActivity(), "dsdfs", maritalList, etdob);
+
         etmarital = (Spinner) view.findViewById(R.id.etmarital);
 
         etfathername = (EditText) view.findViewById(R.id.etfathername);
@@ -281,6 +351,11 @@ public class BadgesFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
 
+
+
+//                dsadsadad
+//                        sadfsad
+//                        sdfsd
 
                 // method to getting personal detail
                 updatepersonal ds = new updatepersonal(etmobile.getText().toString(), etusername.getText().toString(),
@@ -426,7 +501,7 @@ public class BadgesFragment extends BaseFragment {
         RelativeLayout mTabMainlayout = (RelativeLayout) LayoutInflater.from(getActivity()).inflate(R.layout.custom_tab, null);
         TextView mTabText = (TextView) mTabMainlayout.findViewById(R.id.tab_text);
         ImageView mImageview = (ImageView) mTabMainlayout.findViewById(R.id.tabimage);
-        mTabText.setText("BROADCAST");
+        mTabText.setText("BADGES");
         mImageview.setImageResource(image1[0]);
         tabs.getTabAt(0).setCustomView(mTabMainlayout);
 
@@ -466,7 +541,7 @@ public class BadgesFragment extends BaseFragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home button
+            // Respond to the action bar's Up/HomeActivity button
             case android.R.id.home:
                 finish();
 
