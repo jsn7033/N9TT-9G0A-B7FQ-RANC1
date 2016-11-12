@@ -1,18 +1,19 @@
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clickable="true"
-    android:focusableInTouchMode="true"
+
     android:layout_marginBottom="10dp"
-    android:background="@color/light_gray1">
+    android:background="@color/light_gray1"
+    android:clickable="true"
+
+    android:focusableInTouchMode="true">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="${relativePackage}.${activityClass}" >
+        tools:context="${relativePackage}.${activityClass}">
 
         <RelativeLayout
             android:id="@+id/healthContainer"
@@ -23,13 +24,13 @@
                 android:id="@+id/quoteBody"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="20dp" >
+                android:padding="20dp">
 
                 <ImageView
                     android:id="@+id/ivQuoteOpen"
                     android:layout_width="20dp"
-                    android:src="@drawable/ic_rightquote"
-                    android:layout_height="20dp" />
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_rightquote" />
 
                 <TextView
                     android:id="@+id/tvQuote"
@@ -45,10 +46,10 @@
                     android:id="@+id/ivQuoteClose"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginBottom="-10dp"
-                    android:src="@drawable/ic_leftquote"
                     android:layout_alignBottom="@+id/tvQuote"
-                    android:layout_alignRight="@+id/tvQuote" />
+                    android:layout_alignRight="@+id/tvQuote"
+                    android:layout_marginBottom="-10dp"
+                    android:src="@drawable/ic_leftquote" />
             </RelativeLayout>
 
             <LinearLayout
@@ -58,7 +59,7 @@
                 android:layout_above="@+id/btnSave"
                 android:layout_below="@+id/quoteBody"
                 android:layout_margin="15dp"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
 
                 <android.support.design.widget.TextInputLayout
@@ -75,25 +76,25 @@
                 </android.support.design.widget.TextInputLayout>
 
 
-<!--
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
+                <!--
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal" >
 
-                    <TextView
-                        style="@style/BadgeTextViewFiled"
-                        android:text="@string/blood_group_text" />
+                                    <TextView
+                                        style="@style/BadgeTextViewFiled"
+                                        android:text="@string/blood_group_text" />
 
-                    <EditText
-                        android:id="@+id/etBloodGroup"
-                        android:layout_width="match_parent"
-                        android:layout_height="22dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/edittext_states"
-                        android:gravity="top" />
-                </LinearLayout>
--->
+                                    <EditText
+                                        android:id="@+id/etBloodGroup"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="22dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/edittext_states"
+                                        android:gravity="top" />
+                                </LinearLayout>
+                -->
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
@@ -108,26 +109,26 @@
                         android:singleLine="true" />
                 </android.support.design.widget.TextInputLayout>
 
-<!--
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal" >
+                <!--
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal" >
 
-                    <TextView
-                        style="@style/BadgeTextViewFiled"
-                        android:text="MEDICAL INSURANCE" />
+                                    <TextView
+                                        style="@style/BadgeTextViewFiled"
+                                        android:text="MEDICAL INSURANCE" />
 
-                    <EditText
-                        android:id="@+id/etinsurance"
-                        android:layout_width="match_parent"
-                        android:layout_height="22dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/edittext_states"
-                        android:gravity="top" />
-                </LinearLayout>
--->
+                                    <EditText
+                                        android:id="@+id/etinsurance"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="22dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/edittext_states"
+                                        android:gravity="top" />
+                                </LinearLayout>
+                -->
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -194,8 +195,8 @@
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_marginBottom="50dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
                     android:hint="VEHICLE NO">
 
                     <EditText
@@ -206,28 +207,28 @@
                         android:singleLine="true" />
                 </android.support.design.widget.TextInputLayout>
 
-<!--
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="40dp">
+                <!--
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal"
+                                    android:layout_marginBottom="40dp">
 
-                    <TextView
-                        style="@style/BadgeTextViewFiled"
-                        android:text="VEHICLE NO" />
+                                    <TextView
+                                        style="@style/BadgeTextViewFiled"
+                                        android:text="VEHICLE NO" />
 
-                    <EditText
-                        android:id="@+id/etvehicleno"
-                        android:layout_width="match_parent"
-                        android:layout_height="22dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/btn_bgr"
-                        android:gravity="top"
-                        android:paddingRight="5dp" />
-                </LinearLayout>
--->
+                                    <EditText
+                                        android:id="@+id/etvehicleno"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="22dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/btn_bgr"
+                                        android:gravity="top"
+                                        android:paddingRight="5dp" />
+                                </LinearLayout>
+                -->
             </LinearLayout>
 
             <Button
@@ -235,12 +236,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+
                 android:background="@color/purple"
                 android:text="SAVE"
-
-                android:textColor="@color/white"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp" />
+                android:textColor="@color/white" />
         </RelativeLayout>
 
     </RelativeLayout>
