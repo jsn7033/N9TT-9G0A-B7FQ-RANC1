@@ -1,17 +1,15 @@
 package com.suraksha;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.AppHelper.RoundedImageView;
 import com.core.BaseFragment;
 import com.squareup.picasso.Picasso;
 
@@ -45,7 +43,7 @@ import com.squareup.picasso.Picasso;
 //    @Override
 //    public boolean onOptionsItemSelected(MenuItem item) {
 //        switch (item.getItemId()) {
-//            // Respond to the action bar's Up/Home button
+//            // Respond to the action bar's Up/HomeActivity button
 //            case android.R.id.home:
 //                finish();
 //
@@ -77,7 +75,7 @@ public class AboutUsFragment extends BaseFragment {
     public void onAttach(Activity context) {
         super.onAttach(context);
 
-        if (context instanceof Home) {
+        if (context instanceof HomeActivity) {
             mAppTitleCallback = (AppTitleCallback) context;
         }
 
@@ -88,6 +86,8 @@ public class AboutUsFragment extends BaseFragment {
         super.onCreate(savedInstanceState);
         mAppTitleCallback.title(getString(R.string.menu_about_text));
     }
+
+
 
 
     @Nullable
@@ -102,7 +102,14 @@ public class AboutUsFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        setHasOptionsMenu(true);
         mBackGroundImage= (ImageView) view.findViewById(R.id.background_img);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        menu.clear();
     }
 
     @Override

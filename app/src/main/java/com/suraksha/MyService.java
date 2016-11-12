@@ -2,10 +2,7 @@ package com.suraksha;
 
 
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -30,8 +27,6 @@ import android.os.StrictMode;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v4.content.ContextCompat;
-import android.text.format.Time;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.SessionManager.SessionManager;
@@ -186,10 +181,10 @@ public class MyService extends Service {
                         .setAutoCancel(true)
                         .setContentText(c + " new message from HowZat SOS");
 
-        Intent resultIntent = new Intent(MyService.this, Home.class);
+        Intent resultIntent = new Intent(MyService.this, HomeActivity.class);
 
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(MyService.this);
-        stackBuilder.addParentStack(Home.class);
+        stackBuilder.addParentStack(HomeActivity.class);
         stackBuilder.addNextIntent(resultIntent);
         PendingIntent resultPendingIntent =
                 stackBuilder.getPendingIntent(
@@ -216,7 +211,7 @@ public class MyService extends Service {
                 android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
 
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(MyService.this);
-        stackBuilder.addParentStack(Home.class);
+        stackBuilder.addParentStack(HomeActivity.class);
         stackBuilder.addNextIntent(resultIntent);
         PendingIntent resultPendingIntent =
                 stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT

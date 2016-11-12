@@ -1,14 +1,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
     android:layout_height="match_parent"
-     >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:id="@+id/broadcastContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <ListView
             android:id="@+id/lvPost"
@@ -18,13 +20,30 @@
             android:layout_alignParentTop="true"
             android:choiceMode="singleChoice" />
 
-        <Button android:id="@+id/btnnewbroadcast"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignBottom="@+id/lvPost"
-            android:layout_alignRight="@+id/lvPost"
-            android:background="@drawable/newbroadcast"
-            android:layout_margin="10dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/float_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/footer"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/plus_icon"
+            android:layout_marginRight="25dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="70dp"
+
+            />
+
+        <!--<Button-->
+            <!--android:id="@+id/btnnewbroadcast"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_alignBottom="@+id/lvPost"-->
+            <!--android:layout_alignRight="@+id/lvPost"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:background="@drawable/newbroadcast" />-->
+
         <RelativeLayout
             android:id="@+id/footer"
             android:layout_width="match_parent"
@@ -40,9 +59,10 @@
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:background="@drawable/ic_businessman"
-                android:visibility="gone"/>
-            
-            <TextView android:id="@+id/tvSlidetoCall"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvSlidetoCall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -50,8 +70,8 @@
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
-            
-                <ImageView
+
+            <ImageView
                 android:id="@+id/ivShare"
                 android:layout_width="40dp"
                 android:layout_height="40dp"

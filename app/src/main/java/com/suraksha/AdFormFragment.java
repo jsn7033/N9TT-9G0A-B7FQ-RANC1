@@ -23,12 +23,11 @@ import android.os.Environment;
 import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -87,15 +86,20 @@ public class AdFormFragment extends BaseFragment {
     public void onAttach(Activity context) {
         super.onAttach(context);
 
-        if (context instanceof Home) {
+        if (context instanceof HomeActivity) {
             mAppTitleCallback = (AppTitleCallback) context;
         }
 
     }
-
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        menu.clear();
+    }
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
         mAppTitleCallback.title(getString(R.string.menu_post_text));
     }
 
@@ -421,7 +425,7 @@ public class AdFormFragment extends BaseFragment {
             Toast.makeText(getActivity(), "Ad submitted successfully", Toast.LENGTH_LONG).show();
             SendPhotos sendPhotos = new SendPhotos(Imagename, selectedImagePath);
             sendPhotos.execute();
-            Intent i = new Intent(getActivity(), Home.class);
+            Intent i = new Intent(getActivity(), HomeActivity.class);
             startActivity(i);
 
             super.onPostExecute(result);

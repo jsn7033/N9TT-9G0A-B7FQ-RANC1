@@ -76,7 +76,7 @@ public class OTP_verification extends Activity
                         //df.execute();
                         session.Savepreferences("MobileNo",dbmobileno);
                         session.Savepreferences("login","yes");
-                        Intent ds=new Intent(getApplicationContext(),Home.class);
+                        Intent ds=new Intent(getApplicationContext(),HomeActivity.class);
                         startActivity(ds);
                         finish();
 
@@ -94,7 +94,7 @@ public class OTP_verification extends Activity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home button
+            // Respond to the action bar's Up/HomeActivity button
             case android.R.id.home:
                 finish();
 
@@ -204,7 +204,7 @@ public class OTP_verification extends Activity
 
             session.Savepreferences("MobileNo",dbmobileno);
             session.Savepreferences("login","yes");
-            Intent ds=new Intent(getApplicationContext(),Home.class);
+            Intent ds=new Intent(getApplicationContext(),HomeActivity.class);
             startActivity(ds);
             finish();
 

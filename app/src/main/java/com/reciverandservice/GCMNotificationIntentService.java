@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
-import com.suraksha.Home;
+import com.suraksha.HomeActivity;
 import com.suraksha.R;
 
 public class GCMNotificationIntentService extends IntentService {
@@ -65,7 +65,7 @@ public class GCMNotificationIntentService extends IntentService {
                 .getSystemService(Context.NOTIFICATION_SERVICE);
 
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, Home.class), 0);
+                new Intent(this, HomeActivity.class), 0);
 
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(
                 this).setSmallIcon(R.drawable.howzaticon)

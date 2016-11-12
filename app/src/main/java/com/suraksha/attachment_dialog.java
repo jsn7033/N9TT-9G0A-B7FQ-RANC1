@@ -20,14 +20,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.provider.MediaStore;
 import android.text.format.Time;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -35,14 +33,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
-import android.widget.ImageView.ScaleType;
+
 import com.ticktick.imagecropper.CropImageActivity;
-import com.ticktick.imagecropper.CropIntent;
 
 public class attachment_dialog extends Activity{
 
-	Home h;
+	HomeActivity h;
 	public static boolean cropflag=false;
 	public static int flag;
 	public static Bitmap photo;
@@ -128,7 +124,7 @@ public class attachment_dialog extends Activity{
 			
 			@Override
 			public void onClick(View arg0) {
-				Intent i=new Intent(attachment_dialog.this,Home.class);
+				Intent i=new Intent(attachment_dialog.this,HomeActivity.class);
 				startActivity(i);
 				
 			}
@@ -163,7 +159,7 @@ public class attachment_dialog extends Activity{
 				
 				Async2 task2=new Async2();
 			    task2.execute();
-				Intent i=new Intent(attachment_dialog.this,Home.class);
+				Intent i=new Intent(attachment_dialog.this,HomeActivity.class);
 				startActivity(i); 
 				
 			}

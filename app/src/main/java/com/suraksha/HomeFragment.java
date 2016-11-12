@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 
 import android.support.annotation.Nullable;
@@ -18,23 +19,20 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.core.BaseFragment;
-import com.devsmart.android.ui.HorizontalListView;
 
 //this activity is home activity wich is first call BroadcastFragment by default
 public class HomeFragment extends BaseFragment {
 
-    TabLayout tabs;
+  public     TabLayout tabs;
 
     AppTitleCallback mAppTitleCallback;
-
 
     public interface AppTitleCallback {
         void title(String title);
@@ -45,7 +43,7 @@ public class HomeFragment extends BaseFragment {
     public void onAttach(Activity context) {
         super.onAttach(context);
 
-        if (context instanceof Home) {
+        if (context instanceof HomeActivity) {
             mAppTitleCallback = (AppTitleCallback) context;
         }
 
@@ -55,7 +53,119 @@ public class HomeFragment extends BaseFragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAppTitleCallback.title(getString(R.string.title_activity_home));
+        setHasOptionsMenu(true);
     }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.activity_main, menu);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+/*
+        if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        } else*/ if (item.getItemId() == R.id.menu_filter) {
+            int actionBarHeight =((HomeActivity)getActivity()).mToolbar.getHeight() * 2;
+            popupWindow(actionBarHeight);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void popupWindow(int offsetY) {
+        // // TODO Auto-generated method stub
+
+        // Inflate the popup_layout.xml
+       // RelativeLayout viewGroup = (RelativeLayout) findViewById(R.id.popup);
+       // LayoutInflater layoutInflater = (LayoutInflater) getActivity.(Context.LAYOUT_INFLATER_SERVICE);
+        View layout = LayoutInflater.from(getActivity()).inflate(R.layout.filterscreen_pupp,
+                null);
+        Button mostusefull = (Button) layout.findViewById(R.id.btn2);
+        Button recentpost = (Button) layout.findViewById(R.id.btn3);
+        Button myusefullpost = (Button) layout.findViewById(R.id.btn4);
+        Button mypost = (Button) layout.findViewById(R.id.btn5);
+        Button cancel=(Button) layout.findViewById(R.id.cancelBtn);
+
+        // Creating the PopupWindow
+        final PopupWindow popup = new PopupWindow();
+        popup.setContentView(layout);
+        popup.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
+        popup.setHeight(ViewGroup.LayoutParams.MATCH_PARENT);
+        popup.setFocusable(true);
+        popup.setOutsideTouchable(true);
+
+        // Clear the default translucent background
+        popup.setBackgroundDrawable(new BitmapDrawable());
+
+
+        popup.showAsDropDown(layout, 0, 0);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popup.dismiss();
+
+            }
+        });
+
+        mostusefull.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popup.dismiss();
+                postcategory("Most Useful Post");
+
+            }
+        });
+
+        recentpost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popup.dismiss();
+                postcategory("Recent Post");
+
+            }
+        });
+
+        myusefullpost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popup.dismiss();
+                postcategory("My Useful Post");
+
+            }
+        });
+
+        mypost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popup.dismiss();
+                postcategory("My Post");
+
+            }
+        });
+
+    }
+
+    public void postcategory(String pcat) {
+
+        Fragment fragment = null;
+        tabs.setScrollPosition(0,0f,true);
+        ((HomeActivity)getActivity()).clearBackStack();
+        fragment = new BroadcastFragment();
+        Bundle args = new Bundle();
+        args.putString("postcat", pcat);
+
+        fragment.setArguments(args);
+        android.support.v4.app.FragmentManager fm = getActivity().getSupportFragmentManager();
+      //  fm.popBackStack();
+        android.support.v4.app.FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.add(R.id.mainContainer, fragment);
+        fragmentTransaction.commit();
+    }
+
 
     int[] tabDrawables = {R.drawable.broadcast, R.drawable.search, R.drawable.map};
 
@@ -66,6 +176,7 @@ public class HomeFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.activity_home, container, false);
         tabs = (TabLayout) view.findViewById(R.id.tabs);
         tabs.setTabMode(TabLayout.MODE_SCROLLABLE);
+        tabs.setScrollPosition(0,0f,true);
 //		hlList = (HorizontalListView) view.findViewById(R.id.rlTabs);
 //		adapter = new GridAdapter(getActivity(), 0);// custom adapter for set horizental list view
 //		hlList.setAdapter(adapter);
@@ -293,7 +404,7 @@ public class HomeFragment extends BaseFragment {
         fm.popBackStack();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.add(R.id.mainContainer, fragment);
-        fragmentTransaction.addToBackStack(null);
+//        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 }

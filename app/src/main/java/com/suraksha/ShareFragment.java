@@ -2,20 +2,15 @@ package com.suraksha;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,12 +40,18 @@ public class ShareFragment extends BaseFragment {
         void title(String title);
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        menu.clear();
+    }
+
 
     @Override
     public void onAttach(Activity context) {
         super.onAttach(context);
 
-        if (context instanceof Home) {
+        if (context instanceof HomeActivity) {
             mAppTitleCallback = (AppTitleCallback) context;
         }
 
@@ -59,6 +60,7 @@ public class ShareFragment extends BaseFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
         mAppTitleCallback.title(getString(R.string.menu_share_text));
     }
 
@@ -91,6 +93,8 @@ public class ShareFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
+
         return inflater.inflate(R.layout.share, container, false);
     }
 
@@ -113,10 +117,10 @@ public class ShareFragment extends BaseFragment {
         });
     }
 
-    @Override
+   /* @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home button
+            // Respond to the action bar's Up/HomeActivity button
             case android.R.id.home:
                 getActivity().finish();
 
@@ -124,7 +128,7 @@ public class ShareFragment extends BaseFragment {
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     private void sharedialog() {
         final CharSequence[] items = {"ShareFragment my location", "ShareFragment this app"};

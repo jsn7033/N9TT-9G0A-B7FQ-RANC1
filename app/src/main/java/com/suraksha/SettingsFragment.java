@@ -12,12 +12,10 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.hardware.SensorManager;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -29,7 +27,6 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 
 import com.SessionManager.SessionManager;
 import com.core.BaseFragment;
-import com.squareup.picasso.Picasso;
 import com.webservice.Service1;
 
 public class SettingsFragment extends BaseFragment {
@@ -55,15 +52,22 @@ public class SettingsFragment extends BaseFragment {
     public void onAttach(Activity context) {
         super.onAttach(context);
 
-        if (context instanceof Home) {
+        if (context instanceof HomeActivity) {
             mAppTitleCallback = (AppTitleCallback) context;
         }
 
     }
 
     @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        menu.clear();
+    }
+
+    @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
         mAppTitleCallback.title(getString(R.string.menu_setting_text));
     }
 
@@ -317,7 +321,7 @@ public class SettingsFragment extends BaseFragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home button
+            // Respond to the action bar's Up/HomeActivity button
             case android.R.id.home:
                 finish();
                 return true;

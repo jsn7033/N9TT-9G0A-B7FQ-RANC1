@@ -31,7 +31,6 @@
             android:layout_below="@+id/badgeProfile"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="6dp"
-            android:text="Ahsan"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -41,7 +40,6 @@
             android:layout_below="@+id/profileName"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="3dp"
-            android:text="Karachi, Pakistan"
             android:textColor="@color/white"
             android:textSize="12sp" />
 

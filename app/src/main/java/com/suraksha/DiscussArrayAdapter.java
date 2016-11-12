@@ -1,26 +1,19 @@
 package com.suraksha;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.AppHelper.RoundedImageView;
-import com.squareup.picasso.Picasso;
 
 public class DiscussArrayAdapter extends ArrayAdapter<OneComment> {
 
@@ -29,7 +22,7 @@ public class DiscussArrayAdapter extends ArrayAdapter<OneComment> {
     private ImageView ivleft, ivright;
     private RelativeLayout wrapper_left, wrapper_right;
     private Context context;
-    Home h;
+    HomeActivity h;
     public String path;
     public String imgcaption;
     public Object indextag;

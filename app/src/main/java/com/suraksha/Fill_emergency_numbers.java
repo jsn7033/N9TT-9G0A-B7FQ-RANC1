@@ -131,7 +131,7 @@ public class Fill_emergency_numbers extends Activity implements OnClickListener 
 		}
 		if(v.getId()==btnsave.getId()) {
 			sessionManager.Savepreferences("login","yes");
-			Intent i = new Intent(Fill_emergency_numbers.this, Home.class);
+			Intent i = new Intent(Fill_emergency_numbers.this, HomeActivity.class);
 			startActivity(i);
 			finish();
 		}
@@ -176,7 +176,7 @@ public class Fill_emergency_numbers extends Activity implements OnClickListener 
 			   } else {
 				   sessionManager.Savepreferences("login","yes");
 
-				   Intent i = new Intent(Fill_emergency_numbers.this, Home.class);
+				   Intent i = new Intent(Fill_emergency_numbers.this, HomeActivity.class);
 				   startActivity(i);
 				   finish();
 			   }
