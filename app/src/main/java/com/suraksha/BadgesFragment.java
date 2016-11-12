@@ -24,6 +24,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -43,7 +44,6 @@ import com.AppHelper.RoundedImageView;
 import com.CheckInternet.CheckInternet;
 import com.SessionManager.SessionManager;
 import com.core.BaseFragment;
-import com.utilites.Utilites;
 import com.webservice.Service1;
 import com.squareup.picasso.Picasso;
 
@@ -52,7 +52,6 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
@@ -112,8 +111,11 @@ public class BadgesFragment extends BaseFragment {
 
     int image[] = {R.drawable.ic_person1, R.drawable.ic_person1,
             R.drawable.ic_professional, R.drawable.ic_health};
-    int image1[] = {R.drawable.ic_person, R.drawable.ic_person,
-            R.drawable.ic_professional, R.drawable.ic_health};
+//    int image1[] = {R.drawable.ic_person, R.drawable.ic_person,
+//            R.drawable.ic_professional, R.drawable.ic_health};
+
+    int image1[] = {R.drawable.ic_person, R.drawable.ic_professional,
+            R.drawable.ic_health, R.drawable.ic_person};
 
     RelativeLayout badgeLayout, healthLayout, personalLayout, ProfessionalLayout;
 
@@ -126,8 +128,7 @@ public class BadgesFragment extends BaseFragment {
     ImageView badgeProfile;
     TextView profileName, stateName, coinbalance, tvGoldCount, tvSilverCount, tvBronzeCount;
     Button btnEdit, btnViewOffer, btnRedeme;
-    EditText etusername, etmobile, etfname, etlname, etemailid, etdob, etfathername, etfathermobile, etspousename, etspousemobile, etaddress, etrcity;
-    Spinner etgender, etmarital;
+    EditText etusername, etmobile, etfname, etlname, etemailid, etfathername, etfathermobile, etspousename, etspousemobile, etaddress, etrcity;
     EditText etrstate;
     Button btnpersonal;
     EditText etBloodGroup, etinsurance, etpolicyno, ethealth;
@@ -137,12 +138,23 @@ public class BadgesFragment extends BaseFragment {
     Button btnprofession;
     ImageView mEditProfileIv;
 
+
+    LinearLayout mDobLayout;
+    LinearLayout mGenderLayout;
+    LinearLayout mMartialLayout;
+    EditText mGenderEdt;
+    EditText mDobEdt;
+    EditText mMartialEdt;
+
     private String imgUrl = "http://104.238.126.224/djnni%20dll/bills/";
 
     LinearLayout badgeFooter;
 
-    String[] genderlist = new String[]{"Select", "Male", "Female"};
-    String[] maritalList = new String[]{"Select", "Single", "Married", "UnMarried", "divorced"};
+//    String[] genderlist = new String[]{"Select", "Male", "Female"};
+//    String[] maritalList = new String[]{"Select", "Single", "Married", "UnMarried", "divorced"};
+
+    String[] genderlist = new String[]{"Male", "Female"};
+    String[] maritalList = new String[]{"Single", "Married", "UnMarried", "divorced"};
     ArrayAdapter<String> gendrAdapter, maritAdapter;
 
 
@@ -165,7 +177,9 @@ public class BadgesFragment extends BaseFragment {
 
     }
 
-    public static void showOptionDialog(Context context, String title, final String[] genderlist, final EditText editText) {
+    int mGenderSelectedPos = 0;
+
+    public void showOptionDialogforGender(Context context, String title, final String[] list, final EditText editText) {
 
         android.support.v7.app.AlertDialog.Builder builder;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -176,15 +190,19 @@ public class BadgesFragment extends BaseFragment {
 
         builder.setTitle(title);
 
-        ArrayList<String> currList = new ArrayList<>();
-        for (int i = 0; i < currList.size(); i++) {
-/*
-            builder.setSingleChoiceItems(genderlist, i, null)
-                    .setPositiveButton("Select", new DialogInterface.OnClickListener() {
+        for (int i = 0; i < list.length; i++) {
+
+            if (editText.getText().toString().equalsIgnoreCase(list[i])) {
+                mGenderSelectedPos = i;
+            }
+
+            builder.setSingleChoiceItems(list, mGenderSelectedPos, null)
+                    .setPositiveButton("DONE", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            int position = ((android.support.v7.app.AlertDialog) dialog).getListView().getCheckedItemPosition();
-                            String selectedTExt = genderlist[position];
+                            int pos = ((android.support.v7.app.AlertDialog) dialog).getListView().getCheckedItemPosition();
+                            String selectedTExt = list[pos];
+
                             editText.setText(selectedTExt);
 
                         }
@@ -196,14 +214,38 @@ public class BadgesFragment extends BaseFragment {
                         }
                     });
 
-//            }
-*/
-            builder.setSingleChoiceItems(genderlist, 0, null)
-                    .setPositiveButton("Select", new DialogInterface.OnClickListener() {
+        }
+
+        android.support.v7.app.AlertDialog dialog = builder.create();//AlertDialog dialog; create like this outside onClick
+        dialog.show();
+
+    }
+
+
+    int mMaritalStatusPos = 0;
+
+    private void showdialogforMartialStatus(Context context, String title, final String[] list, final EditText editText) {
+        android.support.v7.app.AlertDialog.Builder builder;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            builder = new android.support.v7.app.AlertDialog.Builder(context, android.R.style.Theme_Material_Light_Dialog_Alert);
+        } else {
+            builder = new android.support.v7.app.AlertDialog.Builder(context);
+        }
+
+        builder.setTitle(title);
+
+        for (int i = 0; i < list.length; i++) {
+
+            if (editText.getText().toString().equalsIgnoreCase(list[i])) {
+                mMaritalStatusPos = i;
+            }
+
+            builder.setSingleChoiceItems(list, mMaritalStatusPos, null)
+                    .setPositiveButton("DONE", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             int pos = ((AlertDialog) dialog).getListView().getCheckedItemPosition();
-                            String selectedTExt = genderlist[pos];
+                            String selectedTExt = list[pos];
 
                             editText.setText(selectedTExt);
 
@@ -248,15 +290,6 @@ public class BadgesFragment extends BaseFragment {
         ws = new Service1();
         tabs = (TabLayout) view.findViewById(R.id.tabs);
         tabs.setTabMode(TabLayout.MODE_SCROLLABLE);
-       /* Toolbar mToolbar = loadToolbar("Profile");
-        setSupportActionBar(mToolbar);
-        mToolbar.setLogo(R.drawable.howzaticon_);
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });*/
 
         badgeLayout = (RelativeLayout) view.findViewById(R.id.badgeContainer);
         healthLayout = (RelativeLayout) view.findViewById(R.id.healthContainer);
@@ -299,11 +332,9 @@ public class BadgesFragment extends BaseFragment {
         etlname = (EditText) view.findViewById(R.id.etlname);
         etemailid = (EditText) view.findViewById(R.id.etemailid);
 
-        etgender = (Spinner) view.findViewById(R.id.etgender);
-        etdob = (EditText) view.findViewById(R.id.etdob);
-        showOptionDialog(getActivity(), "dsdfs", maritalList, etdob);
-
-        etmarital = (Spinner) view.findViewById(R.id.etmarital);
+//        etgender = (Spinner) view.findViewById(R.id.etgender);
+//
+//        etmarital = (Spinner) view.findViewById(R.id.etmarital);
 
         etfathername = (EditText) view.findViewById(R.id.etfathername);
         etfathermobile = (EditText) view.findViewById(R.id.etfathermobile);
@@ -329,28 +360,40 @@ public class BadgesFragment extends BaseFragment {
         etopincode = (EditText) view.findViewById(R.id.etopincode);
 
 
+        mDobLayout = (LinearLayout) view.findViewById(R.id.dob_layout_click);
+        ;
+        mGenderLayout = (LinearLayout) view.findViewById(R.id.gender_layout_click);
+        ;
+        mMartialLayout = (LinearLayout) view.findViewById(R.id.marital_layout_click);
+        ;
+        mGenderEdt = (EditText) view.findViewById(R.id.gender_edt);
+        ;
+        mDobEdt = (EditText) view.findViewById(R.id.dob_edt);
+        ;
+        mMartialEdt = (EditText) view.findViewById(R.id.martial_edt);
+        ;
+
+
 //        hlList = (HorizontalListView) view.findViewById(R.id.rlTabs);
 //        adapter = new GridAdapter(getActivity(), 0);// set Adapter on horizental list view
 //        hlList.setAdapter(adapter);
 //        hlList.setOnItemClickListener(item_Click);
-        SetCalenderToTextbox(etdob);// method for calender on edit text
 
 // set array Adapter on the spinner for select gender
         gendrAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, genderlist);
         gendrAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        etgender.setAdapter(gendrAdapter);
+//        etgender.setAdapter(gendrAdapter);
 
 
 // set array Adapter on the spinner for select marital status
         maritAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, maritalList);
         maritAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        etmarital.setAdapter(maritAdapter);
+//        etmarital.setAdapter(maritAdapter);
 
 // btn for gettting personal detail of user
         btnpersonal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
 
 
 //                dsadsadad
@@ -360,7 +403,7 @@ public class BadgesFragment extends BaseFragment {
                 // method to getting personal detail
                 updatepersonal ds = new updatepersonal(etmobile.getText().toString(), etusername.getText().toString(),
                         etfname.getText().toString(), etlname.getText().toString(), etemailid.getText().toString(),
-                        etgender.getSelectedItem().toString(), etdob.getText().toString(), etmarital.getSelectedItem().toString(),
+                        mGenderEdt.getText().toString(), mDobEdt.getText().toString(), mMartialEdt.getText().toString(),
                         etfathername.getText().toString(), etfathermobile.getText().toString(), etspousename.getText().toString(),
                         etspousemobile.getText().toString(), etaddress.getText().toString(), etrcity.getText().toString(),
                         etrstate.getText().toString());
@@ -435,8 +478,101 @@ public class BadgesFragment extends BaseFragment {
 
         super.onActivityCreated(savedInstanceState);
 
-
+        SetCalenderToTextbox(mDobEdt);
         setTabs();
+        setClickListeners();
+
+    }
+
+    public void SetCalenderToTextbox(EditText Txt) {
+        final Calendar myCalendar = Calendar.getInstance();
+        final EditText Txtdate = Txt;
+        final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                UpdateDateText(Txtdate, myCalendar);
+            }
+
+        };
+
+//        Txt.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                new DatePickerDialog(getActivity(), date, myCalendar
+//                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+//                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+//            }
+//        });
+
+        mDobEdt.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+
+                switch (motionEvent.getAction()) {
+                    case MotionEvent.ACTION_UP:
+                        new DatePickerDialog(getActivity(), date, myCalendar
+                                .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                                myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+                        break;
+                }
+
+                return false;
+            }
+        });
+
+    }
+
+
+    private void setClickListeners() {
+
+        mGenderEdt.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+
+                switch (motionEvent.getAction()) {
+                    case MotionEvent.ACTION_UP:
+                        showOptionDialogforGender(getActivity(), "Gender", genderlist, mGenderEdt);
+                        break;
+                }
+
+                return false;
+            }
+        });
+
+        mMartialEdt.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+
+                switch (motionEvent.getAction()) {
+                    case MotionEvent.ACTION_UP:
+                        showOptionDialogforGender(getActivity(), "Martial Status", maritalList, mMartialEdt);
+                        break;
+                }
+
+                return false;
+            }
+        });
+
+//        mGenderLayout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                showOptionDialogforGender(getActivity(), "Gender", genderlist, mGenderEdt);
+//            }
+//        });
+//        mMartialLayout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                showOptionDialogforGender(getActivity(), "Martial Status", maritalList, mMartialEdt);
+////                showdialogforMartialStatus(getActivity(), "Martial Status", maritalList, mMartialEdt);
+//            }
+//        });
+
         tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -450,7 +586,7 @@ public class BadgesFragment extends BaseFragment {
                         badgeFooter.setVisibility(View.VISIBLE);
 //                        adapter.setItemSelected(position);
                         break;
-                    case 1:
+                    case 3:
                         badgeLayout.setVisibility(View.GONE);
                         healthLayout.setVisibility(View.GONE);
                         ProfessionalLayout.setVisibility(View.GONE);
@@ -458,7 +594,7 @@ public class BadgesFragment extends BaseFragment {
                         badgeFooter.setVisibility(View.GONE);
 //                        adapter.setItemSelected(position);
                         break;
-                    case 2:
+                    case 1:
                         badgeLayout.setVisibility(View.GONE);
                         healthLayout.setVisibility(View.GONE);
                         ProfessionalLayout.setVisibility(View.VISIBLE);
@@ -466,7 +602,7 @@ public class BadgesFragment extends BaseFragment {
                         badgeFooter.setVisibility(View.GONE);
 //                        adapter.setItemSelected(position);
                         break;
-                    case 3:
+                    case 2:
                         healthLayout.setVisibility(View.VISIBLE);
                         badgeLayout.setVisibility(View.GONE);
                         ProfessionalLayout.setVisibility(View.GONE);
@@ -489,6 +625,8 @@ public class BadgesFragment extends BaseFragment {
 
     }
 
+    private int sources[] = {R.drawable.badge, R.drawable.professional, R.drawable.health, R.drawable.personal};
+
 
     private void setTabs() {
 
@@ -502,28 +640,28 @@ public class BadgesFragment extends BaseFragment {
         TextView mTabText = (TextView) mTabMainlayout.findViewById(R.id.tab_text);
         ImageView mImageview = (ImageView) mTabMainlayout.findViewById(R.id.tabimage);
         mTabText.setText("BADGES");
-        mImageview.setImageResource(image1[0]);
+        mImageview.setImageResource(sources[0]);
         tabs.getTabAt(0).setCustomView(mTabMainlayout);
 
         RelativeLayout mTabMainlayout1 = (RelativeLayout) LayoutInflater.from(getActivity()).inflate(R.layout.custom_tab, null);
         TextView mTabText1 = (TextView) mTabMainlayout1.findViewById(R.id.tab_text);
         ImageView mImageview1 = (ImageView) mTabMainlayout1.findViewById(R.id.tabimage);
-        mTabText1.setText("PERSONAL");
-        mImageview1.setImageResource(image1[1]);
+        mTabText1.setText("PROFESSIONAL");
+        mImageview1.setImageResource(sources[1]);
         tabs.getTabAt(1).setCustomView(mTabMainlayout1);
 
         RelativeLayout mTabMainlayout2 = (RelativeLayout) LayoutInflater.from(getActivity()).inflate(R.layout.custom_tab, null);
         TextView mTabText2 = (TextView) mTabMainlayout2.findViewById(R.id.tab_text);
         ImageView mImageview2 = (ImageView) mTabMainlayout2.findViewById(R.id.tabimage);
-        mTabText2.setText("PROFESSIONAL");
-        mImageview2.setImageResource(image1[2]);
+        mTabText2.setText("HEALTH");
+        mImageview2.setImageResource(sources[2]);
         tabs.getTabAt(2).setCustomView(mTabMainlayout2);
 
         RelativeLayout mTabMainlayout3 = (RelativeLayout) LayoutInflater.from(getActivity()).inflate(R.layout.custom_tab, null);
         TextView mTabText3 = (TextView) mTabMainlayout3.findViewById(R.id.tab_text);
         ImageView mImageview3 = (ImageView) mTabMainlayout3.findViewById(R.id.tabimage);
-        mTabText3.setText("HEALTH");
-        mImageview3.setImageResource(image1[3]);
+        mTabText3.setText("PERSONAL");
+        mImageview3.setImageResource(sources[3]);
         tabs.getTabAt(3).setCustomView(mTabMainlayout3);
     }
 
@@ -551,36 +689,6 @@ public class BadgesFragment extends BaseFragment {
         return super.onOptionsItemSelected(item);
     }
 */
-
-    public void SetCalenderToTextbox(EditText Txt) {
-        final Calendar myCalendar = Calendar.getInstance();
-        final EditText Txtdate = Txt;
-        final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
-
-            @Override
-            public void onDateSet(DatePicker view, int year, int monthOfYear,
-                                  int dayOfMonth) {
-                // TODO Auto-generated method stub
-                myCalendar.set(Calendar.YEAR, year);
-                myCalendar.set(Calendar.MONTH, monthOfYear);
-                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                UpdateDateText(Txtdate, myCalendar);
-            }
-
-        };
-
-        Txt.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                new DatePickerDialog(getActivity(), date, myCalendar
-                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
-                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
-            }
-        });
-
-    }
 
 
     void UpdateDateText(EditText Txt, Calendar myCalendar) {
@@ -831,15 +939,17 @@ public class BadgesFragment extends BaseFragment {
                             etemailid.setText(obj.getString(peremailid));
                             String genderitem = obj.getString(pergender);
                             if (!genderitem.equals(null)) {
-                                int spinnerPosition = gendrAdapter.getPosition(genderitem);
-                                etgender.setSelection(spinnerPosition);
+                                mGenderEdt.setText(genderitem);
+//                                int spinnerPosition = gendrAdapter.getPosition(genderitem);
+//                                etgender.setSelection(spinnerPosition);
                             }
-                            etdob.setText(obj.getString(perdob));
+                            mDobEdt.setText(obj.getString(perdob));
                             String martal = obj.getString(permaritalsts);
 
                             if (!martal.equals(null)) {
-                                int spinnerPosition = maritAdapter.getPosition(martal);
-                                etmarital.setSelection(spinnerPosition);
+                                mMartialEdt.setText(martal);
+//                                int spinnerPosition = maritAdapter.getPosition(martal);
+//                                etmarital.setSelection(spinnerPosition);
                             }
                             etfathername.setText(obj.getString(perfatname));
                             etfathermobile.setText(obj.getString(perfatmob));
