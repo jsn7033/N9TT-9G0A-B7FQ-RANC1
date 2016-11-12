@@ -352,6 +352,11 @@ public class BadgesFragment extends BaseFragment {
             public void onClick(View v) {
 
 
+
+//                dsadsadad
+//                        sadfsad
+//                        sdfsd
+
                 // method to getting personal detail
                 updatepersonal ds = new updatepersonal(etmobile.getText().toString(), etusername.getText().toString(),
                         etfname.getText().toString(), etlname.getText().toString(), etemailid.getText().toString(),
