@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menuid">
+
+    <item
+        android:id="@+id/notification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:icon="@drawable/ic_notification"
+        android:title="filter"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/menu_filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:icon="@drawable/ic_filter"
+        android:title="filter"
+        app:showAsAction="always" />
+
+</menu>

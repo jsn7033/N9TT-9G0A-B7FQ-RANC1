@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainlayout"
+    android:background="@android:color/white"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivItem"
+            android:layout_width="23dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:src="@drawable/ic_person1" />
+
+        <TextView
+            android:id="@+id/tvItem"
+            style="@style/MenuItem"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_toRightOf="@+id/ivItem"
+            android:layout_marginRight="50dp"
+            android:text="asd" />
+
+        <View
+            android:id="@+id/selectedview"
+            android:layout_width="5dp"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorPrimary" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ivItem"
+            android:background="@color/light_gray2"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/white" >-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/ivItem"-->
+        <!--android:layout_width="23dp"-->
+        <!--android:layout_height="24dp"-->
+        <!--android:src="@drawable/ic_person1"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_margin="10dp" />-->
+    <!---->
+    <!--<TextView android:id="@+id/tvItem"-->
+        <!--android:layout_toRightOf="@+id/ivItem"-->
+        <!--android:text="asd"-->
+        <!--style="@style/MenuItem" />-->
+    <!---->
+     <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_below="@+id/ivItem"-->
+        <!--android:background="@color/light_gray2"/>-->
+
+<!--</RelativeLayout>-->

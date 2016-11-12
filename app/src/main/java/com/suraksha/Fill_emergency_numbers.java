@@ -14,6 +14,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View.OnClickListener;
 import android.view.Menu;
@@ -23,7 +24,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 // in this activity call from two class one is Fill_user_detail and anathor is setting class
-public class Fill_emergency_numbers extends Activity implements OnClickListener {
+public class Fill_emergency_numbers extends BaseActivity implements OnClickListener {
 
 	Button btnnext1;
 	EditText txtno1;
@@ -51,6 +52,17 @@ public class Fill_emergency_numbers extends Activity implements OnClickListener 
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_fill_emergency_numbers);
+
+		Toolbar mToolbar = loadToolbar("Contacts Setting");
+		setSupportActionBar(mToolbar);
+		mToolbar.setLogo(R.drawable.howzaticon_);
+		mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				finish();
+			}
+		});
+
         sessionManager=new SessionManager(getApplicationContext());
 		btnaddcontacts=(Button)findViewById(R.id.btnaddcontact);
 		btnnext1=(Button)findViewById(R.id.btnupdate);

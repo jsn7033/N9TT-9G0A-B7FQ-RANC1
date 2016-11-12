@@ -1,0 +1,92 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbarlayout"></include>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnsend"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:text="Broadcast Post" />
+
+        <ImageButton
+            android:id="@+id/btnattach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/attach" />
+
+        <EditText
+            android:id="@+id/etmsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/btnattach"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/btnattach"
+            android:ems="10"
+            android:hint="What&apos;s on your mind?">
+
+            <requestFocus />
+        </EditText>
+
+        <LinearLayout
+            android:id="@+id/llGallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvImagePost"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivPostImage1"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:scaleType="fitXY"
+
+                android:src="@drawable/documenti"
+                android:layout_marginRight="10dp"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/tvdocument"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="No Doc"
+
+                android:textSize="8sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnsend"
+            android:layout_below="@+id/etmsg"
+            android:layout_centerHorizontal="true"
+            android:maxHeight="400dp"
+            android:maxWidth="300dp"
+            android:src="@drawable/no_image" />
+
+    </RelativeLayout>
+</LinearLayout>

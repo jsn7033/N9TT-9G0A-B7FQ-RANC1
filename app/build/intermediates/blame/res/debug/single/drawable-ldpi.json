@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-ldpi/otp1.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-ldpi/otp1.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-ldpi/share_round.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-ldpi/share_round.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-ldpi/swipe_button_new.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-ldpi/swipe_button_new.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-ldpi/share_round_onclick.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-ldpi/share_round_onclick.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-ldpi/circle_round_onclick.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-ldpi/circle_round_onclick.png"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/drawable-ldpi/circle_round.png",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/drawable-ldpi/circle_round.png"
+    }
+]

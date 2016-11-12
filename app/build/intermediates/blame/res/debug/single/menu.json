@@ -1,0 +1,122 @@
+[
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/otp_verification.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/otp_verification.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/landingpage.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/landingpage.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/help.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/help.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/fill_emergency_contact.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/fill_emergency_contact.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/showmylocation.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/showmylocation.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/fill_personal_details.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/fill_personal_details.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/sensorcallingevent.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/sensorcallingevent.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/fill_emergency_contacts.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/fill_emergency_contacts.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/settings.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/settings.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/fill_user_details.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/fill_user_details.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/registration_existing.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/registration_existing.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/registration_homepage.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/registration_homepage.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/show_attachments.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/show_attachments.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/preloader.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/preloader.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/updatepersonaldetails.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/updatepersonaldetails.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/updatepersonaldetail.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/updatepersonaldetail.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/fill_emergency_numbers.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/fill_emergency_numbers.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/add_custom_message.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/add_custom_message.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/registration.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/registration.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/add_members.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/add_members.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/attachment_dialog.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/attachment_dialog.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/ad_form.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/ad_form.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/home.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/home.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/add_friends.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/add_friends.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/activity_main.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/activity_main.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/add_circles.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/add_circles.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/verify_ot.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/verify_ot.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/adsearch_details.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/adsearch_details.xml"
+    },
+    {
+        "merged": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/build/intermediates/res/merged/debug/menu/add_social.xml",
+        "source": "/home/jsn/AndroidStudioProjects/Suraksha_7-11-2016/Suraksha/app/src/main/res/menu/add_social.xml"
+    }
+]
