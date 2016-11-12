@@ -301,7 +301,7 @@ public class BadgesFragment extends BaseFragment {
 
         etgender = (Spinner) view.findViewById(R.id.etgender);
         etdob = (EditText) view.findViewById(R.id.etdob);
-      //  showOptionDialog(getActivity(), "dsdfs", maritalList, etdob);
+        showOptionDialog(getActivity(), "dsdfs", maritalList, etdob);
 
         etmarital = (Spinner) view.findViewById(R.id.etmarital);
 
