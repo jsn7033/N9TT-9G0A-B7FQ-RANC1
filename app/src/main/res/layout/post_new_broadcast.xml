@@ -18,7 +18,8 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
-            android:text="Broadcast Post" />
+            android:text="Broadcast Post"
+            android:backgroundTint="@color/colorPrimary"/>
 
         <ImageButton
             android:id="@+id/btnattach"
@@ -26,7 +27,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/attach" />
+            android:src="@drawable/attach"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/colorPrimary"/>
 
         <EditText
             android:id="@+id/etmsg"
@@ -37,6 +40,8 @@
             android:layout_marginTop="5dp"
             android:layout_toLeftOf="@+id/btnattach"
             android:ems="10"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:hint="What&apos;s on your mind?">
 
             <requestFocus />

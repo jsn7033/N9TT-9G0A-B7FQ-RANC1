@@ -343,7 +343,7 @@ public class HomeActivity extends BaseActivity implements HomeFragment.AppTitleC
         int Image[] = {R.drawable.ic_home, R.drawable.ic_person1,
                 R.drawable.ic_dicount, R.drawable.ic_note, R.drawable.ic_setting,
                 R.drawable.ic_networkmenu, R.drawable.ic_question,
-                R.drawable.ic_operator};
+                R.drawable.operator};
 
         String Title[] = {getResources().getString(string.menu_home_text),
                 getResources().getString(string.menu_profile_text),

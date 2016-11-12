@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 // view the ad form post detail
@@ -31,6 +32,7 @@ public class Adsearch_details extends BaseActivity {
     Statement stmnt = null;
     private ImageView imageView;
     private String imgBaseUrl = "http://104.238.126.224/djnni%20dll/bills/";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +74,7 @@ public class Adsearch_details extends BaseActivity {
 
         String imageUrl =imgBaseUrl +  intent.getStringExtra("image");
 
-//        Picasso.with(this).load(imageUrl).into(imageView);
+        Picasso.with(this).load(imageUrl).placeholder(R.drawable.no_image).error(R.drawable.no_image).into(imageView);
 
 
         btnchat = (Button) findViewById(R.id.btnchat);

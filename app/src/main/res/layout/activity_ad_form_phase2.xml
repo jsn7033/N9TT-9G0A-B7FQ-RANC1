@@ -7,7 +7,8 @@
     <ImageView
         android:id="@+id/bg_image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+     />
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -34,11 +35,11 @@
                 android:id="@+id/btnattachad"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="90dp"
+                android:layout_marginBottom="20dp"
                 android:background="@color/text_shadow_white"
                 android:scaleType="centerCrop"
-                android:src="@drawable/attachadimage" />
+                android:src="@drawable/attachadimage"
+                android:layout_gravity="center_horizontal"/>
 
             <!--<LinearLayout-->
             <!--android:layout_width="match_parent"-->
@@ -72,7 +73,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:paddingBottom="5dp"
-                android:paddingTop="5dp" />
+                android:paddingTop="5dp"
+                android:layout_marginTop="10dp"/>
 
             <View
                 android:layout_width="match_parent"
@@ -86,7 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp" />
 
@@ -95,7 +97,8 @@
                 android:layout_height="1dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="5dp"
-                android:background="@color/purple"></View>
+                android:layout_marginBottom="5dp"
+                android:background="@color/purple"/>
 
             <!--<LinearLayout-->
             <!--android:layout_width="match_parent"-->
@@ -106,8 +109,8 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:hint="Category name">
+                android:hint="Category name"
+                android:layout_marginTop="5dp">
 
                 <EditText
                     android:id="@+id/txtcategory"
@@ -137,7 +140,7 @@
                 android:id="@+id/spinnerproduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp" />
 
@@ -151,13 +154,14 @@
                 android:layout_height="1dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="5dp"
-                android:background="@color/purple"></View>
+                android:background="@color/purple"
+                />
 
             <Spinner
                 android:id="@+id/spinnerusedproduct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp"
                 android:visibility="gone" />
@@ -167,13 +171,14 @@
                 android:layout_height="1dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
                 android:background="@color/purple"></View>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:hint="Title name">
+                android:hint="Title name"
+                android:layout_marginTop="5dp">
 
                 <EditText
                     android:id="@+id/txttitle"
@@ -202,6 +207,7 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:hint="Description">
 
                 <EditText
@@ -230,6 +236,7 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:hint="Address">
 
                 <EditText
@@ -259,6 +266,7 @@
                 android:id="@+id/spinnerstate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp" />
 
@@ -278,7 +286,7 @@
                 android:id="@+id/spinnercity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:paddingBottom="5dp"
                 android:paddingTop="5dp" />
 
@@ -287,6 +295,7 @@
                 android:layout_height="1dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
                 android:background="@color/purple"></View>
             <!--<LinearLayout-->
             <!--android:layout_width="match_parent"-->
@@ -297,6 +306,7 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:hint="Contact No">
 
                 <EditText
@@ -327,6 +337,7 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:hint="Email ID">
 
                 <EditText
@@ -356,6 +367,7 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:hint="Website">
 
                 <EditText
@@ -370,6 +382,7 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:hint="Keywords(seperated by commas)">
 
                 <EditText
@@ -386,6 +399,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="5dp"
+                android:layout_marginTop="20dp"
                 android:paddingTop="5dp" />
 
             <View

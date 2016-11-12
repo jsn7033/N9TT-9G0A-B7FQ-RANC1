@@ -87,7 +87,7 @@ public class SettingsFragment extends BaseFragment implements CompoundButton.OnC
     public void onAttach(Activity context) {
         super.onAttach(context);
 
-        if (context instanceof Home) {
+        if (context instanceof HomeActivity) {
             mAppTitleCallback = (AppTitleCallback) context;
         }
 
