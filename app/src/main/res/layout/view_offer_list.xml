@@ -7,9 +7,10 @@
     android:layout_height="match_parent"
 
     tools:context="com.suraksha.ViewOffersFragment">
-   <!-- <include
+   <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbarlayout"></include>-->
+       android:visibility="gone"
+        layout="@layout/toolbarlayout"></include>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

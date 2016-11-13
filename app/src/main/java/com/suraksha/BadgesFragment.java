@@ -43,6 +43,7 @@ import android.widget.Toast;
 import com.AppHelper.RoundedImageView;
 import com.CheckInternet.CheckInternet;
 import com.SessionManager.SessionManager;
+import com.activities.ViewOfferActivity;
 import com.core.BaseFragment;
 import com.webservice.Service1;
 import com.squareup.picasso.Picasso;
@@ -442,7 +443,7 @@ public class BadgesFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 if (checknet.isNetworkAvailable()) {
-                    Intent is = new Intent(getActivity(), ViewOffersFragment.class);
+                    Intent is = new Intent(getActivity(), ViewOfferActivity.class);
                     is.putExtra("coinbalance", coinbalance.getText().toString());
                     is.putExtra("offer", "profile");
                     startActivity(is);

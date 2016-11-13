@@ -11,4 +11,6 @@ public class Constants {
 
     public static int FRAGMENT_TRANSACTION_TIME=300;
 
+    public static int REQUEST_PERMISSION_FOR_LOCATION=200;
+
 }

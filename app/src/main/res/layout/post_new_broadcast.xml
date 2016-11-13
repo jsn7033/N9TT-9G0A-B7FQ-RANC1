@@ -19,6 +19,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             android:text="Broadcast Post"
+            android:textColor="@android:color/white"
             android:backgroundTint="@color/colorPrimary"/>
 
         <ImageButton

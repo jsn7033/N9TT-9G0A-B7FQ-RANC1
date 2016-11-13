@@ -10,8 +10,11 @@ import org.json.JSONObject;
 import com.CheckInternet.CheckInternet;
 import com.SessionManager.SessionManager;
 import com.core.BaseFragment;
+import com.google.android.gms.location.LocationSettingsStates;
+import com.utilites.CurrentLocationSinglton;
 import com.webservice.Service1;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.ProgressDialog;
@@ -322,63 +325,112 @@ public class BroadcastFragment extends BaseFragment {
 
     }
 
+    public void refreshFragment(){
+        if (checkInternet.isNetworkAvailable()) {
+            getBdroicastmessage ds = new getBdroicastmessage(postcat);// method for getting all message
+            ds.execute();
+        } else {
+            Toast.makeText(getActivity(), "Internet not available", Toast.LENGTH_LONG).show();
+        }
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        final LocationSettingsStates states = LocationSettingsStates.fromIntent(data);
+        switch (requestCode) {
+            case CurrentLocationSinglton.REQUEST_CHECK_SETTINGS:
+                switch (resultCode) {
+                    case Activity.RESULT_OK:
+                        CurrentLocationSinglton.getInstance().startLocationUpdates();
+                        break;
+                    case Activity.RESULT_CANCELED:
+
+                        break;
+                    default:
+                        break;
+                }
+                break;
+        }
+    }
+
     private void sharedialog() {
-        final CharSequence[] items = {"ShareFragment my location", "ShareFragment this app"};
+        final CharSequence[] items = {"Share my location", "Share this app"};
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Choose to share");
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int item) {
-                if (items[item].equals("ShareFragment my location")) {
+                if (items[item].equals("Share my location")) {
 
-                    locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-                    // getting GPS status
-                    isGPSEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
-
-
-// chicking the gps status
-                    if (!isGPSEnabled) {
-                        show("Please enable GPS");// message for enable gps
-                    } else if (!checkInternet.isNetworkAvailable()) {
-                        show("Please enable internet connection");// message fo enable internet
-                    } else {
-
-                        locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-
-                        // Define a listener that responds to location updates
-                        LocationListener locationListener = new LocationListener() {
-                            public void onLocationChanged(Location location) {
-                                // Called when a new location is found by the network location provider.
-                                if (Build.VERSION.SDK_INT >= 23 &&
-                                        ContextCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
-                                        ContextCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                                    return;
-                                }
+                    CurrentLocationSinglton.getInstance().getCurrentLocation(getActivity(), new CurrentLocationSinglton.CurrentLocationCallback() {
+                        @Override
+                        public void onSuccess(Location location) {
+                            if (location != null) {
                                 lat = Double.toString(location.getLatitude());
                                 lon = Double.toString(location.getLongitude());
 
                                 msg = "My location is: http://maps.google.com/?q=" + lat + "," + lon + " \n Sent by Howzat SOS App \n click to download http://www.howzatsos.com/download ";
                                 // method for share location though email
                                 shareIt(msg);
-
-
-                                locationManager.removeUpdates(this);
-                                locationManager = null;
-
                             }
+                        }
 
-                            public void onStatusChanged(String provider, int status, Bundle extras) {
-                            }
+                        @Override
+                        public void onFailure() {
 
-                            public void onProviderEnabled(String provider) {
-                            }
+                        }
+                    });
 
-                            public void onProviderDisabled(String provider) {
-                            }
-                        };
-                        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 120000, 100, locationListener);
-                    }
+//                    locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+//                    // getting GPS status
+//                    isGPSEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+//
+//
+//// chicking the gps status
+//                    if (!isGPSEnabled) {
+//                        show("Please enable GPS");// message for enable gps
+//                    } else if (!checkInternet.isNetworkAvailable()) {
+//                        show("Please enable internet connection");// message fo enable internet
+//                    } else {
+//
+//                        locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+//
+//                        // Define a listener that responds to location updates
+//                        LocationListener locationListener = new LocationListener() {
+//                            public void onLocationChanged(Location location) {
+//                                // Called when a new location is found by the network location provider.
+//                                if (Build.VERSION.SDK_INT >= 23 &&
+//                                        ContextCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
+//                                        ContextCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//                                    return;
+//                                }
+//                                lat = Double.toString(location.getLatitude());
+//                                lon = Double.toString(location.getLongitude());
+//
+//                                msg = "My location is: http://maps.google.com/?q=" + lat + "," + lon + " \n Sent by Howzat SOS App \n click to download http://www.howzatsos.com/download ";
+//                                // method for share location though email
+//                                shareIt(msg);
+//
+//
+//                                locationManager.removeUpdates(this);
+//                                locationManager = null;
+//
+//                            }
+//
+//                            public void onStatusChanged(String provider, int status, Bundle extras) {
+//                            }
+//
+//                            public void onProviderEnabled(String provider) {
+//                            }
+//
+//                            public void onProviderDisabled(String provider) {
+//                            }
+//                        };
+//                        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 120000, 100, locationListener);
+//                    }
                 } else {
                     //String playstorelink="https://play.google.com/store/apps/details?id=com.aviary.android.feather";
                     String playstorelink = "HowZat sos App click link to download http://www.howzatsos.com/download";

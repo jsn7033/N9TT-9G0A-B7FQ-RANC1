@@ -43,6 +43,7 @@ import com.AppHelper.ResizeImage;
 import com.CheckInternet.CheckInternet;
 import com.AppHelper.CheckAppPermission;
 import com.SessionManager.SessionManager;
+import com.callback.RefreshHomeFragmentCallback;
 import com.webservice.Service1;
 
 import com.ticktick.imagecropper.CropImageActivity;
@@ -228,8 +229,6 @@ public class Add_new_broadcast extends BaseActivity {
 
 
             if (path.endsWith(".doc") || path.endsWith(".docx") || path.endsWith(".ppt") || path.endsWith(".pptx") || path.endsWith(".xls") || path.endsWith(".xlsx") || path.endsWith(".pdf")) {
-
-
                 SendPhotos ds = new SendPhotos(Imagename, path);
                 ds.execute();
             } else {
@@ -237,12 +236,13 @@ public class Add_new_broadcast extends BaseActivity {
                 SendPhotos ds = new SendPhotos(Imagename, path);
                 ds.execute();
             }
-
-
-            Toast.makeText(Add_new_broadcast.this, "Message broadcasted", Toast.LENGTH_LONG).show();
-            Intent i = new Intent(Add_new_broadcast.this, HomeActivity.class);
-            startActivity(i);
             dismissDialog(progress_bar_type);
+            RefreshHomeFragmentCallback.getInstance().notiyy();
+            Toast.makeText(Add_new_broadcast.this, "Message broadcasted", Toast.LENGTH_LONG).show();
+//            Intent i = new Intent(Add_new_broadcast.this, HomeActivity.class);
+//            startActivity(i);
+            finish();
+
         }
     }
 

@@ -3,6 +3,7 @@ package com.suraksha;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.BitmapDrawable;
@@ -13,6 +14,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -26,11 +28,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.core.BaseFragment;
+import com.utilites.Constants;
 
 //this activity is home activity wich is first call BroadcastFragment by default
 public class HomeFragment extends BaseFragment {
 
-  public     TabLayout tabs;
+    public TabLayout tabs;
 
     AppTitleCallback mAppTitleCallback;
 
@@ -68,8 +71,9 @@ public class HomeFragment extends BaseFragment {
 /*
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
-        } else*/ if (item.getItemId() == R.id.menu_filter) {
-            int actionBarHeight =((HomeActivity)getActivity()).mToolbar.getHeight() * 2;
+        } else*/
+        if (item.getItemId() == R.id.menu_filter) {
+            int actionBarHeight = ((HomeActivity) getActivity()).mToolbar.getHeight() * 2;
             popupWindow(actionBarHeight);
         }
 
@@ -80,15 +84,15 @@ public class HomeFragment extends BaseFragment {
         // // TODO Auto-generated method stub
 
         // Inflate the popup_layout.xml
-       // RelativeLayout viewGroup = (RelativeLayout) findViewById(R.id.popup);
-       // LayoutInflater layoutInflater = (LayoutInflater) getActivity.(Context.LAYOUT_INFLATER_SERVICE);
+        // RelativeLayout viewGroup = (RelativeLayout) findViewById(R.id.popup);
+        // LayoutInflater layoutInflater = (LayoutInflater) getActivity.(Context.LAYOUT_INFLATER_SERVICE);
         View layout = LayoutInflater.from(getActivity()).inflate(R.layout.filterscreen_pupp,
                 null);
         Button mostusefull = (Button) layout.findViewById(R.id.btn2);
         Button recentpost = (Button) layout.findViewById(R.id.btn3);
         Button myusefullpost = (Button) layout.findViewById(R.id.btn4);
         Button mypost = (Button) layout.findViewById(R.id.btn5);
-        Button cancel=(Button) layout.findViewById(R.id.cancelBtn);
+        Button cancel = (Button) layout.findViewById(R.id.cancelBtn);
 
         // Creating the PopupWindow
         final PopupWindow popup = new PopupWindow();
@@ -152,15 +156,15 @@ public class HomeFragment extends BaseFragment {
     public void postcategory(String pcat) {
 
         Fragment fragment = null;
-        tabs.setScrollPosition(0,0f,true);
-        ((HomeActivity)getActivity()).clearBackStack();
+        tabs.setScrollPosition(0, 0f, true);
+        ((HomeActivity) getActivity()).clearBackStack();
         fragment = new BroadcastFragment();
         Bundle args = new Bundle();
         args.putString("postcat", pcat);
 
         fragment.setArguments(args);
         android.support.v4.app.FragmentManager fm = getActivity().getSupportFragmentManager();
-      //  fm.popBackStack();
+        //  fm.popBackStack();
         android.support.v4.app.FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.add(R.id.mainContainer, fragment);
         fragmentTransaction.commit();
@@ -176,7 +180,7 @@ public class HomeFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.activity_home, container, false);
         tabs = (TabLayout) view.findViewById(R.id.tabs);
         tabs.setTabMode(TabLayout.MODE_SCROLLABLE);
-        tabs.setScrollPosition(0,0f,true);
+        tabs.setScrollPosition(0, 0f, true);
 //		hlList = (HorizontalListView) view.findViewById(R.id.rlTabs);
 //		adapter = new GridAdapter(getActivity(), 0);// custom adapter for set horizental list view
 //		hlList.setAdapter(adapter);
@@ -219,6 +223,36 @@ public class HomeFragment extends BaseFragment {
         loadFragment(new BroadcastFragment());
 
         return view;
+    }
+
+    public void refeshFragment(){
+
+        for (Fragment fragment : getChildFragmentManager().getFragments()) {
+            if (fragment instanceof BroadcastFragment) {
+                BroadcastFragment bf= (BroadcastFragment) fragment;
+                bf.refreshFragment();
+            }
+            Log.e("onactivityresult", "activity");
+
+        }
+
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        for (Fragment fragment : getChildFragmentManager().getFragments()) {
+            if (fragment instanceof BroadcastFragment) {
+                if (requestCode == Constants.REQUEST_PERMISSION_FOR_LOCATION) {
+                    fragment.onActivityResult(requestCode, resultCode, data);
+                }
+            }
+            Log.e("onactivityresult", "activity");
+
+        }
+
+
     }
 
     private void setupTabIcons() {

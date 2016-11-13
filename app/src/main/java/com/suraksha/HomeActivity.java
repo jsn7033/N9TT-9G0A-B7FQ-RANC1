@@ -1,5 +1,6 @@
 package com.suraksha;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.content.Context;
@@ -30,9 +31,12 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.callback.RefreshHomeFragmentCallback;
 import com.suraksha.R.string;
 import com.utilites.Constants;
 import com.utilites.Utilites;
+
+import java.util.List;
 
 // this is the navigation activity
 public class HomeActivity extends BaseActivity implements HomeFragment.AppTitleCallback,
@@ -42,13 +46,14 @@ public class HomeActivity extends BaseActivity implements HomeFragment.AppTitleC
         SettingsFragment.AppTitleCallback,
         ShareFragment.AppTitleCallback,
         HelpFragment.AppTitleCallback,
-        AboutUsFragment.AppTitleCallback {
+        AboutUsFragment.AppTitleCallback,
+        RefreshHomeFragmentCallback.RefreshHomeFragmentCl{
 
 
     private ListView lvItems;
     private DrawerLayout mDrawerLayout;
     private android.support.v7.app.ActionBarDrawerToggle mDrawerToggle;
-   public Toolbar mToolbar;
+    public Toolbar mToolbar;
     FrameLayout container;
 
     /**
@@ -107,6 +112,8 @@ public class HomeActivity extends BaseActivity implements HomeFragment.AppTitleC
         adapter = new MenuItemAdapter(HomeActivity.this, 0);
         lvItems.setAdapter(adapter);
 
+        setListeners();
+
 
         mDrawerToggle = new android.support.v7.app.ActionBarDrawerToggle(this, mDrawerLayout,
                 mToolbar,
@@ -161,6 +168,10 @@ public class HomeActivity extends BaseActivity implements HomeFragment.AppTitleC
         });
 
 
+    }
+
+    public void setListeners(){
+        RefreshHomeFragmentCallback.getInstance().setListener(this);
     }
 
     public void clearBackStack() {
@@ -301,41 +312,62 @@ public class HomeActivity extends BaseActivity implements HomeFragment.AppTitleC
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
-  /*  @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    /*  @Override
+      public boolean onCreateOptionsMenu(Menu menu) {
 
-        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.container);
-        if (fragment instanceof HomeFragment) {
-            mToolbar.setTitle(getString(string.menu_home_text));
-            getMenuInflater().inflate(R.menu.activity_main, menu);
-            return true;
-        } else {
-            return false;
+          Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.container);
+          if (fragment instanceof HomeFragment) {
+              mToolbar.setTitle(getString(string.menu_home_text));
+              getMenuInflater().inflate(R.menu.activity_main, menu);
+              return true;
+          } else {
+              return false;
+          }
+
+
+      }
+
+      @Override
+      public boolean onOptionsItemSelected(MenuItem item) {
+
+          if (mDrawerToggle.onOptionsItemSelected(item)) {
+              return true;
+          } else if (item.getItemId() == R.id.menu_filter) {
+              int actionBarHeight = getSupportActionBar().getHeight() * 2;
+              popupWindow(actionBarHeight);
+          }
+
+          return super.onOptionsItemSelected(item);
+      }
+
+
+  */
+    @Override
+    public void title(String title) {
+        if (mToolbar != null) {
+            mToolbar.setTitle(title);
         }
-
-
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    public void refreshFragment() {
+        getSupportFragmentManager().getFragments();
 
-        if (mDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        } else if (item.getItemId() == R.id.menu_filter) {
-            int actionBarHeight = getSupportActionBar().getHeight() * 2;
-            popupWindow(actionBarHeight);
+        for (Fragment fragment : getSupportFragmentManager().getFragments()) {
+            if (fragment instanceof HomeFragment) {
+                HomeFragment ff= (HomeFragment) fragment;
+                ff.refeshFragment();
+            }
+
         }
 
-        return super.onOptionsItemSelected(item);
+//        String fragmentname = (String) getSupportFragmentManager().getBackStackEntryAt(0).getName();
+//        Fragment fragment=getSupportFragmentManager().findFragmentByTag(fragmentname);
+//        if(fragment instanceof HomeFragment){
+//
+//        }
+
     }
-
-
-*/  @Override
-  public void title(String title) {
-      if (mToolbar != null) {
-          mToolbar.setTitle(title);
-      }
-  }
 
     private class MenuItemAdapter extends ArrayAdapter<String> {
 
@@ -406,7 +438,22 @@ public class HomeActivity extends BaseActivity implements HomeFragment.AppTitleC
         }
     }
 
-/*
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        List<Fragment> fragment = (List<Fragment>) getSupportFragmentManager().getFragments();
+        for (Fragment fragment : getSupportFragmentManager().getFragments()) {
+            if (fragment instanceof HomeFragment) {
+                if (requestCode == Constants.REQUEST_PERMISSION_FOR_LOCATION) {
+                    fragment.onActivityResult(requestCode, resultCode, data);
+                }
+            }
+            Log.e("onactivityresult", "activity");
+
+        }
+    }
+
+    /*
     public void popupWindow(int offsetY) {
         // // TODO Auto-generated method stub
 

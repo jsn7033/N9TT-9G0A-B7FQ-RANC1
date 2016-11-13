@@ -10,6 +10,7 @@ import org.json.JSONObject;
 import com.AppHelper.RoundedImageView;
 import com.SessionManager.SessionManager;
 import com.utilites.Constants;
+import com.utilites.Utilites;
 import com.webservice.Service1;
 
 import com.squareup.picasso.Picasso;
@@ -25,6 +26,7 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -184,8 +186,19 @@ public class BroadcastCustomList extends ArrayAdapter<String> {
         txtcontent.setText(albcontent.get(position).toString());
         mUseFulcountTxt.setText(aluseful.get(position).toString());
         mUserLesscountTxt.setText(aluseless.get(position).toString());
-        txtdate.setText(aldate.get(position).toString());
+
         String broadcast_id = albid.get(position).toString();
+
+        String date = aldate.get(position).toString();
+        String time = Utilites.getDateTimedifference(date.split("T")[0], date.split("T")[1]);
+        if(TextUtils.isEmpty(time)){
+            txtdate.setText(date);
+        }else{
+            txtdate.setText(time);
+        }
+
+
+
 
 
         String fileName = postimage.get(position).toString();
