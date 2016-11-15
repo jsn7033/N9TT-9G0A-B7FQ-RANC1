@@ -10,9 +10,11 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v7.view.ContextThemeWrapper;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
@@ -45,7 +47,7 @@ public class ShakeSetting extends BaseActivity implements View.OnClickListener, 
         init();
         registerListener();
 
-        Toolbar mToolbar = loadToolbar("SettingsFragment");
+        Toolbar mToolbar = loadToolbar("Shake Setting");
         setSupportActionBar(mToolbar);
         mToolbar.setLogo(R.drawable.howzaticon_);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -194,6 +196,8 @@ public class ShakeSetting extends BaseActivity implements View.OnClickListener, 
             counter = 0;
             sd.deregister();
 
+            Vibrator v = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+            v.vibrate(500);
 
         }
     }

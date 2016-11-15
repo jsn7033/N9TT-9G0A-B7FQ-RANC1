@@ -101,40 +101,25 @@ public class SettingsFragment extends BaseFragment implements CompoundButton.OnC
         setHasOptionsMenu(true);
     }
 
+
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        menu.clear();
+    public void onResume() {
+        super.onResume();
+
+        btntoggleshake.setOnCheckedChangeListener(null);
+
+        String status = session.Getshechfeature();
+
+
+        if (status.equals("true")) {
+            btntoggleshake.setChecked(true);
+        } else if (status.equals("false")) {
+            btntoggleshake.setChecked(false);
+        }
+
+        btntoggleshake.setOnCheckedChangeListener(this);
     }
 
-    //    @Override
-//    public void onResume() {
-//        super.onResume();
-//
-//        String status = session.Getshechfeature();
-//
-//        if (status.equals("true")) {
-//            btntoggleshake.setChecked(true);
-//        } else if (status.equals("false")) {
-//            btntoggleshake.setChecked(false);
-//        }
-//    }
-
-
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-//
-//        String status = session.Getshechfeature();
-//
-//        if (status.equals("true")) {
-//            btntoggleshake.setChecked(true);
-//        } else if (status.equals("false")) {
-//            btntoggleshake.setChecked(false);
-//        }
-//
-//
-//    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -252,8 +237,6 @@ public class SettingsFragment extends BaseFragment implements CompoundButton.OnC
         btntoggle.setOnCheckedChangeListener(this);
 
         btntoggleshake = (Switch) view.findViewById(R.id.togglebtnsensor);
-
-        btntoggleshake.setOnCheckedChangeListener(this);
 
 
         btncontact.setOnClickListener(new OnClickListener() {
